@@ -105,7 +105,7 @@
 
             <ul class="pure-menu-list">
                 <li><a href="index.html" class="pure-menu-link">Home</a></li>
-                <li><a href="soa_compare.html" class="pure-menu-link">Benchmark</a></li>
+                <li><a href="soa_compare.php" class="pure-menu-link">Benchmark</a></li>
                 <li><a class="pure-menu-link pure-menu-selected">Explore</a></li>
                 <li><a href="code.html" class="pure-menu-link">Download</a></li>
             </ul>
@@ -189,7 +189,7 @@
               {
                               console.log("Adding: "+seq_list[i])
 
-                   new_html = new_html + '<div class="horizontalbox"><div class="boxInner"><a href="one_result.html?seq_id='+seq_list[i]+'"><img src="'+im_url+ seq_list[i] +'/00000.jpg"/></a><div class="titleBox">'+seq_list[i]+'</div></div></div>'
+                   new_html = new_html + '<div class="horizontalbox"><div class="boxInner"><a href="one_result.php?seq_id='+seq_list[i]+'"><img src="'+im_url+ seq_list[i] +'/00000.jpg"/></a><div class="titleBox">'+seq_list[i]+'</div></div></div>'
               }
               console.log(new_html);
               document.getElementById(div_id).innerHTML = new_html;
