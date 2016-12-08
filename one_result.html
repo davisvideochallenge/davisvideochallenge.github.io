@@ -134,18 +134,15 @@
     var frame_num = 1;
 
     // Get a sequence id from the PHP url if set
-    var seq_id = '<?php 
-      if (isset($_GET['seq_id']))
-      {
-        $seq_id=$_GET['seq_id'];
-        echo $seq_id;
-      }
-      else
-      {
-        echo "bear";
-      }
-      ?>';
+    function getParameterByName(name){
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
 
+    seq_id = getParameterByName('seq_id');
+    console.log(seq_id);
 
     // In which set is this sequence
     var which_set = '';
