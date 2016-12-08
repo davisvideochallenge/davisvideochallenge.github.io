@@ -140,9 +140,7 @@
         results = regex.exec(location.search);
         return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
-
     seq_id = getParameterByName('seq_id');
-    console.log(seq_id);
 
     // In which set is this sequence
     var which_set = '';

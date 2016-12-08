@@ -175,9 +175,6 @@
 
               curr_subset = new_subset;
 
-              console.log("Switching to: "+curr_subset)
-              console.log("Switching to: "+seq_lists[curr_subset])
-
               // Call the actual code to show the images
               show_images("horiz_container",seq_lists[curr_subset])
           }
@@ -187,11 +184,8 @@
               var new_html = "";
               for (var i=0; i<seq_list.length; i++)
               {
-                              console.log("Adding: "+seq_list[i])
-
                    new_html = new_html + '<div class="horizontalbox"><div class="boxInner"><a href="one_result.html?seq_id='+seq_list[i]+'"><img src="'+im_url+ seq_list[i] +'/00000.jpg"/></a><div class="titleBox">'+seq_list[i]+'</div></div></div>'
               }
-              console.log(new_html);
               document.getElementById(div_id).innerHTML = new_html;
           }
 
