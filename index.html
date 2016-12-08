@@ -1,1 +1,219 @@
-Hello World
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,300' rel='stylesheet' type='text/css'>
+    <meta name="description" content="DAVIS, Densely Annotated VIdeo Segmentation">
+
+    <title>DAVIS: Densely Annotated VIdeo Segmentation</title>
+
+    <!-- Buttons -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/buttons/component.css" /> -->
+
+    <!-- Google analytics -->
+    // <script>
+    //   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    //   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    //   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    //   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    //   ga('create', 'UA-66736701-1', 'auto');
+    //   ga('send', 'pageview');
+    // </script>
+
+	<link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+    <!--<![endif]-->
+
+<!--     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
+</head>
+
+<style type="text/css">
+    /*********************************
+    The list of publication items
+    *********************************/
+    /* The list of items */
+    .biblist { }
+
+    /* The item */
+    .biblist li { }
+
+    /* You can define custom styles for plstyle field here. */
+
+
+    /*************************************
+     The box that contain BibTeX code
+     *************************************/
+    div.noshow { display: none; }
+    div.bibtex {
+        margin-right: 0%;
+        margin-top: 1.2em;
+        margin-bottom: 1.3em;
+        border: 1px solid silver;
+        padding: 0.3em 0.5em;
+        background: #ffffee;
+    }
+    div.bibtex pre { font-size: 75%; overflow: auto;  width: 100%; }
+
+
+    .content-subhead{color: black}
+</style>
+
+<script type="text/javascript">
+ <!--
+ // Toggle Display of BibTeX
+ function toggleBibtex(articleid) {
+     var bib = document.getElementById('bib_'+articleid);
+     if (bib) {
+         if(bib.className.indexOf('bibtex') != -1) {
+             bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+         }
+     } else {
+         return;
+     }
+ }
+-->
+</script>
+
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+
+            <ul class="pure-menu-list">
+                <li><a class="pure-menu-link pure-menu-selected">Home</a></li>
+                <li><a href="soa_compare.php" class="pure-menu-link">Benchmark</a></li>
+                <li><a href="browse.php" class="pure-menu-link">Explore</a></li>
+                <li><a href="code.html" class="pure-menu-link">Download</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>DAVIS: Densely Annotated VIdeo Segmentation</h1>
+            <h2>In-depth analysis of the state-of-the-art in video object segmentation</h2>
+        </div>
+
+        <div class="pure-g" style="margin-left:20px; margin-right:10px;margin-top:20px;">
+            <div class="pure-u-1-6"><img src="images/teaser/kite-001.jpg" alt="" style="width:95%"></div>
+            <div class="pure-u-1-6"><img src="images/teaser/agilitydog.jpg" alt="" style="width:95%"></div>
+            <div class="pure-u-1-6"><img src="images/teaser/train-001.jpg" alt="" style="width:95%"></div>
+            <div class="pure-u-1-6"><img src="images/teaser/motorbike-001.jpg" alt="" style="width:95%"></div>
+            <div class="pure-u-1-6"><img src="images/teaser/goat.jpg" alt="" style="width:95%"></div>
+            <div class="pure-u-1-6"><img src="images/teaser/bmx-002.jpg" alt="" style="width:95%"></div>
+            </div>
+        <div class="content">
+
+
+            <h2 class="content-subhead" style="margin-top:33px;margin-bottom:12px">Publications</h2>
+
+            <div class="pure-g">
+                <div class="pure-u-1-6">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:100%;" src="images/teaser/montage.jpg" alt="CVPR">
+                </div>
+                <div class="pure-u-5-6">
+                <p style="margin-left:0.6cm;line-height: 1.4em;margin-top:0em;">
+                    A Benchmark Dataset and Evaluation Methodology for Video Object Segmentation<br>
+                    <a href="http://graphics.ethz.ch/~perazzif" target="_blank"/>F. Perazzi</a>,
+                    <a href="http://jponttuset.github.io" target="_blank">J. Pont-Tuset</a>,
+                    <a href="https://www.inf.ethz.ch/personal/mcbrian/" target="_blank">B. McWilliams</a>,
+                    <a href="https://www.vision.ee.ethz.ch/en/members/get_member.cgi?id=1" target="_blank">L. Van Gool</a>,
+                    <a href="http://www.disneyresearch.com/people/markus-gross" target="_blank">M. Gross</a>, and
+                    <a href="http://www.ahornung.net" target="_blank">A. Sorkine-Hornung</a>
+                    <br>
+                    <i>Computer Vision and Pattern Recognition (CVPR) 2016</i><br>
+                    [<a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Perazzi_A_Benchmark_Dataset_CVPR_2016_paper.pdf" target="_blank">PDF</a>] [<a href="https://graphics.ethz.ch/~perazzif/davis/files/davis_supplementary.pdf" target="_blank">Supplemental</a>] [<a href="javascript:toggleBibtex('Perazzi2016')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+            <div id="bib_Perazzi2016" class="bibtex noshow"><pre>@inproceedings{Perazzi2016,<br/>  author = {F. Perazzi and J. Pont-Tuset and B. McWilliams and L. Van Gool and M. Gross and A. Sorkine-Hornung},<br/>  title = {A Benchmark Dataset and Evaluation Methodology for Video Object Segmentation},<br/>  booktitle = {Computer Vision and Pattern Recognition},<br/>  year = {2016}<br/>}</pre></div>
+
+            <i>Please cite this paper in your publications if it helps your research.</i>
+
+<!--             <h2 class="content-subhead" style="margin-top:33px">Web Content</h2>
+            <div class="pure-g">
+                <div class="pure-u-1-2" style="text-align:center;font-family: 'Raleway', sans-serif;">
+                    <a href="https://github.com/fperazzi/davis" target="_blank"><button class="btn btn-6 btn-6a" style="width: 85%;margin-top:10px;">Code</button></a>
+                </div>
+                <div class="pure-u-1-2" style="text-align:center;font-family: 'Raleway', sans-serif;">
+                    <a href="https://graphics.ethz.ch/Downloads/Data/Davis/davis.zip" target="_blank"><button class="btn btn-6 btn-6a" style="width: 85%;margin-top:10px;">Datasets</button></a>
+                </div>
+            </div> -->
+
+        <h2 class="content-subhead" style="margin-top:33px;margin-bottom:0px">Abstract</h2>
+        <p style="font-size:90%;margin-top:10px">
+            Over the years, datasets and benchmarks have proven their fundamental importance in computer vision research, enabling targeted progress and objective comparisons in many fields. At the same time, legacy datasets may impend the evolution of a field due to saturated algorithm performance and the lack of contemporary, high quality data. In this work we present a new benchmark dataset and evaluation methodology for the area of video object segmentation. The dataset, named DAVIS (Densely Annotated VIdeo Segmentation), consists of fifty high quality, Full HD video sequences, spanning multiple occurrences of common video object segmentation challenges such as occlusions, motion-blur and appearance changes. Each video is accompanied by densely annotated, pixel-accurate and per-frame ground truth segmentation. In addition, we provide a comprehensive analysis of several state-of-the-art segmentation approaches using three complementary metrics that measure the spatial extent of the segmentation, the accuracy of the silhouette contours and the temporal coherence. The results uncover strengths and weaknesses of current approaches, opening up promising directions for future works.
+        </p>
+
+        <h2 class="content-subhead" style="margin-top:33px">Preview of the Annotations</h2>
+         <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <video style="width:100%;height:auto" muted loop controls poster="images/teaser/horsejump-002.jpg">
+                        <source src="images/davis.mp4" type="video/mp4">
+                    </video>
+          <!-- <embed src="" wmode="transparent" type="application/x-shockwave-flash" width="100%" height="100%" allowfullscreen="true" title="DAVIS"> -->
+                </div>
+        </div>
+
+            <h2 class="content-subhead" style="margin-bottom:0px">Benchmark State-of-the-Art</h2>
+            <p style="margin-top:10px">
+                Display the evaluation of the current State-of-the-Art segmentation tecniques in DAVIS; using the three presented measures in our work.
+            </p>
+
+            <h2 class="content-subhead" style="margin-bottom:0px;margin-top:35px;">Explore State-of-the-Art Results</h2>
+            <p style="margin-top:10px;">
+                Visualize the segmentation results for all state-of-the-Art techniques on all DAVIS images, right from your browser.
+            </p>
+
+            <h2 class="content-subhead" style="margin-bottom:0px;margin-top:35px;">Downloads</h2>
+            <p style="margin-top:10px;margin-bottom:30px">
+                Download the DAVIS images and annotations, pre-computed results from all techniques, and the code to reproduce the evaluation.
+            </p>
+
+            <i>Is your technique missing although it's published and the code is public? <a href='mailto:perazzif@inf.ethz.ch,jponttuset@vision.ee.ethz.ch'>Let us know</a>  and we'll add it.</i>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="js/ui.js"></script>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=8914677;
+var sc_invisible=1;
+var sc_security="f1edf88a";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/8914677/0/f1edf88a/1/"
+alt="web analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>
