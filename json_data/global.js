@@ -106,8 +106,8 @@ var techn_papers ={
   "msk": {
     "conference": "CVPR",
     "authors": [
-      "A. Khoreva",
-      "F. Perazzi",
+      "F. Perazzi*",
+      "A. Khoreva*",
       "R. Benenson",
       "B. Schiele",
       "A. Sorkine-Hornung"
