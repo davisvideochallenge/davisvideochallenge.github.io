@@ -63,7 +63,7 @@ var techniques = ['osvos','msk','ofl','bvs','fcp','jmp','hvs','sea','tsp','fst',
                   'sal','key','msg','trc','cvos','nlc',
                   'sflab','sfmot','mcg'];
 
-var shown_techniques = ['osvos','msk','ofl','bvs','fcp'];
+var shown_techniques = ['osvos','msk','ofl'];
 
 var tech_types = ["preprop", "unsup", "semisup"];
 

@@ -73,7 +73,7 @@
                 <span style="color:red">NEW!</span> Select the techniques that you'd like to display*:
                  </div>
                  <div style="vertical-align: middle;font-family: 'Raleway', sans-serif;text-align:left;font-weight: 300;margin-top:3px;margin-bottom:3px;margin-right:10%;">
-                    <i>*Techniques in italics have no result in this sequence (training set)</i>
+                    <i>*Techniques in strikethrough text have no result in this sequence (training set)</i>
                 </div>
             </div>
             <div class="pure-u-3-4" id="technique_selector">
@@ -160,7 +160,7 @@
     {
         // Do we show the button? Only if we have the results in that sequence
         if (tech_props[techniques[ii]].sets.indexOf(which_set)==-1)
-            button_style = "font-style: italic;";
+            button_style = "text-decoration: line-through;";
         else if (shown_techniques.indexOf(techniques[ii])>-1)
             button_style = "background: #e7eae8;";
         else
