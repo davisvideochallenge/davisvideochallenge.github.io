@@ -190,7 +190,8 @@
             tmp = JSON.parse(data.responseText);
             all_eval[tmp.id] = tmp;
             if (shown_techniques.indexOf(tmp.id)>-1)
-                set_footnote(tmp.id);
+                if (tech_props[tmp.id].sets.indexOf(which_set)>-1)
+                    set_footnote(tmp.id);
         });
     }
 
@@ -331,8 +332,11 @@
         // Change all images
         for(ii=0; ii<shown_techniques.length; ii++)
         {
-           document.getElementById('im_'+shown_techniques[ii]).src = res_url+tech_props[shown_techniques[ii]].im_url+'/'+seq_id +'/'+pad(frame_num)+'.jpg';
-           set_footnote(shown_techniques[ii]);
+            if (tech_props[shown_techniques[ii]].sets.indexOf(which_set)>-1)
+            {
+               document.getElementById('im_'+shown_techniques[ii]).src = res_url+tech_props[shown_techniques[ii]].im_url+'/'+seq_id +'/'+pad(frame_num)+'.jpg';
+                set_footnote(shown_techniques[ii]);
+            }
         } 
 
         // Change frame number
