@@ -69,8 +69,11 @@
 
         <div class="pure-g" style="margin-left: 5%;margin-right: 5%;margin-top: 20px;">
             <div class="pure-u-1-4"> 
-                <div style="vertical-align: middle;font-family: 'Raleway', sans-serif;text-align:left;font-weight: 300;margin-top:3px;margin-bottom:3px;margin-right:10%;">
-                    <span style="color:red">NEW!</span> Select the techniques that you'd like to display:
+                <div style="vertical-align: middle;font-family: 'Raleway', sans-serif;text-align:left;font-weight: 300;margin-top:3px;margin-bottom:3px;margin-right:10%;margin-bottom:20px;">
+                <span style="color:red">NEW!</span> Select the techniques that you'd like to display*:
+                 </div>
+                 <div style="vertical-align: middle;font-family: 'Raleway', sans-serif;text-align:left;font-weight: 300;margin-top:3px;margin-bottom:3px;margin-right:10%;">
+                    <i>*Techniques in italics have no result in this sequence (training set)</i>
                 </div>
             </div>
             <div class="pure-u-3-4" id="technique_selector">
@@ -150,26 +153,20 @@
     else
         which_set = 'val';
 
-    // Select the techniques that have results on a given subset
-    var which_tecs = [];
-    for(var i = 0; i < techniques.length; i++)
-        if (tech_props[techniques[i]].sets.indexOf(which_set)>=0)
-            which_tecs.push(techniques[i]);
 
     // Create buttons to select techniques
     var res_html = "";
-    for(var ii = 0; ii < which_tecs.length; ii++)
+    for(var ii = 0; ii < techniques.length; ii++)
     {
         // Do we show the button? Only if we have the results in that sequence
-        if (tech_props[which_tecs[ii]].sets.indexOf(which_set)>-1)
-        {
-            if (shown_techniques.indexOf(which_tecs[ii])>-1)
-                button_style = "background: #e7eae8;";
-            else
-                button_style = "background: transparent;";
+        if (tech_props[techniques[ii]].sets.indexOf(which_set)==-1)
+            button_style = "font-style: italic;";
+        else if (shown_techniques.indexOf(techniques[ii])>-1)
+            button_style = "background: #e7eae8;";
+        else
+            button_style = "background: transparent;";
 
-            res_html = res_html + '<div class="pure-u-1-6"><button id="button_'+which_tecs[ii]+'" onclick="change_technique(\''+which_tecs[ii]+'\')" class="btn btn-6 btn-6a" style="width: 95%;margin-top:3px; padding-left:0px; padding-right:0px;min-width:0px; text-align:center; font-family: \'Raleway\', sans-serif; font-weight: 300;font-size: 80%;'+button_style+'">'+tech_props[which_tecs[ii]].display_name+'</button></div>';
-        }
+        res_html = res_html + '<div class="pure-u-1-6"><button id="button_'+techniques[ii]+'" onclick="change_technique(\''+techniques[ii]+'\')" class="btn btn-6 btn-6a" style="width: 95%;margin-top:3px; padding-left:0px; padding-right:0px;min-width:0px; text-align:center; font-family: \'Raleway\', sans-serif; font-weight: 300;font-size: 80%;'+button_style+'">'+tech_props[techniques[ii]].display_name+'</button></div>';
     }
     document.getElementById("technique_selector").innerHTML = res_html;
 
@@ -227,34 +224,38 @@
     //  Function implementations
     // ###########################################################################################
 
-    function change_technique(tec) {
-
-        // Is it currently seelcted?
-        var idx = shown_techniques.indexOf(tec);
-        if (idx>-1)  // Yes
+    function change_technique(tec)
+    {
+        // Do we have result on this subset?
+        if (tech_props[tec].sets.indexOf(which_set)>-1)
         {
-            // Switch button state to unselected
-            document.getElementById("button_"+tec).style.background = "transparent";
+            // Is it currently selected?
+            var idx = shown_techniques.indexOf(tec);
+            if (idx>-1)  // Yes
+            {
+                // Switch button state to unselected
+                document.getElementById("button_"+tec).style.background = "transparent";
 
-            // Remove it from the list of selected
-            shown_techniques.splice(idx, 1);
+                // Remove it from the list of selected
+                shown_techniques.splice(idx, 1);
 
+            }
+            else  // Now
+            {
+                // Switch button state to selected
+                document.getElementById("button_"+tec).style.background = "#e7eae8";
+
+                // Add it to the list of selected
+                shown_techniques.push(tec);
+            }
+            
+
+            // Re-allocate all results
+            allocate_all();
+
+            // Change all images
+            update_all();
         }
-        else  // Now
-        {
-            // Switch button state to selected
-            document.getElementById("button_"+tec).style.background = "#e7eae8";
-
-            // Add it to the list of selected
-            shown_techniques.push(tec);
-        }
-        
-
-        // Re-allocate all results
-        allocate_all();
-
-        // Change all images
-        update_all();
     }
 
     function decrease() {
@@ -310,7 +311,9 @@
         var res_html = "";
         for(var ii = 0; ii < shown_techniques.length; ii++)
         {
-            res_html = res_html + '<div class="pure-u-1-3" style="position: relative;"><div style="padding:5px;text-align:center;"><img class="img" id="im_'+shown_techniques[ii]+'" alt="" style="width: 100%; outline: 2px solid black; outline-offset: -1px;"/ src="'+res_url+tech_props[shown_techniques[ii]].im_url+'/'+seq_id +'/'+pad(frame_num)+'.jpg"><div class="boxTitle" id="title_' + shown_techniques[ii] + '"></div></div></div>';
+        if (tech_props[techniques[ii]].sets.indexOf(which_set)>-1)
+           res_html = res_html + '<div class="pure-u-1-3" style="position: relative;"><div style="padding:5px;text-align:center;"><img class="img" id="im_'+shown_techniques[ii]+'" alt="" style="width: 100%; outline: 2px solid black; outline-offset: -1px;"/ src="'+res_url+tech_props[shown_techniques[ii]].im_url+'/'+seq_id +'/'+pad(frame_num)+'.jpg"><div class="boxTitle" id="title_' + shown_techniques[ii] + '"></div></div></div>';
+
         }
         document.getElementById("res_container").innerHTML = res_html;
     }

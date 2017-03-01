@@ -1,4 +1,4 @@
-global_eval_val = {
+var global_eval_val = {
 	"Tgt": "0.088",
 	"techniques": [
 		"mcg",
@@ -17,7 +17,9 @@ global_eval_val = {
 		"jmp",
 		"fcp",
 		"bvs",
-		"ofl"
+		"ofl",
+		"msk",
+		"osvos"
 	],
 	"mcg": {
 		"Jmean": "0.707",
@@ -171,5 +173,23 @@ global_eval_val = {
 		"Frecall": "0.704",
 		"Fdecay": "0.272",
 		"T": "0.217"
+	},
+	"msk": {
+		"Jmean": "0.797",
+		"Jrecall": "0.931",
+		"Jdecay": "0.089",
+		"Fmean": "0.754",
+		"Frecall": "0.871",
+		"Fdecay": "0.090",
+		"T": "0.211"
+	},
+	"osvos": {
+		"Jmean": "0.798",
+		"Jrecall": "0.936",
+		"Jdecay": "0.149",
+		"Fmean": "0.806",
+		"Frecall": "0.926",
+		"Fdecay": "0.150",
+		"T": "0.376"
 	}
 }

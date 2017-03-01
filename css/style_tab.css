@@ -44,7 +44,7 @@ table th, table td {
 
 .seq_header, .sequences, .semisup, .unsup, .preprop, .measures{
   text-transform: capitalize;
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: 300;
 }
 
@@ -53,12 +53,16 @@ table th, table td {
 }
 
 .elements {
-  font-weight:100;
-  color:#000000;
+  font-family: "Courier New", Courier, monospace;
+  font-size:80%;
+  text-align:right;
 }
 
 .highlight {
-  font-weight:500;
+  font-family: "Courier New", Courier, monospace;
+  font-size:80%;
+  text-align:right;
+  font-weight: bold;
 }
 
 .semisup {

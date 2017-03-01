@@ -59,11 +59,11 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['ofl','bvs','fcp','jmp','hvs','sea','tsp','fst',
+var techniques = ['osvos','msk','ofl','bvs','fcp','jmp','hvs','sea','tsp','fst',
                   'sal','key','msg','trc','cvos','nlc',
                   'sflab','sfmot','mcg'];
 
-var shown_techniques = ['ofl','bvs','fcp'];
+var shown_techniques = ['osvos','msk','ofl','bvs','fcp'];
 
 var tech_types = ["preprop", "unsup", "semisup"];
 
@@ -84,9 +84,38 @@ var tech_props = {"gt"     : {"type": "preprop", "sets": ['train','val','all'], 
                   "jmp"    : {"type": "semisup", "sets": ['train','val','all'], "display_name": "JMP"   , "im_url": "jmp"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "fcp"    : {"type": "semisup", "sets": ['train','val','all'], "display_name": "FCP"   , "im_url": "fcp"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "bvs"    : {"type": "semisup", "sets": ['train','val','all'], "display_name": "BVS"   , "im_url": "bvs"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "ofl"    : {"type": "semisup", "sets": ['train','val','all'], "display_name": "OFL"   , "im_url": "obj"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
+                  "ofl"    : {"type": "semisup", "sets": ['train','val','all'], "display_name": "OFL"   , "im_url": "obj"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "msk"    : {"type": "semisup", "sets": ['train','val','all'], "display_name": "MSK"   , "im_url": "msk"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "osvos"    : {"type": "semisup", "sets": ['val'], "display_name": "OSVOS"   , "im_url": "osvos"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
 
 var techn_papers ={
+    "osvos": {
+    "conference": "CVPR",
+    "authors": [
+      "S. Caelles*",
+      "K.K. Maninis*",
+      "J. Pont-Tuset",
+      "L. Leal-Taixé",
+      "D. Cremers", 
+      "L. Van Gool"
+    ],
+    "year": 2017,
+    "url": "http://www.vision.ee.ethz.ch/~cvlsegmentation/osvos",
+    "title": "One-Shot Video Object Segmentation"
+  },
+  "msk": {
+    "conference": "CVPR",
+    "authors": [
+      "A. Khoreva",
+      "F. Perazzi",
+      "R. Benenson",
+      "B. Schiele",
+      "A. Sorkine-Hornung"
+    ],
+    "year": 2017,
+    "url": "https://graphics.ethz.ch/~perazzif/masktrack/index.html",
+    "title": "Learning Video Object Segmentation from Static Images"
+  },
   "ofl": {
     "conference": "CVPR",
     "authors": [

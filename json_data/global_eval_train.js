@@ -1,4 +1,4 @@
-global_eval_train = {
+var global_eval_train = {
 	"Tgt": "0.098",
 	"techniques": [
 		"mcg",
@@ -17,7 +17,8 @@ global_eval_train = {
 		"jmp",
 		"fcp",
 		"bvs",
-		"ofl"
+		"ofl",
+		"msk"
 	],
 	"mcg": {
 		"Jmean": "0.736",
@@ -171,5 +172,23 @@ global_eval_train = {
 		"Frecall": "0.831",
 		"Fdecay": "0.219",
 		"T": "0.224"
+	},
+	"msk": {
+		"Jmean": "0.807",
+		"Jrecall": "0.939",
+		"Jdecay": "0.088",
+		"Fmean": "0.761",
+		"Frecall": "0.889",
+		"Fdecay": "0.098",
+		"T": "0.166"
+	},
+	"OSVOS": {
+		"Jmean": "0.798",
+		"Jrecall": "0.936",
+		"Jdecay": "0.149",
+		"Fmean": "0.806",
+		"Frecall": "0.926",
+		"Fdecay": "0.150",
+		"T": "0.376"
 	}
 }
