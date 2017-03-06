@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,300' rel='stylesheet' type='text/css'>
+    <meta name="description" content="DAVIS, Densely Annotated VIdeo Segmentation">
+
+    <title>DAVIS: Densely Annotated VIdeo Segmentation</title>
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="../css/layouts/side-menu.css">
+    <!--<![endif]-->
+    
+    <!--Includes-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Buttons -->
+    <link rel="stylesheet" type="text/css" href="../css/buttons/component.css" />
+
+    <style type="text/css">
+    .round{
+      width:100%;
+      padding-top:100%;
+      overflow:hidden;
+      position:relative;
+      border-radius:50%;
+    }
+     
+    img.roundimg{
+      position:absolute;
+      top:51%;
+      left:51%;
+      min-width:102%;
+      height:102%;
+      transform:translate(-51%,-51%);
+      transition: all 0.5s ease;
+    }
+
+    img.roundimg:hover{
+      min-width:105%;
+      height:105%;
+    }
+
+    h3{
+        font-weight: 300;
+    }
+
+    .footnote{
+        font-size: 70%;
+        line-height: 130%;
+    }
+
+    </style>
+</head>
+
+
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+        <span class="pure-menu-heading" style="border-bottom: 1px solid;">DAVIS</span>
+            <ul class="pure-menu-list">
+                <li><a href="../index.html" class="pure-menu-link">Home</a></li>
+                <li><a href="../soa_compare.html" class="pure-menu-link">Benchmark</a></li>
+                <li><a href="../browse.html" class="pure-menu-link">Explore</a></li>
+                <li style="border-bottom: 1px solid;"><a href="../code.html" class="pure-menu-link">Download</a></li>
+                <li><a class="pure-menu-link pure-menu-selected" style="color: red">Challenge 2017</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>DAVIS Challenge on Video Object Segmentation 2017</h1>
+            <h2>Workshop in conjunction with CVPR 2017, Honolulu, Hawaii</h2>
+        </div>
+
+                <!-- Buttons  -->
+        <div class="pure-g" style="margin-left: 5%;margin-right: 5%;">
+            <div class="pure-u-1-3" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">  
+                <a href="index.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;">Workshop</button></a>
+            </div>
+            <div class="pure-u-1-3" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;background:#e7eae8">Terms and Conditions</button>
+            </div>
+            <div class="pure-u-1-3" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">  
+                <a href="leaderboard.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;">Leaderboard</button></a>
+            </div>
+        </div>
+
+
+        <div class="content" style="text-align: left; padding-top: 40px;font-size:95%">
+
+        <h3 style="margin-top: 0px;margin-bottom: 5px">Dates and Phases</h3>
+        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Dev 2017</span>: 1st April 2017 - Open end.<br> 
+        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Challenge 2017</span>: 19th June 2017 - 30th June 2017. <span style="color: red; margin-bottom: 50px">(Save the dates!)</span><br> 
+
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Datasets</h3>
+        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Train 2017</span>: 90 sequences, the 50 original DAVIS 2016 sequences (reannotated with multiple objects) plus 40 new sequences. The sequences and ground truth will be publicly available 1st of April.<br>
+        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Dev 2017</span>: 30 new sequences, available 1st of April. Ground truth not publicly available, unlimited number of submissions.<br> 
+        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Challenge 2017</span>: 30 new sequences. Ground truth not publicly available, limited to 5 submissions in total.<br> 
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Submission</h3>
+        Submissions to all phases will be done through the <a href="">Codalab site of the challenge</a>. <span style="color: red; margin-bottom: 50px">(Available 1st of April)</span><br>Please register to the site and refer to the instructions on how to submit your results.
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Prizes </h3>
+        The top entries will recieve prizes in form of hardware. <span style="color: red; margin-bottom: 50px">(More info coming soon)</span><br>
+<!--         - An <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">iPad</span>, laser-engraved with the team name and challenge position.<br>
+        - An <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">NVIDIA Titan X GPU</span>.<br> -->
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Evaluation</h3>
+        - The per-object measures are those described in the original DAVIS CVPR 2016 paper: Region Jaccard (J) and Boundary F measure (F).<br>
+        - The overall measures will be computed as a combination of J and F averaged over all objects. <span style="color: red; margin-bottom: 50px">(Precise info coming soon)</span>
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Other considerations</h3>
+        - The new annotations in this dataset belong to the organizers of the challenge and are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 License</a>.<br>
+<!--         - The organizers Disqualify cheating<br>
+        - These prizes won't be given to anyone related to the organizers. -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="js/ui.js"></script>
+
+
+</body>
+
+</html>
+
+
