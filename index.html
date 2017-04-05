@@ -113,12 +113,12 @@
         </div>
 
         <div class="pure-g" style="margin-left:20px; margin-right:10px;margin-top:20px;">
-            <div class="pure-u-1-6"><img src="images/teaser/kite-001.jpg" alt="" style="width:95%"></div>
-            <div class="pure-u-1-6"><img src="images/teaser/agilitydog.jpg" alt="" style="width:95%"></div>
-            <div class="pure-u-1-6"><img src="images/teaser/train-001.jpg" alt="" style="width:95%"></div>
-            <div class="pure-u-1-6"><img src="images/teaser/motorbike-001.jpg" alt="" style="width:95%"></div>
-            <div class="pure-u-1-6"><img src="images/teaser/goat.jpg" alt="" style="width:95%"></div>
-            <div class="pure-u-1-6"><img src="images/teaser/bmx-002.jpg" alt="" style="width:95%"></div>
+            <div class="pure-u-1-6"><img src="images/teaser/2017/scooter-board.jpg" alt="" style="width:95%"></div>
+            <div class="pure-u-1-6"><img src="images/teaser/2017/boxing-fisheye.jpg" alt="" style="width:95%"></div>
+            <div class="pure-u-1-6"><img src="images/teaser/2017/dogs-scale.jpg" alt="" style="width:95%"></div>
+            <div class="pure-u-1-6"><img src="images/teaser/2017/drone.jpg" alt="" style="width:95%"></div>
+            <div class="pure-u-1-6"><img src="images/teaser/2017/planes-water.jpg" alt="" style="width:95%"></div>
+            <div class="pure-u-1-6"><img src="images/teaser/2017/bmx-trees.jpg" alt="" style="width:95%"></div>
             </div>
         <div class="content">
 
@@ -126,6 +126,37 @@
             <h2 class="content-subhead" style="margin-top:33px;margin-bottom:12px">Publications</h2>
 
             <div class="pure-g">
+
+                <div class="pure-u-1-6">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:100%;" src="images/teaser/montage-2017.jpg" alt="arXiv">
+                </div>
+                <div class="pure-u-5-6">
+                <p style="margin-left:0.6cm;line-height: 1.4em;margin-top:0em;">
+                    The 2017 DAVIS Challenge on Video Object Segmentation<br>
+                    <a href="http://jponttuset.github.io" target="_blank">J. Pont-Tuset</a>,
+                    <a href="http://graphics.ethz.ch/~perazzif" target="_blank"/>F. Perazzi</a>,
+                    <a href="https://ch.linkedin.com/in/sergicaelles" target="_blank"/>S. Caelles</a>,
+                    <a href="https://biomedicalcomputervision.uniandes.edu.co/" target="_blank"/>P. Arbeláez</a>,
+                    <a href="http://www.ahornung.net" target="_blank">A. Sorkine-Hornung</a>, and
+                    <a href="https://www.vision.ee.ethz.ch/en/members/get_member.cgi?id=1" target="_blank">L. Van Gool</a>
+                    <br>
+                                       <i>arXiv:1704.00675, 2017</i><br>
+                    [<a href="https://arxiv.org/abs/1704.00675" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('Pont-Tuset_arXiv_2017')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+
+            <div id="bib_Pont-Tuset_arXiv_2017" class="bibtex noshow"><pre>@article{Pont-Tuset_arXiv_2017,
+  author = {Jordi Pont-Tuset and Federico Perazzi and Sergi Caelles and Pablo Arbel\'aez and Alexander Sorkine-Hornung and Luc {Van Gool}},
+  title = {The 2017 DAVIS Challenge on Video Object Segmentation},
+  journal = {arXiv:1704.00675},
+  year = {2017}
+}</pre></div>
+
+
+
+
+<div class="pure-g">
                 <div class="pure-u-1-6">
                     <img class="pure-img-responsive" style="margin-top:5px; width:100%;" src="images/teaser/montage.jpg" alt="CVPR">
                 </div>
@@ -144,9 +175,9 @@
                 </p>
                 </div>
             </div>
-            <div id="bib_Perazzi2016" class="bibtex noshow"><pre>@inproceedings{Perazzi2016,<br/>  author = {F. Perazzi and J. Pont-Tuset and B. McWilliams and L. Van Gool and M. Gross and A. Sorkine-Hornung},<br/>  title = {A Benchmark Dataset and Evaluation Methodology for Video Object Segmentation},<br/>  booktitle = {Computer Vision and Pattern Recognition},<br/>  year = {2016}<br/>}</pre></div>
+            <div id="bib_Perazzi2016" class="bibtex noshow"><pre>@inproceedings{Perazzi2016,<br/>  author = {F. Perazzi and J. Pont-Tuset and B. McWilliams and L. {Van Gool} and M. Gross and A. Sorkine-Hornung},<br/>  title = {A Benchmark Dataset and Evaluation Methodology for Video Object Segmentation},<br/>  booktitle = {Computer Vision and Pattern Recognition},<br/>  year = {2016}<br/>}</pre></div>
 
-            <i>Please cite this paper in your publications if it helps your research.</i>
+            <i>Please cite both papers in your publications if DAVIS helps your research.</i>
 
 <!--             <h2 class="content-subhead" style="margin-top:33px">Web Content</h2>
             <div class="pure-g">
@@ -160,14 +191,14 @@
 
         <h2 class="content-subhead" style="margin-top:33px;margin-bottom:0px">Abstract</h2>
         <p style="font-size:90%;margin-top:10px">
-            Over the years, datasets and benchmarks have proven their fundamental importance in computer vision research, enabling targeted progress and objective comparisons in many fields. At the same time, legacy datasets may impend the evolution of a field due to saturated algorithm performance and the lack of contemporary, high quality data. In this work we present a new benchmark dataset and evaluation methodology for the area of video object segmentation. The dataset, named DAVIS (Densely Annotated VIdeo Segmentation), consists of fifty high quality, Full HD video sequences, spanning multiple occurrences of common video object segmentation challenges such as occlusions, motion-blur and appearance changes. Each video is accompanied by densely annotated, pixel-accurate and per-frame ground truth segmentation. In addition, we provide a comprehensive analysis of several state-of-the-art segmentation approaches using three complementary metrics that measure the spatial extent of the segmentation, the accuracy of the silhouette contours and the temporal coherence. The results uncover strengths and weaknesses of current approaches, opening up promising directions for future works.
+            We present the 2017 DAVIS Challenge, a public competition specifically designed for the task of video object segmentation. Following the footsteps of other successful initiatives, such as ILSVRC and PASCAL VOC, which established the avenue of research in the fields of scene classification and semantic segmentation, the DAVIS Challenge comprises a dataset, an evaluation methodology, and a public competition with a dedicated workshop co-located with CVPR 2017. The DAVIS Challenge follows up on the recent publication of DAVIS (Densely-Annotated VIdeo Segmentation), which has fostered the development of several novel state-of-the-art video object segmentation techniques. In this paper we describe the scope of the benchmark, highlight the main characteristics of the dataset and define the evaluation metrics of the competition.
         </p>
 
-        <h2 class="content-subhead" style="margin-top:33px">Preview of the Annotations</h2>
+        <h2 class="content-subhead" style="margin-top:33px">Preview of the Annotations (Train and Val 2017)</h2>
          <div class="pure-g">
                 <div class="pure-u-1-1">
-                    <video style="width:100%;height:auto" muted loop controls poster="images/teaser/horsejump-002.jpg">
-                        <source src="images/davis.mp4" type="video/mp4">
+                    <video style="width:100%;height:auto" muted loop controls poster="images/teaser/2017/classic-car.jpg">
+                        <source src="images/DAVIS-2017-TrainVal.mp4" type="video/mp4">
                     </video>
           <!-- <embed src="" wmode="transparent" type="application/x-shockwave-flash" width="100%" height="100%" allowfullscreen="true" title="DAVIS"> -->
                 </div>
