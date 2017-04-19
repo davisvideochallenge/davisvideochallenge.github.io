@@ -309,7 +309,7 @@
             // Show one line per measure
             var meas = ["Jmean", "Jrecall", "Jdecay", "Fmean", "Frecall", "Fdecay", "T"];
             var meas_up = [1, 1, 0, 1, 1, 0, 0];
-            var meas_show = ["J Mean &uarr;", "J Recall &uarr;", "J Decay &darr;", "F Mean &uarr;", "F Recall &uarr;", "F Decay &darr;", "T (GT "+curr_eval.Tgt+") &darr;"];
+            var meas_show = ["J Mean &uarr;", "J Recall &uarr;", "J Decay &darr;", "F Mean &uarr;", "F Recall &uarr;", "F Decay &darr;", "T (GT "+(100*curr_eval.Tgt).toFixed(1)+") &darr;"];
             for(var i = 0; i < meas.length; i++)
             {
                 // Get the maximum at each row
