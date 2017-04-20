@@ -127,13 +127,13 @@
             </div>
             </div>
             <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">  
-                <button id="subset_val" onclick="switch_to_subset('val')" class="btn btn-6 btn-6a" style="width: 95%;margin-top:3px;">Val 2016</button>
+                <button id="subset_val_2016" onclick="switch_to_subset('val_2016')" class="btn btn-6 btn-6a" style="width: 95%;margin-top:3px;">Val 2016</button>
             </div>
             <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
-                <button id="subset_train" onclick="switch_to_subset('train')" class="btn btn-6 btn-6a" style="width: 95%;margin-top:3px;">Train 2016</button>
+                <button id="subset_train_2016" onclick="switch_to_subset('train_2016')" class="btn btn-6 btn-6a" style="width: 95%;margin-top:3px;">Train 2016</button>
             </div>
             <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">  
-                <button  id="subset_all" onclick="switch_to_subset('all')" class="btn btn-6 btn-6a" style="width: 95%;margin-top:3px;">TrainVal 2016</button>
+                <button  id="subset_trainval_2016" onclick="switch_to_subset('trainval_2016')" class="btn btn-6 btn-6a" style="width: 95%;margin-top:3px;">TrainVal 2016</button>
             </div>
         </div>
 
@@ -167,7 +167,7 @@
           });
 
 
-          var curr_subset = 'train';
+          var curr_subset = 'train_2016';
 
           function switch_to_subset(new_subset)
           {
@@ -192,7 +192,7 @@
 
 
           // Call the switch function that activates everything
-          switch_to_subset('all')
+          switch_to_subset('trainval_2016')
       
       </script>
   </div>

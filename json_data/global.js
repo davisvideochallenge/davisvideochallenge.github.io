@@ -1,12 +1,12 @@
 var im_url  = 'https://graphics.ethz.ch/Downloads/Data/Davis/files/sequences/';
-var res_url = 'https://graphics.ethz.ch/Downloads/Data/Davis/files/results/';
+var res_url = 'https://data.vision.ee.ethz.ch/jpont/davis/overlays/';
 // var im_url  = 'http://localhost/~jpont/davis/images/db/';
 // var res_url = 'http://localhost/~jpont/davis/images/results-overlay/';
 
 var all_seq    = ["bear", "car-shadow", "elephant", "lucia", "rollerblade", "blackswan", "car-turn", "flamingo", "mallard-fly","scooter-black", "bmx-bumps", "cows", "goat", "mallard-water", "scooter-gray", "bmx-trees", "dance-jump", "hike", "motocross-bumps", "soapbox", "boat", "dance-twirl", "hockey", "motocross-jump", "soccerball", "breakdance", "dog", "horsejump-high", "motorbike", "stroller", "breakdance-flare", "dog-agility", "horsejump-low", "paragliding", "surf", "bus", "drift-chicane", "kite-surf", "paragliding-launch", "swing", "camel", "drift-straight", "kite-walk", "parkour", "tennis", "car-roundabout", "drift-turn", "libby", "rhino", "train"];
-var seq_lists = {'train': ['bear', 'bmx-bumps', 'boat', 'breakdance-flare', 'bus', 'car-turn', 'dance-jump', 'dog-agility', 'drift-turn', 'elephant', 'flamingo', 'hike', 'hockey', 'horsejump-low', 'kite-walk', 'lucia', 'mallard-fly', 'mallard-water', 'motocross-bumps', 'motorbike', 'paragliding', 'rhino', 'rollerblade', 'scooter-gray', 'soccerball', 'stroller', 'surf', 'swing', 'tennis', 'train'],
-                 'val'  : ['blackswan', 'bmx-trees', 'breakdance', 'camel', 'car-roundabout', 'car-shadow', 'cows', 'dance-twirl', 'dog', 'drift-chicane', 'drift-straight', 'goat', 'horsejump-high', 'kite-surf', 'libby', 'motocross-jump', 'paragliding-launch', 'parkour', 'scooter-black', 'soapbox'],
-                 'all'  : all_seq.sort()};
+var seq_lists = {'train_2016'     : ['bear', 'bmx-bumps', 'boat', 'breakdance-flare', 'bus', 'car-turn', 'dance-jump', 'dog-agility', 'drift-turn', 'elephant', 'flamingo', 'hike', 'hockey', 'horsejump-low', 'kite-walk', 'lucia', 'mallard-fly', 'mallard-water', 'motocross-bumps', 'motorbike', 'paragliding', 'rhino', 'rollerblade', 'scooter-gray', 'soccerball', 'stroller', 'surf', 'swing', 'tennis', 'train'],
+                 'val_2016'       : ['blackswan', 'bmx-trees', 'breakdance', 'camel', 'car-roundabout', 'car-shadow', 'cows', 'dance-twirl', 'dog', 'drift-chicane', 'drift-straight', 'goat', 'horsejump-high', 'kite-surf', 'libby', 'motocross-jump', 'paragliding-launch', 'parkour', 'scooter-black', 'soapbox'],
+                 'trainval_2016'  : all_seq.sort()};
 
 var seq_nframes = {"bear"                 : 82,
                    "blackswan"            : 50,
@@ -59,34 +59,36 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['osvos','msk','ofl','bvs','fcp','jmp','hvs','sea','tsp','fst',
+var techniques = ['osvos','msk','vpn','ofl','bvs','fcp','jmp','hvs','sea','tsp','fst',
                   'sal','key','msg','trc','cvos','nlc',
                   'sflab','sfmot','mcg'];
 
-var shown_techniques = ['osvos','msk','ofl'];
+var shown_techniques = ['osvos','msk','vpn'];
 
 var tech_types = ["preprop", "unsup", "semisup"];
 
-var tech_props = {"gt"     : {"type": "preprop", "sets": ['train','val','all'], "display_name": "GT"    , "im_url": "gt"    , "col_R" : 255, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "mcg"    : {"type": "preprop", "sets": ['train','val','all'], "display_name": "MCG"   , "im_url": "mcg"   , "col_R" :   0, "col_G" :   0, "col_B" : 255, "currmask": undefined, "canv_resized": false},
-                  "sflab"  : {"type": "preprop", "sets": ['train','val','all'], "display_name": "SFL"   , "im_url": "sf-lab", "col_R" :   0, "col_G" :   0, "col_B" : 255, "currmask": undefined, "canv_resized": false},
-                  "sfmot"  : {"type": "preprop", "sets": ['train','val','all'], "display_name": "SFM"   , "im_url": "sf-mot", "col_R" :   0, "col_G" :   0, "col_B" : 255, "currmask": undefined, "canv_resized": false},
-                  "nlc"    : {"type": "unsup"  , "sets": ['train','val','all'], "display_name": "NLC"   , "im_url": "nlc"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "cvos"   : {"type": "unsup"  , "sets": ['train','val','all'], "display_name": "CVOS"  , "im_url": "cvos"  , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "trc"    : {"type": "unsup"  , "sets": ['train','val','all'], "display_name": "TRC"   , "im_url": "trc"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "msg"    : {"type": "unsup"  , "sets": ['train','val','all'], "display_name": "MSG"   , "im_url": "msg"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "key"    : {"type": "unsup"  , "sets": ['train','val','all'], "display_name": "KEY"   , "im_url": "key"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "sal"    : {"type": "unsup"  , "sets": ['train','val','all'], "display_name": "SAL"   , "im_url": "sal"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "fst"    : {"type": "unsup"  , "sets": ['train','val','all'], "display_name": "FST"   , "im_url": "fst"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "tsp"    : {"type": "semisup", "sets": ['train','val','all'], "display_name": "TSP"   , "im_url": "tsp"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "sea"    : {"type": "semisup", "sets": ['train','val','all'], "display_name": "SEA"   , "im_url": "sea"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "hvs"    : {"type": "semisup", "sets": ['train','val','all'], "display_name": "HVS"   , "im_url": "hvs"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "jmp"    : {"type": "semisup", "sets": ['train','val','all'], "display_name": "JMP"   , "im_url": "jmp"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "fcp"    : {"type": "semisup", "sets": ['train','val','all'], "display_name": "FCP"   , "im_url": "fcp"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "bvs"    : {"type": "semisup", "sets": ['train','val','all'], "display_name": "BVS"   , "im_url": "bvs"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "ofl"    : {"type": "semisup", "sets": ['train','val','all'], "display_name": "OFL"   , "im_url": "obj"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "msk"    : {"type": "semisup", "sets": ['train','val','all'], "display_name": "MSK"   , "im_url": "msk"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "osvos"    : {"type": "semisup", "sets": ['val'], "display_name": "OSVOS"   , "im_url": "osvos"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
+var tech_props = {"gt"     : {"type": "preprop", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "GT"    , "im_url": "gt"    , "col_R" : 255, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "mcg"    : {"type": "preprop", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "MCG"   , "im_url": "mcg"   , "col_R" :   0, "col_G" :   0, "col_B" : 255, "currmask": undefined, "canv_resized": false},
+                  "sflab"  : {"type": "preprop", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "SFL"   , "im_url": "sf-lab", "col_R" :   0, "col_G" :   0, "col_B" : 255, "currmask": undefined, "canv_resized": false},
+                  "sfmot"  : {"type": "preprop", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "SFM"   , "im_url": "sf-mot", "col_R" :   0, "col_G" :   0, "col_B" : 255, "currmask": undefined, "canv_resized": false},
+                  "nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "NLC"   , "im_url": "nlc"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "cvos"   : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "CVOS"  , "im_url": "cvos"  , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "trc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "TRC"   , "im_url": "trc"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "msg"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "MSG"   , "im_url": "msg"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "key"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "KEY"   , "im_url": "key"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "sal"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "SAL"   , "im_url": "sal"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "fst"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "FST"   , "im_url": "fst"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "tsp"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "TSP"   , "im_url": "tsp"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "sea"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "SEA"   , "im_url": "sea"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "hvs"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "HVS"   , "im_url": "hvs"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "jmp"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "JMP"   , "im_url": "jmp"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "fcp"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "FCP"   , "im_url": "fcp"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "bvs"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "BVS"   , "im_url": "bvs"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "ofl"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "OFL"   , "im_url": "obj"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "msk"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "MSK"   , "im_url": "msk"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "osvos"  : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OSVOS" , "im_url": "osvos" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "vpn"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "VPN"   , "im_url": "vpn"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
+
 
 var techn_papers ={
     "osvos": {
@@ -115,6 +117,17 @@ var techn_papers ={
     "year": 2017,
     "url": "https://graphics.ethz.ch/~perazzif/masktrack/index.html",
     "title": "Learning Video Object Segmentation from Static Images"
+  },
+  "vpn": {
+    "conference": "CVPR",
+    "authors": [
+      "V. Jampani",
+      "R. Gadde",
+      "P. V. Gehler"
+    ],
+    "year": 2017,
+    "url": "https://varunjampani.github.io/vpn/",
+    "title": "Video Propagation Networks"
   },
   "ofl": {
     "conference": "CVPR",
