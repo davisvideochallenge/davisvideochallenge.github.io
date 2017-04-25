@@ -59,9 +59,9 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['osvos','msk','vpn','ofl','bvs','fcp','jmp','hvs','sea','tsp','fst',
-                  'sal','key','msg','trc','cvos','nlc',
-                  'sflab','sfmot','mcg'];
+var techniques = ['osvos','msk','vpn','ofl','bvs','fcp','jmp','cut','hvs','sea','tsp',
+                  'fst','nlc','msg','cvos','trc','sal','key',
+                  'mcg','sfmot','sflab'];
 
 var shown_techniques = ['osvos','msk','vpn'];
 
@@ -82,6 +82,7 @@ var tech_props = {"gt"     : {"type": "preprop", "sets": ['train_2016','val_2016
                   "sea"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "SEA"   , "im_url": "sea"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "hvs"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "HVS"   , "im_url": "hvs"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "jmp"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "JMP"   , "im_url": "jmp"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "cut"    : {"type": "semisup", "sets": ['val_2016',                            ], "display_name": "CUT"   , "im_url": "cut"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "fcp"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "FCP"   , "im_url": "fcp"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "bvs"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "BVS"   , "im_url": "bvs"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "ofl"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "OFL"   , "im_url": "obj"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
@@ -297,6 +298,17 @@ var techn_papers ={
     "year": 2015,
     "url": "http://irc.cs.sdu.edu.cn/JumpCut/",
     "title": "JumpCut: Non-Successive Mask Transfer and Interpolation for Video Cutout"
+  },
+  "cut": {
+    "conference": "ICCV",
+    "authors": [
+      "M. Keuper",
+      "B. Andres",
+      "T. Brox"
+    ],
+    "year": 2015,
+    "url": "https://lmb.informatik.uni-freiburg.de/Publications/2015/KB15b/",
+    "title": "Motion Trajectory Segmentation via Minimum Cost Multicuts"
   },
   "hvs": {
     "conference": "CVPR",

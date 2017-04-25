@@ -8,6 +8,7 @@ var global_eval_val_2016 = {
 		"bvs",
 		"fcp",
 		"jmp",
+		"cut",
 		"hvs",
 		"sea",
 		"tsp",
@@ -84,6 +85,15 @@ var global_eval_val_2016 = {
 		"Frecall": "0.542",
 		"Fdecay": "0.384",
 		"T": "0.159"
+	},
+	"cut": {
+		"Jmean": "0.552",
+		"Jrecall": "0.575",
+		"Jdecay": "0.022",
+		"Fmean": "0.552",
+		"Frecall": "0.610",
+		"Fdecay": "0.034",
+		"T": "0.277"
 	},
 	"hvs": {
 		"Jmean": "0.546",
