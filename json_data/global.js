@@ -60,7 +60,7 @@ var seq_nframes = {"bear"                 : 82,
                    "train"                : 80};
 
 var techniques = ['osvos','msk','vpn','ofl','bvs','fcp','jmp','hvs','sea','tsp',
-                  'fst','cut','nlc','msg','cvos','trc','sal','key',
+                  'fst','cut','nlc','msg','key','cvos','trc','sal',
                   'mcg','sfmot','sflab'];
 
 var shown_techniques = ['osvos','msk','vpn'];
