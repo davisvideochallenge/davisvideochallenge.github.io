@@ -42,7 +42,7 @@ table th, table td {
 }
 
 
-.seq_header, .sequences, .semisup, .unsup, .preprop, .measures{
+.seq_header, .sequences, .semisup, .unsup, .preprop, .measures, .over, .under{
   text-transform: capitalize;
   font-size: 0.8em;
   font-weight: 300;
@@ -67,6 +67,16 @@ table th, table td {
 
 .semisup {
   color: #ef1111;
+  background: #a1a1a1;
+}
+
+.over {
+  color: #efefef;
+  background: #a1a1a1;
+}
+
+.under {
+  color: #1111ef;
   background: #a1a1a1;
 }
 
