@@ -59,19 +59,14 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['osvos','msk','vpn','ofl','bvs','fcp','jmp','hvs','sea','tsp',
-                  'fst','cut','nlc','msg','key','cvos','trc','sal',
-                  'mcg','sfmot','sflab'];
+var techniques = ['onavos','osvos','msk','vpn','ofl','bvs','fcp','jmp','hvs','sea','tsp',
+                  'fst','cut','nlc','msg','key','cvos','trc','sal'];
 
 var shown_techniques = ['osvos','msk','vpn'];
 
-var tech_types = ["preprop", "unsup", "semisup"];
+var tech_types = ["unsup", "semisup"];
 
-var tech_props = {"gt"     : {"type": "preprop", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "GT"    , "im_url": "gt"    , "col_R" : 255, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "mcg"    : {"type": "preprop", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "MCG"   , "im_url": "mcg"   , "col_R" :   0, "col_G" :   0, "col_B" : 255, "currmask": undefined, "canv_resized": false},
-                  "sflab"  : {"type": "preprop", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "SFL"   , "im_url": "sf-lab", "col_R" :   0, "col_G" :   0, "col_B" : 255, "currmask": undefined, "canv_resized": false},
-                  "sfmot"  : {"type": "preprop", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "SFM"   , "im_url": "sf-mot", "col_R" :   0, "col_G" :   0, "col_B" : 255, "currmask": undefined, "canv_resized": false},
-                  "nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "NLC"   , "im_url": "nlc"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "NLC"   , "im_url": "nlc"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "cut"    : {"type": "unsup"  , "sets": ['val_2016',                            ], "display_name": "CUT"   , "im_url": "cut"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "cvos"   : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "CVOS"  , "im_url": "cvos"  , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "trc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "TRC"   , "im_url": "trc"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
@@ -88,10 +83,21 @@ var tech_props = {"gt"     : {"type": "preprop", "sets": ['train_2016','val_2016
                   "ofl"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "OFL"   , "im_url": "obj"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "msk"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "MSK"   , "im_url": "msk"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "osvos"  : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OSVOS" , "im_url": "osvos" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "onavos" : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OnAVOS", "im_url": "onavos", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "vpn"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "VPN"   , "im_url": "vpn"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
 
 
 var techn_papers ={
+    "onavos": {
+    "conference": "BMVC",
+    "authors": [
+      "P. Voigtlaender",
+      "B. Leibe"
+    ],
+    "year": 2017,
+    "url": "https://www.vision.rwth-aachen.de/publication/00158/",
+    "title": "Online Adaptation of Convolutional Neural Networks for Video Object Segmentation"
+  },
     "osvos": {
     "conference": "CVPR",
     "authors": [

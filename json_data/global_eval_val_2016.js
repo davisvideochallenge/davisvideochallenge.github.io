@@ -1,6 +1,7 @@
 var global_eval_val_2016 = {
 	"Tgt": "0.088",
 	"techniques": [
+		"onavos",
 		"osvos",
 		"msk",
 		"vpn",
@@ -23,6 +24,15 @@ var global_eval_val_2016 = {
 		"sflab",
 		"sfmot"
 	],
+	"onavos": {
+		"Jmean": "0.861",
+		"Jrecall": "0.961",
+		"Jdecay": "0.052",
+		"Fmean": "0.849",
+		"Frecall": "0.897",
+		"Fdecay": "0.058",
+		"T": "0.190"
+	},
 	"osvos": {
 		"Jmean": "0.798",
 		"Jrecall": "0.936",
