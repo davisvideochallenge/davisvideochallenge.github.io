@@ -62,7 +62,7 @@ var seq_nframes = {"bear"                 : 82,
 var techniques = ['onavos','osvos','msk','vpn','ofl','bvs','fcp','jmp','hvs','sea','tsp',
                   'fst','cut','nlc','msg','key','cvos','trc','sal'];
 
-var shown_techniques = ['osvos','msk','vpn'];
+var shown_techniques = ['onavos','osvos','msk'];
 
 var tech_types = ["unsup", "semisup"];
 
