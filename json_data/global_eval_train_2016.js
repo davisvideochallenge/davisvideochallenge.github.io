@@ -4,6 +4,7 @@ var global_eval_train_2016 = {
 		"msk",
 		"vpn",
 		"ofl",
+		"lmp",
 		"bvs",
 		"fcp",
 		"jmp",
@@ -47,6 +48,15 @@ var global_eval_train_2016 = {
 		"Frecall": "0.831",
 		"Fdecay": "0.219",
 		"T": "0.225"
+	},
+	"lmp": {
+		"Jmean": "0.694",
+		"Jrecall": "0.815",
+		"Jdecay": "0.085",
+		"Fmean": "0.665",
+		"Frecall": "0.777",
+		"Fdecay": "0.095",
+		"T": "0.757"
 	},
 	"bvs": {
 		"Jmean": "0.709",

@@ -4,6 +4,7 @@ var global_eval_trainval_2016 = {
 		"msk",
 		"vpn",
 		"ofl",
+		"lmp",
 		"bvs",
 		"fcp",
 		"jmp",
@@ -21,15 +22,6 @@ var global_eval_trainval_2016 = {
 		"sflab",
 		"sfmot"
 	],
-	"osvos": {
-		"Jmean": "0.798",
-		"Jrecall": "0.936",
-		"Jdecay": "0.149",
-		"Fmean": "0.806",
-		"Frecall": "0.926",
-		"Fdecay": "0.150",
-		"T": "0.378"
-	},
 	"msk": {
 		"Jmean": "0.803",
 		"Jrecall": "0.935",
@@ -56,6 +48,15 @@ var global_eval_trainval_2016 = {
 		"Frecall": "0.780",
 		"Fdecay": "0.240",
 		"T": "0.224"
+	},
+	"lmp": {
+		"Jmean": "0.697",
+		"Jrecall": "0.829",
+		"Jdecay": "0.056",
+		"Fmean": "0.663",
+		"Frecall": "0.783",
+		"Fdecay": "0.067",
+		"T": "0.688"
 	},
 	"bvs": {
 		"Jmean": "0.665",

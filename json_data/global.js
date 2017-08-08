@@ -60,13 +60,14 @@ var seq_nframes = {"bear"                 : 82,
                    "train"                : 80};
 
 var techniques = ['onavos','osvos','msk','vpn','ofl','bvs','fcp','jmp','hvs','sea','tsp',
-                  'fst','cut','nlc','msg','key','cvos','trc','sal'];
+                  'lmp','fst','cut','nlc','msg','key','cvos','trc','sal'];
 
 var shown_techniques = ['onavos','osvos','msk'];
 
 var tech_types = ["unsup", "semisup"];
 
 var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "NLC"   , "im_url": "nlc"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "lmp"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "LMP"   , "im_url": "lmp"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "cut"    : {"type": "unsup"  , "sets": ['val_2016',                            ], "display_name": "CUT"   , "im_url": "cut"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "cvos"   : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "CVOS"  , "im_url": "cvos"  , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "trc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "TRC"   , "im_url": "trc"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
@@ -88,6 +89,17 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
 
 
 var techn_papers ={
+      "lmp": {
+    "conference": "CVPR",
+    "authors": [
+      "P. Tokmakov",
+      "K. Alahari",
+      "C. Schmid"
+    ],
+    "year": 2017,
+    "url": "https://hal.univ-lille3.fr/hal-01427480v2",
+    "title": "Learning Motion Patterns in Videos"
+  },
     "onavos": {
     "conference": "BMVC",
     "authors": [
