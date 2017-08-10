@@ -1,19 +1,20 @@
 var global_eval_val_2016 = {
 	"Tgt": "0.088",
 	"techniques": [
-		"lmp",
 		"onavos",
 		"osvos",
+		"cut",
 		"msk",
 		"vpn",
 		"ofl",
+		"lmp",
 		"bvs",
 		"fcp",
 		"jmp",
-		"cut",
 		"hvs",
 		"sea",
 		"tsp",
+		"fseg",
 		"nlc",
 		"cvos",
 		"trc",
@@ -25,15 +26,6 @@ var global_eval_val_2016 = {
 		"sflab",
 		"sfmot"
 	],
-	"lmp": {
-		"Jmean": "0.700",
-		"Jrecall": "0.850",
-		"Jdecay": "0.013",
-		"Fmean": "0.659",
-		"Frecall": "0.792",
-		"Fdecay": "0.025",
-		"T": "0.572"
-	},
 	"onavos": {
 		"Jmean": "0.861",
 		"Jrecall": "0.961",
@@ -51,6 +43,15 @@ var global_eval_val_2016 = {
 		"Frecall": "0.926",
 		"Fdecay": "0.150",
 		"T": "0.378"
+	},
+	"cut": {
+		"Jmean": "0.552",
+		"Jrecall": "0.575",
+		"Jdecay": "0.022",
+		"Fmean": "0.552",
+		"Frecall": "0.610",
+		"Fdecay": "0.034",
+		"T": "0.277"
 	},
 	"msk": {
 		"Jmean": "0.797",
@@ -79,6 +80,15 @@ var global_eval_val_2016 = {
 		"Fdecay": "0.272",
 		"T": "0.222"
 	},
+	"lmp": {
+		"Jmean": "0.700",
+		"Jrecall": "0.850",
+		"Jdecay": "0.013",
+		"Fmean": "0.659",
+		"Frecall": "0.792",
+		"Fdecay": "0.025",
+		"T": "0.572"
+	},
 	"bvs": {
 		"Jmean": "0.600",
 		"Jrecall": "0.669",
@@ -106,15 +116,6 @@ var global_eval_val_2016 = {
 		"Fdecay": "0.384",
 		"T": "0.159"
 	},
-	"cut": {
-		"Jmean": "0.552",
-		"Jrecall": "0.575",
-		"Jdecay": "0.022",
-		"Fmean": "0.552",
-		"Frecall": "0.610",
-		"Fdecay": "0.034",
-		"T": "0.277"
-	},
 	"hvs": {
 		"Jmean": "0.546",
 		"Jrecall": "0.614",
@@ -141,6 +142,15 @@ var global_eval_val_2016 = {
 		"Frecall": "0.230",
 		"Fdecay": "0.357",
 		"T": "0.417"
+	},
+	"fseg": {
+		"Jmean": "0.707",
+		"Jrecall": "0.835",
+		"Jdecay": "0.015",
+		"Fmean": "0.653",
+		"Frecall": "0.738",
+		"Fdecay": "0.018",
+		"T": "0.328"
 	},
 	"nlc": {
 		"Jmean": "0.551",

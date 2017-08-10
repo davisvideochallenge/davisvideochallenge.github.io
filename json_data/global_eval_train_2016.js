@@ -11,6 +11,7 @@ var global_eval_train_2016 = {
 		"hvs",
 		"sea",
 		"tsp",
+		"fseg",
 		"nlc",
 		"cvos",
 		"trc",
@@ -111,6 +112,15 @@ var global_eval_train_2016 = {
 		"Frecall": "0.395",
 		"Fdecay": "0.409",
 		"T": "0.283"
+	},
+	"fseg": {
+		"Jmean": "0.722",
+		"Jrecall": "0.904",
+		"Jdecay": "0.019",
+		"Fmean": "0.662",
+		"Frecall": "0.824",
+		"Fdecay": "0.060",
+		"T": "0.275"
 	},
 	"nlc": {
 		"Jmean": "0.701",
