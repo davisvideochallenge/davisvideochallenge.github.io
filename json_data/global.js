@@ -60,13 +60,14 @@ var seq_nframes = {"bear"                 : 82,
                    "train"                : 80};
 
 var techniques = ['onavos','osvos','msk','ctn','vpn','ofl','bvs','fcp','jmp','hvs','sea','tsp',
-                  'fseg','lmp','fst','cut','nlc','msg','key','cvos','trc','sal'];
+                  'arp','fseg','lmp','fst','cut','nlc','msg','key','cvos','trc','sal'];
 
 var shown_techniques = ['onavos','osvos','msk'];
 
 var tech_types = ["unsup", "semisup"];
 
 var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "NLC"   , "im_url": "nlc"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "arp"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "ARP"   , "im_url": "arp"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "lmp"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "LMP"   , "im_url": "lmp"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "fseg"   : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "FSEG"  , "im_url": "fseg"  , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "cut"    : {"type": "unsup"  , "sets": ['val_2016',                            ], "display_name": "CUT"   , "im_url": "cut"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
@@ -91,6 +92,16 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
 
 
 var techn_papers ={
+    "arp": {
+    "conference": "CVPR",
+    "authors": [
+      "Y.J. Koh",
+      "C.-S. Kim"
+    ],
+    "year": 2017,
+    "url": "http://openaccess.thecvf.com/content_cvpr_2017/papers/Koh_Primary_Object_Segmentation_CVPR_2017_paper.pdf",
+    "title": "Primary Object Segmentation in Videos Based on Region Augmentation and Reduction"
+  }, 
     "ctn": {
     "conference": "CVPR",
     "authors": [

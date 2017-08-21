@@ -4,6 +4,7 @@ var global_eval_trainval_2016 = {
 		"msk",
 		"vpn",
 		"ofl",
+		"ctn",
 		"lmp",
 		"bvs",
 		"fcp",
@@ -11,7 +12,7 @@ var global_eval_trainval_2016 = {
 		"hvs",
 		"sea",
 		"tsp",
-		"ctn",
+		"arp",
 		"fseg",
 		"nlc",
 		"cvos",
@@ -50,6 +51,15 @@ var global_eval_trainval_2016 = {
 		"Frecall": "0.780",
 		"Fdecay": "0.240",
 		"T": "0.224"
+	},
+	"ctn": {
+		"Jmean": "0.755",
+		"Jrecall": "0.890",
+		"Jdecay": "0.144",
+		"Fmean": "0.714",
+		"Frecall": "0.848",
+		"Fdecay": "0.140",
+		"T": "0.198"
 	},
 	"lmp": {
 		"Jmean": "0.697",
@@ -114,14 +124,14 @@ var global_eval_trainval_2016 = {
 		"Fdecay": "0.388",
 		"T": "0.333"
 	},
-	"ctn": {
-		"Jmean": "0.755",
-		"Jrecall": "0.890",
-		"Jdecay": "0.144",
-		"Fmean": "0.714",
-		"Frecall": "0.848",
-		"Fdecay": "0.140",
-		"T": "0.198"
+	"arp": {
+		"Jmean": "0.743",
+		"Jrecall": "0.885",
+		"Jdecay": "0.053",
+		"Fmean": "0.696",
+		"Frecall": "0.822",
+		"Fdecay": "0.077",
+		"T": "0.426"
 	},
 	"fseg": {
 		"Jmean": "0.716",
