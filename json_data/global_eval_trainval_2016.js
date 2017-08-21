@@ -125,13 +125,13 @@ var global_eval_trainval_2016 = {
 		"T": "0.333"
 	},
 	"arp": {
-		"Jmean": "0.743",
-		"Jrecall": "0.885",
-		"Jdecay": "0.053",
-		"Fmean": "0.696",
-		"Frecall": "0.822",
-		"Fdecay": "0.077",
-		"T": "0.426"
+		"Jmean": "0.763",
+		"Jrecall": "0.892",
+		"Jdecay": "0.036",
+		"Fmean": "0.711",
+		"Frecall": "0.828",
+		"Fdecay": "0.073",
+		"T": "0.359"
 	},
 	"fseg": {
 		"Jmean": "0.716",

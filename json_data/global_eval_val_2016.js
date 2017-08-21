@@ -155,13 +155,13 @@ var global_eval_val_2016 = {
 		"T": "0.417"
 	},
 	"arp": {
-		"Jmean": "0.739",
-		"Jrecall": "0.892",
-		"Jdecay": "0.075",
-		"Fmean": "0.692",
-		"Frecall": "0.834",
-		"Fdecay": "0.082",
-		"T": "0.452"
+		"Jmean": "0.762",
+		"Jrecall": "0.911",
+		"Jdecay": "0.070",
+		"Fmean": "0.706",
+		"Frecall": "0.835",
+		"Fdecay": "0.079",
+		"T": "0.393"
 	},
 	"fseg": {
 		"Jmean": "0.707",
