@@ -59,7 +59,7 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['onavos','osvos','msk','vpn','ofl','bvs','fcp','jmp','hvs','sea','tsp',
+var techniques = ['onavos','osvos','msk','ctn','vpn','ofl','bvs','fcp','jmp','hvs','sea','tsp',
                   'fseg','lmp','fst','cut','nlc','msg','key','cvos','trc','sal'];
 
 var shown_techniques = ['onavos','osvos','msk'];
@@ -84,13 +84,24 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "bvs"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "BVS"   , "im_url": "bvs"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "ofl"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "OFL"   , "im_url": "obj"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "msk"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "MSK"   , "im_url": "msk"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "ctn"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "CTN"   , "im_url": "ctn"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "osvos"  : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OSVOS" , "im_url": "osvos" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "onavos" : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OnAVOS", "im_url": "onavos", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "vpn"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "VPN"   , "im_url": "vpn"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
 
 
 var techn_papers ={
-      "fseg": {
+    "ctn": {
+    "conference": "CVPR",
+    "authors": [
+      "W.-D. Jang",
+      "C.-S. Kim"
+    ],
+    "year": 2017,
+    "url": "http://mcl.korea.ac.kr/~dotol1216/CVPR2017_CTN/index.html",
+    "title": "Online Video Object Segmentation via Convolutional Trident Network"
+  }, 
+    "fseg": {
     "conference": "CVPR",
     "authors": [
       "S. Jain",
@@ -100,7 +111,8 @@ var techn_papers ={
     "year": 2017,
     "url": "http://vision.cs.utexas.edu/projects/fusionseg/",
     "title": "FusionSeg: Learning to combine motion and appearance for fully automatic segmentation of generic objects in videos"
-  },      "lmp": {
+  }, 
+  "lmp": {
     "conference": "CVPR",
     "authors": [
       "P. Tokmakov",
