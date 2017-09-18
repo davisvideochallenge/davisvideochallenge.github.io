@@ -60,7 +60,7 @@ var seq_nframes = {"bear"                 : 82,
                    "train"                : 80};
 
 var techniques = ['onavos','osvos','msk','ctn','vpn','ofl','bvs','fcp','jmp','hvs','sea','tsp',
-                  'arp','fseg','lmp','fst','cut','nlc','msg','key','cvos','trc','sal'];
+                  'arp','lvo','fseg','lmp','fst','cut','nlc','msg','key','cvos','trc','sal'];
 
 var shown_techniques = ['onavos','osvos','msk'];
 
@@ -70,7 +70,8 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "arp"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "ARP"   , "im_url": "arp"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "lmp"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "LMP"   , "im_url": "lmp"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "fseg"   : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "FSEG"  , "im_url": "fseg"  , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "cut"    : {"type": "unsup"  , "sets": ['val_2016',                            ], "display_name": "CUT"   , "im_url": "cut"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "cut"    : {"type": "unsup"  , "sets": ['val_2016'                             ], "display_name": "CUT"   , "im_url": "cut"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "lvo"    : {"type": "unsup"  , "sets": ['val_2016'                             ], "display_name": "LVO"   , "im_url": "lvo"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},                 
                   "cvos"   : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "CVOS"  , "im_url": "cvos"  , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "trc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "TRC"   , "im_url": "trc"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "msg"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "MSG"   , "im_url": "msg"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
@@ -92,7 +93,18 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
 
 
 var techn_papers ={
-    "arp": {
+    "lvo": {
+    "conference": "ICCV",
+    "authors": [
+      "P. Tokmakov",
+      "K. Alahari",
+      "C. Schmid"
+    ],
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1704.05737",
+    "title": "Learning Video Object Segmentation with Visual Memory"
+  }, 
+  "arp": {
     "conference": "CVPR",
     "authors": [
       "Y.J. Koh",
