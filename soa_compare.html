@@ -51,6 +51,12 @@
             shape-rendering: crispEdges;
         }
 
+        a.lk
+        {
+            font-size: 90%;
+            color: #0e83cd;
+
+        }
         a.lk:link {text-decoration:none;}
         a.lk:hover {text-decoration:none;}
     </style>
@@ -410,13 +416,15 @@
     for(var i = 0; i < techniques.length; i++)
     {
         tc = techniques[i];
-        leg_text = leg_text + "<li><b>" + tech_props[techniques[i]].display_name + "</b>: <a href='" + techn_papers[tc].url + "' class='lk' target='_blank'>" + techn_papers[tc].title
-        leg_text = leg_text + "</a>. " + "<i>" + techn_papers[tc].authors[0] + "</i>"
+        leg_text = leg_text + "<li><b>" + tech_props[techniques[i]].display_name + "</b>: " + techn_papers[tc].title
+        leg_text = leg_text + ". <i>" + techn_papers[tc].authors[0] + "</i>"
         for(var j = 1; j < techn_papers[tc].authors.length; j++)
             leg_text = leg_text + ", <i>" + techn_papers[tc].authors[j] + "</i>"
         if ('conference' in techn_papers[tc])
             leg_text = leg_text + ", " + techn_papers[tc].conference + " " + techn_papers[tc].year.toString()
-        leg_text = leg_text + ".</li>"
+        leg_text = leg_text + ". <a href='" + techn_papers[tc].url + "' class='lk' target='_blank'>[Project Page]</a>"
+        leg_text = leg_text + " <a href='results/2016/" + tech_props[tc].im_url + ".zip' class='lk' target='_blank'>[Precomputed results]</a>"
+        leg_text = leg_text + "</li>"
     }
     
 
