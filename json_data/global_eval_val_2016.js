@@ -4,6 +4,8 @@ var global_eval_val_2016 = {
 		"onavos",
 		"osvos",
 		"cut",
+		"sfls",
+		"sflu",
 		"msk",
 		"vpn",
 		"ofl",
@@ -55,6 +57,24 @@ var global_eval_val_2016 = {
 		"Frecall": "0.610",
 		"Fdecay": "0.034",
 		"T": "0.277"
+	},
+	"sfls": {
+		"Jmean": "0.761",
+		"Jrecall": "0.906",
+		"Jdecay": "0.121",
+		"Fmean": "0.760",
+		"Frecall": "0.855",
+		"Fdecay": "0.104",
+		"T": "0.189"
+	},
+	"sflu": {
+		"Jmean": "0.674",
+		"Jrecall": "0.814",
+		"Jdecay": "0.062",
+		"Fmean": "0.667",
+		"Frecall": "0.771",
+		"Fdecay": "0.051",
+		"T": "0.282"
 	},
 	"msk": {
 		"Jmean": "0.797",

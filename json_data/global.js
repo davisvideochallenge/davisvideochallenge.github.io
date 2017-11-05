@@ -59,8 +59,8 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['onavos','osvos','msk','ctn','vpn','ofl','bvs','fcp','jmp','hvs','sea','tsp',
-                  'arp','lvo','fseg','lmp','fst','cut','nlc','msg','key','cvos','trc','sal'];
+var techniques = ['onavos','osvos','msk','sfls','ctn','vpn','ofl','bvs','fcp','jmp','hvs','sea','tsp',
+                  'arp','lvo','fseg','lmp','sflu','fst','cut','nlc','msg','key','cvos','trc','sal'];
 
 var shown_techniques = ['onavos','osvos','msk'];
 
@@ -79,6 +79,8 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "sal"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "SAL"   , "im_url": "sal"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "fst"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "FST"   , "im_url": "fst"   , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "tsp"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "TSP"   , "im_url": "tsp"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "sfls"   : {"type": "semisup", "sets": ['val_2016'                             ], "display_name": "SFL"   , "im_url": "sfls"  , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "sflu"   : {"type": "semisup", "sets": ['val_2016'                             ], "display_name": "SFL"   , "im_url": "sflu"  , "col_R" :   0, "col_G" : 255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "sea"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "SEA"   , "im_url": "sea"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "hvs"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "HVS"   , "im_url": "hvs"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "jmp"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "JMP"   , "im_url": "jmp"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
@@ -103,6 +105,30 @@ var techn_papers ={
     "year": 2017,
     "url": "https://arxiv.org/abs/1704.05737",
     "title": "Learning Video Object Segmentation with Visual Memory"
+  }, 
+  "sflu": {
+    "conference": "ICCV",
+    "authors": [
+      "J. Cheng",
+      "Y.-H. Tsai",
+      "S. Wang",
+      "M.-H. Yang"
+    ],
+    "year": 2017,
+    "url": "https://sites.google.com/site/yihsuantsai/research/iccv17-segflow",
+    "title": "SegFlow: Joint Learning for Video Object Segmentation and Optical Flow"
+  },  
+  "sfls": {
+    "conference": "ICCV",
+    "authors": [
+      "J. Cheng",
+      "Y.-H. Tsai",
+      "S. Wang",
+      "M.-H. Yang"
+    ],
+    "year": 2017,
+    "url": "https://sites.google.com/site/yihsuantsai/research/iccv17-segflow",
+    "title": "SegFlow: Joint Learning for Video Object Segmentation and Optical Flow"
   }, 
   "arp": {
     "conference": "CVPR",
