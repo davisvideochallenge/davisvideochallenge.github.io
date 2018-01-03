@@ -59,7 +59,7 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['onavos','osvos','msk','sfls','ctn','vpn','ofl','bvs','fcp','jmp','hvs','sea',
+var techniques = ['onavos','osvos','msk','sfls','ctn','vpn','plm','ofl','bvs','fcp','jmp','hvs','sea',
                   'arp','lvo','fseg','lmp','sflu','fst','cut','nlc','msg','key','cvos','trc'];
 
 var shown_techniques = ['onavos','osvos','msk'];
@@ -91,6 +91,7 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "ctn"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "CTN"   , "im_url": "ctn"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "osvos"  : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OSVOS" , "im_url": "osvos" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "onavos" : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OnAVOS", "im_url": "onavos", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "plm"    : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "PLM"   , "im_url": "plm"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "vpn"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "VPN"   , "im_url": "vpn"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
 
 
@@ -105,6 +106,20 @@ var techn_papers ={
     "year": 2017,
     "url": "https://arxiv.org/abs/1704.05737",
     "title": "Learning Video Object Segmentation with Visual Memory"
+  }, 
+  "plm": {
+    "conference": "ICCV",
+    "authors": [
+      "J. Shin Yoon",
+      "F. Rameau", 
+      "J. Kim", 
+      "S. Lee", 
+      "S. Shin",
+      "I. So Kweon"
+    ],
+    "year": 2017,
+    "url": "https://jsyoon4325.wixsite.com/pix-matching",
+    "title": "Pixel-level Matching for Video Object Segmentation using Convolutional Neural Networks"
   }, 
   "sflu": {
     "conference": "ICCV",

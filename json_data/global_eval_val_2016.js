@@ -6,6 +6,7 @@ var global_eval_val_2016 = {
 		"cut",
 		"sfls",
 		"sflu",
+		"plm",
 		"msk",
 		"vpn",
 		"ofl",
@@ -75,6 +76,15 @@ var global_eval_val_2016 = {
 		"Frecall": "0.771",
 		"Fdecay": "0.051",
 		"T": "0.282"
+	},
+	"plm": {
+		"Jmean": "0.702",
+		"Jrecall": "0.863",
+		"Jdecay": "0.112",
+		"Fmean": "0.625",
+		"Frecall": "0.732",
+		"Fdecay": "0.147",
+		"T": "0.318"
 	},
 	"msk": {
 		"Jmean": "0.797",
