@@ -104,7 +104,7 @@ var techn_papers ={
       "C. Schmid"
     ],
     "year": 2017,
-    "url": "https://arxiv.org/abs/1704.05737",
+    "url": "http://lear.inrialpes.fr/research/lvo/",
     "title": "Learning Video Object Segmentation with Visual Memory"
   }, 
   "plm": {
@@ -184,7 +184,7 @@ var techn_papers ={
       "C. Schmid"
     ],
     "year": 2017,
-    "url": "https://hal.univ-lille3.fr/hal-01427480v2",
+    "url": "http://thoth.inrialpes.fr/research/mpnet/",
     "title": "Learning Motion Patterns in Videos"
   },
     "onavos": {
