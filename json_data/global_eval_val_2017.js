@@ -4,12 +4,12 @@ var global_eval_val_2017 = {
 		"osvos"
 	],
 	"osvos": {
-		"Jmean": "0.798",
-		"Jrecall": "0.936",
-		"Jdecay": "0.149",
-		"Fmean": "0.806",
-		"Frecall": "0.926",
-		"Fdecay": "0.150",
-		"T": "0.378"
-	}
+ 		"J_F": "0.5757",
+ 		"Jmean": "0.5467",
+ 		"Jrecall": "0.5968",
+ 		"Jdecay": "0.2989",
+ 		"Fmean": "0.6046",
+ 		"Frecall": "0.6795",
+ 		"Fdecay": "0.3105"
+ 	}
 }

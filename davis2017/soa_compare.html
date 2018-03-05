@@ -58,6 +58,10 @@
         }
         a.lk:link {text-decoration:none;}
         a.lk:hover {text-decoration:none;}
+        table.center {
+            margin-left:auto;
+            margin-right:auto;
+        }
     </style>
 </head>
 
@@ -149,7 +153,7 @@
 
         <div class="pure-g">
             <div class="pure-u-1-1">
-              <table id='tab' width='90%' style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif;margin-left: 5%;margin-right: 5%;margin-bottom:40px;">
+              <table id='tab' width='15%' class="center" style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif;margin-bottom:40px;">
               </table>
             </div>
         </div>
@@ -436,7 +440,7 @@
         if ('conference' in techn_papers[tc])
             leg_text = leg_text + ", " + techn_papers[tc].conference + " " + techn_papers[tc].year.toString()
         leg_text = leg_text + ". <a href='" + techn_papers[tc].url + "' class='lk' target='_blank'>[Project Page]</a>"
-        leg_text = leg_text + " <a href='results/2016/" + tech_props[tc].im_url + ".zip' class='lk' target='_blank'>[Precomputed results]</a>"
+        leg_text = leg_text + " <a href='../results/2017/" + tech_props[tc].im_url + ".zip' class='lk' target='_blank'>[Precomputed results]</a>"
         leg_text = leg_text + "</li>"
     }
     
