@@ -42,7 +42,7 @@ table th, table td {
 }
 
 
-.seq_header, .sequences, .semisup, .unsup, .preprop, .measures, .over, .under{
+.seq_header, .sequences, .semisup, .unsup, .preprop, .semi2017, .measures, .over, .under{
   text-transform: capitalize;
   font-size: 0.8em;
   font-weight: 300;
@@ -95,6 +95,10 @@ table th, table td {
   background: #a1a1a1;
 }
 
+.semi2017 {
+  color: #efefef;
+  background: #a1a1a1;
+}
 
 
 /* Add this attribute to the element that needs a tooltip */
