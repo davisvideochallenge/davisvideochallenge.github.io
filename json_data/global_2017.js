@@ -9,11 +9,11 @@ var seq_lists = {'val_2017'       : ['bike-packing_1','bike-packing_2','blackswa
 var techniques = ['onavos', 'osvos'];
 
 var tech_props = {
-"osvos"  : {"type": "semisup", "sets": ['val_2017', 'test_dev_2017'], "display_name": "OSVOS" , "im_url": "osvos" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-"onavos" : {"type": "semisup", "sets": ['val_2017', 'test_dev_2017'], "display_name": "OnAVOS", "im_url": "onavos", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}
+"osvos"  : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "OSVOS" , "im_url": "osvos" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+"onavos" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "OnAVOS", "im_url": "onavos", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}
 };
 
-var tech_types = ["semisup"];
+var tech_types = ["semi2017"];
 
 var techn_papers ={
     "osvos": {
