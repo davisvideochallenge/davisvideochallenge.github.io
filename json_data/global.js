@@ -154,7 +154,7 @@ var techn_papers ={
       "C.-S. Kim"
     ],
     "year": 2017,
-    "url": "http://openaccess.thecvf.com/content_cvpr_2017/papers/Koh_Primary_Object_Segmentation_CVPR_2017_paper.pdf",
+    "url": "https://mcl.korea.ac.kr/yjkoh_cvpr2017/",
     "title": "Primary Object Segmentation in Videos Based on Region Augmentation and Reduction"
   }, 
     "ctn": {
