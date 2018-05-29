@@ -21,5 +21,14 @@ var global_eval_test_dev_2017 = {
  		"Fmean": "0.5574",
  		"Frecall": "0.6028",
  		"Fdecay": "0.2339"
+ 	},
+	"osvoss": {
+ 		"J_F": "0.5749",
+ 		"Jmean": "0.5293",
+ 		"Jrecall": "0.6024",
+ 		"Jdecay": "0.2410",
+ 		"Fmean": "0.6206",
+ 		"Frecall": "0.7051",
+ 		"Fdecay": "0.2188"
  	}
 };

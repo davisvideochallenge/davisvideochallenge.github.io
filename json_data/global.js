@@ -1,5 +1,5 @@
 var im_url  = 'https://graphics.ethz.ch/Downloads/Data/Davis/files/sequences/';
-var res_url = 'https://data.vision.ee.ethz.ch/jpont/davis/overlays/';
+var res_url = 'https://data.vision.ee.ethz.ch/csergi/share/davis/overlays/';
 // var im_url  = 'http://localhost/~jpont/davis/images/db/';
 // var res_url = 'http://localhost/~jpont/davis/images/results-overlay/';
 
@@ -59,10 +59,10 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['onavos','osvos','msk','sfls','ctn','vpn','plm','ofl','bvs','fcp','jmp','hvs','sea',
+var techniques = ['osvoss','onavos','osvos','msk','sfls','ctn','vpn','plm','ofl','bvs','fcp','jmp','hvs','sea',
                   'arp','lvo','fseg','lmp','sflu','fst','cut','nlc','msg','key','cvos','trc'];
 
-var shown_techniques_val = ['onavos','osvos','msk'];
+var shown_techniques_val = ['osvoss','onavos','osvos'];
 
 var shown_techniques_train = ['msk', 'ctn', 'vpn'];
 
@@ -94,10 +94,26 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "osvos"  : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OSVOS" , "im_url": "osvos" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "onavos" : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OnAVOS", "im_url": "onavos", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "plm"    : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "PLM"   , "im_url": "plm"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "vpn"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "VPN"   , "im_url": "vpn"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
+                  "vpn"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "VPN"   , "im_url": "vpn"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "osvoss" : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OSVOS-S" , "im_url": "osvoss" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
 
 
 var techn_papers ={
+    "osvoss": {
+    "conference": "PAMI",
+    "authors": [
+      "K.K. Maninis*",
+      "S. Caelles*",
+      "Y. Chen",
+      "J. Pont-Tuset",
+      "L. Leal-Taixé",
+      "D. Cremers",
+      "L. Van Gool"
+    ],
+    "year": 2018,
+    "url": "http://www.vision.ee.ethz.ch/~cvlsegmentation/osvos-s",
+    "title": "Video Object Segmentation Without Temporal Information"
+  },
     "lvo": {
     "conference": "ICCV",
     "authors": [
