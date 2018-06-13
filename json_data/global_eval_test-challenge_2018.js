@@ -152,18 +152,6 @@ var global_eval_test_challenge_2017 = {
         "Jmean": "0.719",
         "Jrecall": "0.794"
     },
-    "techniques": [
-        "Jono",
-        "lixx",
-        "dawnsix",
-        "TeamILC_RIL",
-        "apata",
-        "UIT",
-        "alextheengineer",
-        "TeamVia",
-        "kthac",
-        "TeamHuber99"
-    ],
     // "techniques": [
     //     "Jono",
     //     "lixx",
@@ -174,16 +162,28 @@ var global_eval_test_challenge_2017 = {
     //     "alextheengineer",
     //     "TeamVia",
     //     "kthac",
-    //     "TeamHuber99",
-    //     "Zang0",
-    //     "ZilongHuang",
-    //     "going",
-    //     "yelantf",
-    //     "avishek15",
-    //     "cocacolo",
-    //     "GhostDancer",
-    //     "Teamsnowflower"
+    //     "TeamHuber99"
     // ],
+    "techniques": [
+        "Jono",
+        "lixx",
+        "dawnsix",
+        "TeamILC_RIL",
+        "apata",
+        "UIT",
+        "alextheengineer",
+        "TeamVia",
+        "kthac",
+        "TeamHuber99",
+        "Zang0",
+        "ZilongHuang",
+        "going",
+        "yelantf",
+        "avishek15",
+        "cocacolo",
+        "GhostDancer",
+        "Teamsnowflower"
+    ],
     "yelantf": {
         "Fdecay": "0.339",
         "Fmean": "0.516",
