@@ -170,7 +170,7 @@ var global_eval_test_challenge_2017 = {
         "dawnsix",
         "TeamILC_RIL",
         "apata",
-        "UIT",
+        "HCMUS",
         "alextheengineer",
         "TeamVia",
         "kthac",
