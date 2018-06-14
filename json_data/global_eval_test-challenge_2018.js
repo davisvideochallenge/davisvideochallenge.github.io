@@ -53,7 +53,7 @@ var global_eval_test_challenge_2017 = {
         "Jmean": "0.247",
         "Jrecall": "0.221"
     },
-    "UIT": {
+    "HCMUS": {
         "Fdecay": "0.135",
         "Fmean": "0.686",
         "Frecall": "0.807",
@@ -158,7 +158,7 @@ var global_eval_test_challenge_2017 = {
     //     "dawnsix",
     //     "TeamILC_RIL",
     //     "apata",
-    //     "UIT",
+    //     "HCMUS",
     //     "alextheengineer",
     //     "TeamVia",
     //     "kthac",
