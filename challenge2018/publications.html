@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,300' rel='stylesheet' type='text/css'>
+    <meta name="description" content="DAVIS, Densely Annotated VIdeo Segmentation">
+
+    <title>DAVIS: Densely Annotated VIdeo Segmentation</title>
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="../css/layouts/side-menu.css">
+    <!--<![endif]-->
+    
+    <!--Includes-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Buttons -->
+    <link rel="stylesheet" type="text/css" href="../css/buttons/component.css" />
+
+    <style type="text/css">
+    .round{
+      width:100%;
+      padding-top:100%;
+      overflow:hidden;
+      position:relative;
+      border-radius:50%;
+    }
+     
+    img.roundimg{
+      position:absolute;
+      top:51%;
+      left:51%;
+      min-width:102%;
+      height:102%;
+      transform:translate(-51%,-51%);
+      transition: all 0.5s ease;
+    }
+
+    img.roundimg:hover{
+      min-width:105%;
+      height:105%;
+    }
+
+    h3{
+        font-weight: 300;
+    }
+
+    .footnote{
+        font-size: 70%;
+        line-height: 130%;
+    }
+
+    </style>
+
+    <style type="text/css">
+    /*********************************
+    The list of publication items
+    *********************************/
+    /* The list of items */
+    .biblist { }
+
+    /* The item */
+    .biblist li { }
+
+    /* You can define custom styles for plstyle field here. */
+
+
+    /*************************************
+     The box that contain BibTeX code
+     *************************************/
+    div.noshow { display: none; }
+    div.bibtex {
+        margin-right: 0%;
+        margin-top: 1.2em;
+        margin-bottom: 1.3em;
+        border: 1px solid silver;
+        padding: 0.3em 0.5em;
+        background: #ffffee;
+    }
+    div.bibtex pre { font-size: 75%; overflow: auto;  width: 100%; }
+
+
+    .content-subhead{color: black}
+</style>
+
+<script type="text/javascript">
+ <!--
+ // Toggle Display of BibTeX
+ function toggleBibtex(articleid) {
+     var bib = document.getElementById('bib_'+articleid);
+     if (bib) {
+         if(bib.className.indexOf('bibtex') != -1) {
+             bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+         }
+     } else {
+         return;
+     }
+ }
+-->
+</script>
+</head>
+
+
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <ul class="pure-menu-list">
+                <li style="border-bottom: 1px solid;"><a href="../index.html" class="pure-menu-link">Home</a></li>
+            </ul>
+
+            <span class="pure-menu-heading" style="border-bottom: 1px solid;">DAVIS 2016</span>
+            <ul class="pure-menu-list">
+                <li><a href="../davis2016/soa_compare.html" class="pure-menu-link">Benchmark</a></li>
+                <li><a href="../davis2016/browse.html" class="pure-menu-link">Explore</a></li>
+                <li style="border-bottom: 1px solid;"><a href="../davis2016/code.html" class="pure-menu-link">Download</a></li>
+            </ul>
+
+            <span class="pure-menu-heading" style="border-bottom: 1px solid;">DAVIS 2017</span>
+            <ul class="pure-menu-list">
+                <li><a href="../davis2017/soa_compare.html" class="pure-menu-link">Benchmark</a></li>
+                <li style="border-bottom: 1px solid;"><a href="../davis2017/code.html" class="pure-menu-link">Download</a></li>
+            </ul>
+
+            <span class="pure-menu-heading" style="border-bottom: 1px solid;">Challenges</span>
+            <ul class="pure-menu-list">
+                <li><a href="../challenge2017/index.html" class="pure-menu-link">Challenge 2017</a></li>
+                <li><a href="index.html" class="pure-menu-link pure-menu-selected" style="color: red">Challenge 2018</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>DAVIS Challenge on Video Object Segmentation 2018</h1>
+            <h2>Workshop in conjunction with CVPR 2018, Salt Lake City, Utah</h2>
+        </div>
+
+                           <!-- Buttons  -->
+                <div class="pure-g" style="margin-left: 5%;margin-right: 5%;">
+            <!--<div class="pure-u-3-24" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">-->
+                <!-- <a href="publications.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;">Publications</button></a> -->
+            <!--</div>-->
+            <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <a href="index.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Workshop</button></a>
+            </div>
+            <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <a href="semisupervised.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Challenge<br>(Semi-Supervised)</button></a>
+            </div>
+            <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <a href="interactive.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Teaser Challenge<br>(Interactive)</button></a>
+            </div>
+            <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <button class="btn btn-6 btn-6a" style="background:#e7eae8;width: 95%;margin-top:30px;min-height: 65px;">Publications</button>
+            </div>
+        </div>
+
+
+        <div class="content" style="text-align: left; padding-top: 40px;font-size:95%">
+
+            <h2 class="content-subhead" style="margin-top:33px;margin-bottom:20px">Publications Interactive track</h2>
+            <div class="pure-g">
+                <div class="pure-u-1-8">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:60%;" src="numbers/01.png" alt="1">
+                </div>
+                <div class="pure-u-7-8">
+                <p style="margin-left:0.1cm;line-height: 1.4em;margin-top:0em;">
+                    <span style="font-weight: 500;">Fast User-Guided Video Object Segmentation by Deep Networks</span><br>
+                    S. Wug Oh, J. Lee, N. Xu, S. Joo Kim<br>
+                    <i>The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops, 2018</i><br>
+                    [<a href="papers/DAVIS-Interactive-Challenge-1st-Team.pdf" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('DAVIS2018-Int-1st')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+            <div id="bib_DAVIS2018-Int-1st" class="bibtex noshow"><pre>@article{DAVIS2018-Interactive-1st,
+              author = {S. Wug Oh, J. Lee, N. Xu, S. Joo Kim},
+              title = {Fast User-Guided Video Object Segmentation by Deep Networks},
+              journal = {The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops},
+              year = {2018}
+            }</pre>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-8">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:60%;" src="numbers/02.png" alt="1">
+                </div>
+                <div class="pure-u-7-8">
+                <p style="margin-left:0.1cm;line-height: 1.4em;margin-top:0em;">
+                    <span style="font-weight: 500;">Similarity Learning for Dense Label Transfer</span><br>
+                    M. Najafi, V. Kulharia, T. Ajanthan, P. H. S. Torr<br>
+                    <i>The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops, 2018</i><br>
+                    [<a href="papers/DAVIS-Interactive-Challenge-2nd-Team.pdf" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('DAVIS2018-Int-2nd')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+            <div id="bib_DAVIS2018-Int-2nd" class="bibtex noshow"><pre>@article{DAVIS2018-Interactive-2nd,
+              author = {M. Najafi, V. Kulharia, T. Ajanthan, P. H. S. Torr},
+              title = {Similarity Learning for Dense Label Transfer},
+              journal = {The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops},
+              year = {2018}
+            }</pre>
+            </div>
+
+
+            <h2 class="content-subhead" style="margin-top:33px;margin-bottom:20px">Publications Semi-Supervised track</h2>
+
+            <div class="pure-g">
+                <div class="pure-u-1-8">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:60%;" src="numbers/01.png" alt="1">
+                </div>
+                <div class="pure-u-7-8">
+                <p style="margin-left:0.1cm;line-height: 1.4em;margin-top:0em;">
+                    <span style="font-weight: 500;">PReMVOS: Proposal-generation, Refinement and Merging for the DAVIS Challenge on Video Object Segmentation 2018</span><br>
+                    J. Luiten, P. Voigtlaender, B. Leibe<br>
+                    <i>The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops, 2018</i><br>
+                    [<a href="papers/DAVIS-Semisupervised-Challenge-1st-Team.pdf" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('DAVIS2018-Semi-1st')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+            <div id="bib_DAVIS2018-Semi-1st" class="bibtex noshow"><pre>@article{DAVIS2018-Semi-Supervised-1st,
+              author = {J. Luiten, P. Voigtlaender, B. Leibe},
+              title = {PReMVOS: Proposal-generation, Refinement and Merging for the DAVIS Challenge on Video Object Segmentation 2018},
+              journal = {The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops},
+              year = {2018}
+            }</pre>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-8">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:60%;" src="numbers/02.png" alt="1">
+                </div>
+                <div class="pure-u-7-8">
+                <p style="margin-left:0.1cm;line-height: 1.4em;margin-top:0em;">
+                    <span style="font-weight: 500;">Video Object Segmentation with Joint Re-identification and Attention-Aware Mask Propagation</span><br>
+                    X. Li, C. Change Loy<br>
+                    <i>The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops, 2018</i><br>
+                    [<a href="papers/DAVIS-Semisupervised-Challenge-2nd-Team.pdf" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('DAVIS2018-Semi-2nd')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+            <div id="bib_DAVIS2018-Semi-2nd" class="bibtex noshow"><pre>@article{DAVIS2018-Semi-Supervised-2nd,
+              author = {X. Li, C. Change Loy},
+              title = {Video Object Segmentation with Joint Re-identification and Attention-Aware Mask Propagation},
+              journal = {The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops},
+              year = {2018}
+            }</pre>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-8">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:60%;" src="numbers/03.png" alt="1">
+                </div>
+                <div class="pure-u-7-8">
+                <p style="margin-left:0.1cm;line-height: 1.4em;margin-top:0em;">
+                    <span style="font-weight: 500;">Class-Agnostic Video Object Segmentation without Semantic Re-Identification</span><br>
+                    S. Xu, L. Bao, P. Zhou<br>
+                    <i>The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops, 2018</i><br>
+                    [<a href="papers/DAVIS-Semisupervised-Challenge-3rd-Team.pdf" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('DAVIS2018-Semi-3rd')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+            <div id="bib_DAVIS2018-Semi-3rd" class="bibtex noshow"><pre>@article{DAVIS2018-Semi-Supervised-3rd,
+              author = {S. Xu, L. Bao, P. Zhou},
+              title = {Class-Agnostic Video Object Segmentation without Semantic Re-Identification},
+              journal = {The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops},
+              year = {2018}
+            }</pre>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-8">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:60%;" src="numbers/04.png" alt="1">
+                </div>
+                <div class="pure-u-7-8">
+                <p style="margin-left:0.1cm;line-height: 1.4em;margin-top:0em;">
+                    <span style="font-weight: 500;">Adaptive Video Object Segmentation with Online Data Generation</span><br>
+                    P. Guo, L. Zhang, H. Zhang, X. Liu, H. Ren, Y. Zhang<br>
+                    <i>The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops, 2018</i><br>
+                    [<a href="papers/DAVIS-Semisupervised-Challenge-4th-Team.pdf" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('DAVIS2018-Semi-4th')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+            <div id="bib_DAVIS2018-Semi-4th" class="bibtex noshow"><pre>@article{DAVIS2018-Semi-Supervised-4th,
+              author = {P. Guo, L. Zhang, H. Zhang, X. Liu, H. Ren, Y. Zhang},
+              title = {Adaptive Video Object Segmentation with Online Data Generation},
+              journal = {The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops},
+              year = {2018}
+            }</pre>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-8">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:60%;" src="numbers/05.png" alt="1">
+                </div>
+                <div class="pure-u-7-8">
+                <p style="margin-left:0.1cm;line-height: 1.4em;margin-top:0em;">
+                    <span style="font-weight: 500;">Lucid Data Dreaming for Video Object Segmentation*</span><br>
+                    A. Khoreva, R. Benenson, E. Ilg, T. Brox, B. Schiele<br>
+                    <i>The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops, 2018</i><br>
+                    [<a href="papers/DAVIS-Semisupervised-Challenge-5th-Team.pdf" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('DAVIS2018-Semi-5th')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+            <div id="bib_DAVIS2018-Semi-5th" class="bibtex noshow"><pre>@article{DAVIS2018-Semi-Supervised-5th,
+              author = {A. Khoreva, R. Benenson, E. Ilg, T. Brox, B. Schiele},
+              title = {Lucid Data Dreaming for Video Object Segmentation},
+              journal = {The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops},
+              year = {2018}
+            }</pre>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-8">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:60%;" src="numbers/06.png" alt="1">
+                </div>
+                <div class="pure-u-7-8">
+                <p style="margin-left:0.1cm;line-height: 1.4em;margin-top:0em;">
+                    <span style="font-weight: 500;">Context-based Instance Segmentation in Video Sequences</span><br>
+                    M. Tran, V. Ton-That, T. Le, K. Nguyen, T. V. Ninh, T. Le, V. Nguyen, T. V. Nguyen, M. N. Do<br>
+                    <i>The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops, 2018</i><br>
+                    [<a href="papers/DAVIS-Semisupervised-Challenge-6th-Team.pdf" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('DAVIS2018-Semi-6th')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+            <div id="bib_DAVIS2018-Semi-6th" class="bibtex noshow"><pre>@article{DAVIS2018-Semi-Supervised-6th,
+              author = {M. Tran, V. Ton-That, T. Le, K. Nguyen, T. V. Ninh, T. Le, V. Nguyen, T. V. Nguyen, M. N. Do},
+              title = {Context-based Instance Segmentation in Video Sequences},
+              journal = {The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops},
+              year = {2018}
+            }</pre>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-8">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:60%;" src="numbers/07.png" alt="1">
+                </div>
+                <div class="pure-u-7-8">
+                <p style="margin-left:0.1cm;line-height: 1.4em;margin-top:0em;">
+                    <span style="font-weight: 500;">Flow Adaptive Video Object Segmentation</span><br>
+                    A. Lin, Y. Chou, T. Martinez<br>
+                    <i>The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops, 2018</i><br>
+                    [<a href="papers/DAVIS-Semisupervised-Challenge-7th-Team.pdf" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('DAVIS2018-Semi-7th')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+            <div id="bib_DAVIS2018-Semi-7th" class="bibtex noshow"><pre>@article{DAVIS2018-Semi-Supervised-7th,
+              author = {A. Lin, Y. Chou, T. Martinez},
+              title = {Flow Adaptive Video Object Segmentation},
+              journal = {The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops},
+              year = {2018}
+            }</pre>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-8">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:60%;" src="numbers/08.png" alt="1">
+                </div>
+                <div class="pure-u-7-8">
+                <p style="margin-left:0.1cm;line-height: 1.4em;margin-top:0em;">
+                    <span style="font-weight: 500;">Mask Propagation Network for Video Object Segmentation</span><br>
+                    J. Sun, D. Yu, Y. Li, C. Wang<br>
+                    <i>The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops, 2018</i><br>
+                    [<a href="papers/DAVIS-Semisupervised-Challenge-8th-Team.pdf" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('DAVIS2018-Semi-8th')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+            <div id="bib_DAVIS2018-Semi-8th" class="bibtex noshow"><pre>@article{DAVIS2018-Semi-Supervised-8th,
+              author = {J. Sun, D. Yu, Y. Li, C. Wang},
+              title = {Mask Propagation Network for Video Object Segmentation},
+              journal = {The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops},
+              year = {2018}
+            }</pre>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-8">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:60%;" src="numbers/09.png" alt="1">
+                </div>
+                <div class="pure-u-7-8">
+                <p style="margin-left:0.1cm;line-height: 1.4em;margin-top:0em;">
+                    <span style="font-weight: 500;">Video Object Segmentation via Tracking Edges and Classifying Segments</span><br>
+                    V.Petrosyan, O. Örnsberg, A. Proutiere<br>
+                    <i>The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops, 2018</i><br>
+                    [<a href="papers/DAVIS-Semisupervised-Challenge-9th-Team.pdf" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('DAVIS2018-Semi-9th')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+            <div id="bib_DAVIS2018-Semi-9th" class="bibtex noshow"><pre>@article{DAVIS2018-Semi-Supervised-9th,
+              author = {V.Petrosyan, O. {\"O}rnsberg, A. Proutiere},
+              title = {Video Object Segmentation via Tracking Edges and Classifying Segments},
+              journal = {The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops},
+              year = {2018}
+            }</pre>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-8">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:60%;" src="numbers/10.png" alt="1">
+                </div>
+                <div class="pure-u-7-8">
+                <p style="margin-left:0.1cm;line-height: 1.4em;margin-top:0em;">
+                    <span style="font-weight: 500;">ReConvNet: Video Object Segmentation with Spatio-Temporal Features Modulation</span><br>
+                    F. Lattari, M. Ciccone, M. Matteucci, J. Masci, F. Visin<br>
+                    <i>The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops, 2018</i><br>
+                    [<a href="papers/DAVIS-Semisupervised-Challenge-10th-Team.pdf" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('DAVIS2018-Semi-10th')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+            <div id="bib_DAVIS2018-Semi-10th" class="bibtex noshow"><pre>@article{DAVIS2018-Semi-Supervised-10th,
+              author = {F. Lattari, M. Ciccone, M. Matteucci, J. Masci, F. Visin},
+              title = {ReConvNet: Video Object Segmentation with Spatio-Temporal Features Modulation},
+              journal = {The 2018 DAVIS Challenge on Video Object Segmentation - CVPR Workshops},
+              year = {2018}
+            }</pre>
+            </div>
+
+
+            *This method is the same that ranked 2nd in DAVIS Challenge 2017<br>
+
+
+    </div>
+</div>
+
+
+
+
+
+<script src="../js/ui.js"></script>
+
+
+</body>
+
+</html>
+
+
