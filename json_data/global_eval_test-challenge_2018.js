@@ -1,4 +1,16 @@
-var global_eval_test_challenge_2017 = {
+var tech_props = {"Jono"          : {"type": "over", "display_name": "Jono", "sets": ['test-challenge-2018']},
+				  "lixx"         : {"type": "over", "display_name": "Lixx", "sets": ['test-challenge-2018']},
+				  "dawnsix"     : {"type": "over", "display_name": "Dawnsix", "sets": ['test-challenge-2018']},
+				  "TeamILC_RIL"      : {"type": "over", "display_name": "TeamILC_RIL", "sets": ['test-challenge-2018']},
+				  "apata"  : {"type": "over", "display_name": "Apata", "sets": ['test-challenge-2018']},
+				  "HCMUS" : {"type": "over", "display_name": "HCMUS", "sets": ['test-challenge-2018']},
+				  "alextheengineer"           : {"type": "over", "display_name": "Alextheengineer", "sets": ['test-challenge-2018']},
+				  "TeamVia"         : {"type": "over", "display_name": "TeamVia", "sets": ['test-challenge-2018']},
+				  "kthac"    : {"type": "over", "display_name": "kthac", "sets": ['test-challenge-2018']},
+				  "TeamHuber99"   : {"type": "over", "display_name": "TeamHuber99", "sets": ['test-challenge-2018']}};
+
+
+var global_eval_test_challenge_2018 = {
     "GhostDancer": {
         "Fdecay": "0.261",
         "Fmean": "0.328",
@@ -152,18 +164,18 @@ var global_eval_test_challenge_2017 = {
         "Jmean": "0.719",
         "Jrecall": "0.794"
     },
-    // "techniques": [
-    //     "Jono",
-    //     "lixx",
-    //     "dawnsix",
-    //     "TeamILC_RIL",
-    //     "apata",
-    //     "HCMUS",
-    //     "alextheengineer",
-    //     "TeamVia",
-    //     "kthac",
-    //     "TeamHuber99"
-    // ],
+    "accepted_techniques": [
+        "Jono",
+        "lixx",
+        "dawnsix",
+        "TeamILC_RIL",
+        "apata",
+        "HCMUS",
+        "alextheengineer",
+        "TeamVia",
+        "kthac",
+        "TeamHuber99"
+    ],
     "techniques": [
         "Jono",
         "lixx",
