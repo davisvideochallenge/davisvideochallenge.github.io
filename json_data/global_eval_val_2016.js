@@ -3,6 +3,7 @@ var global_eval_val_2016 = {
 	"techniques": [
 		"osvoss",
 		"onavos",
+		"favos",
 		"osvos",
 		"cut",
 		"sfls",
@@ -33,6 +34,15 @@ var global_eval_val_2016 = {
 		"sflab",
 		"sfmot"
 	],
+	"favos": {
+		"Jmean": "0.824",
+		"Jrecall": "0.965",
+		"Jdecay": "0.045",
+		"Fmean": "0.795",
+		"Frecall": "0.894",
+		"Fdecay": "0.055",
+		"T": "0.263"
+	},
 	"osvoss": {
 		"Jmean": "0.856",
 		"Jrecall": "0.968",

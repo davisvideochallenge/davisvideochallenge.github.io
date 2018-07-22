@@ -59,10 +59,10 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['osvoss','onavos','osvos','msk','sfls','ctn','vpn','plm','ofl','bvs','fcp','jmp','hvs','sea',
+var techniques = ['osvoss','onavos', 'favos','osvos','msk','sfls','ctn','vpn','plm','ofl','bvs','fcp','jmp','hvs','sea',
                   'arp','lvo','fseg','lmp','sflu','fst','cut','nlc','msg','key','cvos','trc'];
 
-var shown_techniques_val = ['osvoss','onavos','osvos'];
+var shown_techniques_val = ['osvoss','onavos','favos','osvos'];
 
 var shown_techniques_train = ['msk', 'ctn', 'vpn'];
 
@@ -95,10 +95,24 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "onavos" : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OnAVOS", "im_url": "onavos", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "plm"    : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "PLM"   , "im_url": "plm"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "vpn"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "VPN"   , "im_url": "vpn"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "favos" : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "FAVOS" , "im_url": "favos" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "osvoss" : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OSVOS-S" , "im_url": "osvoss" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
 
 
 var techn_papers ={
+  "favos": {
+    "conference": "CVPR",
+    "authors": [
+      "J. Cheng",
+      "Y.-H. Tsai",
+      "W.-C. Hung",
+      "S. Wang",
+      "M.-H. Yang"
+    ],
+    "year": 2018,
+    "url": "https://github.com/JingchunCheng/FAVOS",
+    "title": "Fast and Accurate Online Video Object Segmentation via Tracking Parts"
+  },
     "osvoss": {
     "conference": "PAMI",
     "authors": [
