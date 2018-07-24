@@ -1,6 +1,8 @@
 var global_eval_test_dev_2017 = {
 	"Tgt": "0.088",
 	"techniques": [
+		"osvoss",
+		"favos",
 		"osvos",
 		"onavos"
 	],
@@ -30,5 +32,14 @@ var global_eval_test_dev_2017 = {
  		"Fmean": "0.6206",
  		"Frecall": "0.7051",
  		"Fdecay": "0.2188"
+ 	},
+	"favos": {
+ 		"J_F": "0.4358",
+ 		"Jmean": "0.4294",
+ 		"Jrecall": "0.4809",
+ 		"Jdecay": "0.1814",
+ 		"Fmean": "0.4423",
+ 		"Frecall": "0.5111",
+ 		"Fdecay": "0.1984"
  	}
 };
