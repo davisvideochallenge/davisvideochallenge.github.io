@@ -1,11 +1,21 @@
 var global_eval_test_dev_2017 = {
 	"Tgt": "0.088",
 	"techniques": [
+		"cinm",
 		"osvoss",
 		"favos",
 		"osvos",
 		"onavos"
 	],
+	"cinm": {
+ 		"J_F": "0.6750",
+ 		"Jmean": "0.6448",
+ 		"Jrecall": "0.7383",
+ 		"Jdecay": "0.1995",
+ 		"Fmean": "0.7052",
+ 		"Frecall": "0.7957",
+ 		"Fdecay": "0.1996"
+ 	},
 	"osvos": {
  		"J_F": "0.5092",
  		"Jmean": "0.4704",

@@ -3,9 +3,11 @@ var global_eval_val_2016 = {
 	"techniques": [
 		"osvoss",
 		"onavos",
+		"cinm",
 		"favos",
 		"osvos",
 		"cut",
+		"pml",
 		"sfls",
 		"sflu",
 		"plm",
@@ -34,6 +36,24 @@ var global_eval_val_2016 = {
 		"sflab",
 		"sfmot"
 	],
+	"pml": {
+		"Jmean": "0.755",
+		"Jrecall": "0.896",
+		"Jdecay": "0.085",
+		"Fmean": "0.793",
+		"Frecall": "0.934",
+		"Fdecay": "0.078",
+		"T": "0.471"
+	},
+	"cinm": {
+		"Jmean": "0.834",
+		"Jrecall": "0.949",
+		"Jdecay": "0.123",
+		"Fmean": "0.850",
+		"Frecall": "0.921",
+		"Fdecay": "0.147",
+		"T": "0.280"
+	},
 	"favos": {
 		"Jmean": "0.824",
 		"Jrecall": "0.965",
