@@ -12,7 +12,7 @@ var tech_props = {
 "osvos"  : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "OSVOS" , "im_url": "osvos" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
 "onavos" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "OnAVOS", "im_url": "onavos", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
 "osvoss" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "OSVOS-S", "im_url": "osvoss", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-"cinm" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "CINM", "im_url": "osvoss", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+"cinm" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "CINM", "im_url": "cinm", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
 "favos" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "FAVOS", "im_url": "favos", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}
 };
 
