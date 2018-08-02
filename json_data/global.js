@@ -59,10 +59,10 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['osvoss','onavos', 'cinm', 'favos','osvos','msk', 'pml','sfls','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
+var techniques = ['osvoss','onavos', 'cinm', 'favos','osvos','msk','pml','sfls','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
                   'arp','lvo','fseg','lmp','sflu','fst','cut','nlc','msg','key','cvos','trc'];
 
-var shown_techniques_val = ['osvoss','onavos','favos', 'cinm', 'osvos'];
+var shown_techniques_val = ['osvoss','onavos','favos', 'cinm', 'osvos','msk'];
 
 var shown_techniques_train = ['msk', 'ctn', 'vpn'];
 
@@ -98,10 +98,38 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "vpn"    : {"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "VPN"   , "im_url": "vpn"   , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "favos"  : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "FAVOS" , "im_url": "favos" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "cinm"   : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "CINM" , "im_url": "cinm" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "osmn"   : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OSMN" , "im_url": "osmn" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "pdb"    : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "PDB" , "im_url": "pdb" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "osvoss" : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OSVOS-S" , "im_url": "osvoss" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
 
 
 var techn_papers ={
+  "pdb": {
+    "conference": "ECCV",
+    "authors": [
+      "H. Song",
+      "W. Wang",
+      "J. Shen",
+      "S. Zhao",
+      "K. M. Lam"
+    ],
+    "year": 2018,
+    "url": "https://github.com/shenjianbing/PDB-ConvLSTM",
+    "title": "Pyramid Dilated Deeper CoonvLSTM for Video Salient Object Detection"
+  },
+  "osmn": {
+    "conference": "CVPR",
+    "authors": [
+      "L. Yang",
+      "Y. Wang",
+      "X. Xiong",
+      "J. Yang",
+      "A. K. Katsaggelos"
+    ],
+    "year": 2018,
+    "url": "https://github.com/linjieyangsc/video_seg",
+    "title": "Efficient Video Object Segmentation via Network Modulation"
+  },
   "pml": {
     "conference": "CVPR",
     "authors": [

@@ -5,8 +5,18 @@ var global_eval_val_2017 = {
 		"osvoss",
 		"favos",
 		"osvos",
-		"onavos"
+		"onavos",
+		"osmn"
 	],
+	"osmn": {
+ 		"J_F": "0.5480",
+ 		"Jmean": "0.5254",
+ 		"Jrecall": "0.6086",
+ 		"Jdecay": "0.2147",
+ 		"Fmean": "0.5706",
+ 		"Frecall": "0.6610",
+ 		"Fdecay": "0.2426"
+ 	},
 	"cinm": {
  		"J_F": "0.7059",
  		"Jmean": "0.6720",

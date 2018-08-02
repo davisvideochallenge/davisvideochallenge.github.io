@@ -9,6 +9,7 @@ var global_eval_val_2016 = {
 		"cut",
 		"pml",
 		"sfls",
+		"osmn",
 		"sflu",
 		"plm",
 		"msk",
@@ -36,6 +37,15 @@ var global_eval_val_2016 = {
 		"sflab",
 		"sfmot"
 	],
+	"osmn": {
+		"Jmean": "0.740",
+		"Jrecall": "0.876",
+		"Jdecay": "0.090",
+		"Fmean": "0.729",
+		"Frecall": "0.840",
+		"Fdecay": "0.106",
+		"T": "0.209"
+	},
 	"pml": {
 		"Jmean": "0.755",
 		"Jrecall": "0.896",
