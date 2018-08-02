@@ -59,7 +59,7 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['osvoss','onavos', 'cinm', 'favos','osvos','msk','pml','sfls','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
+var techniques = ['osvoss','onavos', 'cinm', 'favos','osvos','msk','pml','sfls', 'pdb','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
                   'arp','lvo','fseg','lmp','sflu','fst','cut','nlc','msg','key','cvos','trc'];
 
 var shown_techniques_val = ['osvoss','onavos','favos', 'cinm', 'osvos','msk'];
