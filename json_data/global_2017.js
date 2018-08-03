@@ -14,12 +14,25 @@ var tech_props = {
 "osvoss" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "OSVOS-S", "im_url": "osvoss", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
 "cinm" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "CINM", "im_url": "cinm", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
 "favos" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "FAVOS", "im_url": "favos", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-"osmn" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "OSMN", "im_url": "osmn", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}
+"osmn" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "OSMN", "im_url": "osmn", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+"rgmp" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "RGMP", "im_url": "rgmp", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}
 };
 
 var tech_types = ["semi2017"];
 
 var techn_papers ={
+  "rgmp": {
+    "conference": "CVPR",
+    "authors": [
+      "S. Wug Oh",
+      "J. Lee",
+      "K. Sunkavalli",
+      "S. Joo Kim"
+    ],
+    "year": 2018,
+    "url": "https://github.com/seoungwugoh/RGMP",
+    "title": "Fast Video Object Segmentation by Reference-Guided Mask Propagation"
+  },
   "osmn": {
     "conference": "CVPR",
     "authors": [
