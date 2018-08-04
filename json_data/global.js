@@ -128,7 +128,7 @@ var techn_papers ={
     ],
     "year": 2018,
     "url": "https://github.com/shenjianbing/PDB-ConvLSTM",
-    "title": "Pyramid Dilated Deeper CoonvLSTM for Video Salient Object Detection"
+    "title": "Pyramid Dilated Deeper ConvLSTM for Video Salient Object Detection"
   },
   "osmn": {
     "conference": "CVPR",
