@@ -13,6 +13,7 @@ var global_eval_val_2016 = {
         "pdb",
 		"osmn",
 		"sflu",
+		"elm",
 		"plm",
 		"msk",
 		"vpn",
@@ -39,6 +40,15 @@ var global_eval_val_2016 = {
 		"sflab",
 		"sfmot"
 	],
+	"elm": {
+		"Jmean": "0.618",
+		"Jrecall": "0.672",
+		"Jdecay": "0.098",
+		"Fmean": "0.612",
+		"Frecall": "0.654",
+		"Fdecay": "0.088",
+		"T": "0.251"
+	},
     "rgmp": {
 		"Jmean": "0.815",
 		"Jrecall": "0.917",

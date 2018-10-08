@@ -16,6 +16,7 @@ var global_eval_train_2016 = {
 		"fseg",
 		"nlc",
 		"cvos",
+		"elm",
 		"trc",
 		"msg",
 		"key",
@@ -25,6 +26,15 @@ var global_eval_train_2016 = {
 		"sflab",
 		"sfmot"
 	],
+	"elm": {
+		"Jmean": "0.726",
+		"Jrecall": "0.847",
+		"Jdecay": "0.030",
+		"Fmean": "0.711",
+		"Frecall": "0.829",
+		"Fdecay": "0.064",
+		"T": "0.263"
+	},
 	"msk": {
 		"Jmean": "0.807",
 		"Jrecall": "0.939",
