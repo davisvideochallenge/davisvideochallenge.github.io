@@ -59,10 +59,10 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['osvoss','onavos', 'cinm', 'rgmp', 'favos','osvos','msk','pml','sfls', 'pdb','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
+var techniques = ['premvos', 'osvoss','onavos', 'cinm', 'rgmp', 'favos','osvos','msk','pml','sfls', 'pdb','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
                   'arp','lvo','fseg','lmp', 'sflu', 'elm','fst','cut','nlc','msg','key','cvos','trc'];
 
-var shown_techniques_val = ['osvoss','onavos','favos', 'rgmp', 'cinm', 'osvos'];
+var shown_techniques_val = ['premvos', 'osvoss','onavos','favos', 'rgmp', 'cinm', 'osvos'];
 
 var shown_techniques_train = ['msk', 'ctn', 'vpn'];
 
@@ -102,10 +102,21 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "pdb"    : {"type": "unsup"  , "sets": ['val_2016']                             , "display_name": "PDB"   , "im_url": "pdb"   , "col_R" : 0, "col_G" :   255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "rgmp"   : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "RGMP"  , "im_url": "rgmp"  , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "osvoss" : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OSVOS-S","im_url": "osvoss", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "elm"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "ELM"   , "im_url": "elm"   , "col_R" : 0, "col_G" :   255, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
-
+                  "elm"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "ELM"    ,"im_url": "elm"   , "col_R" : 0, "col_G" :   255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "premvos": {"type": "semisup"  , "sets": ['val_2016'],                            "display_name": "PReMVOS","im_url": "premvos", "col_R" : 0,"col_G" :   255, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
 
 var techn_papers ={
+  "premvos":{
+    "conference": "ACCV",
+    "authors": [
+      "J. Luiten",
+      "P. Voigtlaender",
+      "B. Leibe"
+    ],
+    "year": 2018,
+    "url": "https://github.com/JonathonLuiten/PReMVOS",
+    "title": "PReMVOS: Proposal-generation, Refinement and Merging for Video Object Segmentation"
+  },
   "elm": {
     "conference": "ECCV",
     "authors": [
