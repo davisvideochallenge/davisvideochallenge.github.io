@@ -210,7 +210,7 @@
             <li>We interpolate the previous Time vs Jaccard plot at 60 seconds to obtain a Jaccard value. This evaluates which quality a method can obtain in 60 seconds for a sequence containing the average number of objects in test-dev of DAVIS 2017 (~3 objects).</li>
         </ul>
         For the challenge, the maximum number of interactions is 8 and the maximum time is 30 seconds per object for each interaction (so if there are 2 objects in a sequence, your method has 1 minute for each interaction). Therefore, in order to do 8 interactions, the timeout to interact with a certain sequence is computed as 30*num_obj*8. If the timeout is reached before finishing the 8 interactions, the last interaction will be discarded and only the previous will be considered for evaluation.
-        <br>You can find more information <a href="">here</a> (coming soon, information from last yeas as a reference <a href="http://interactive.davischallenge.org/challenge" target="_blank">here</a>) and in the the paper below.
+        <br>You can find more information <a href="">here</a> (coming soon, information from last year as a reference <a href="http://interactive.davischallenge.org/challenge" target="_blank">here</a>) and in the the paper below.
 
         <h3 style="margin-top: 30px;margin-bottom: 5px">Other considerations</h3>
         - Each entry must be associated to a team and provide its affiliation.<br>
