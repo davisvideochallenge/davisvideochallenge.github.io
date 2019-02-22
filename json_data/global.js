@@ -59,10 +59,10 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['premvos', 'osvoss','onavos', 'cinm', 'rgmp', 'favos','osvos','msk','pml','sfls', 'pdb','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
+var techniques = ['premvos', 'osvoss','onavos', 'cinm', 'rgmp', 'favos','osvos','msk','pml','sfls', 'motadapt', 'pdb','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
                   'arp','lvo','fseg','lmp', 'sflu', 'elm','fst','cut','nlc','msg','key','cvos','trc'];
 
-var shown_techniques_val = ['premvos', 'osvoss','onavos','favos', 'rgmp', 'cinm', 'osvos'];
+var shown_techniques_val = ['premvos', 'osvoss','onavos','favos', 'rgmp', 'cinm', 'osvos', 'motadapt', 'pdb'];
 
 var shown_techniques_train = ['msk', 'ctn', 'vpn'];
 
@@ -103,9 +103,25 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "rgmp"   : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "RGMP"  , "im_url": "rgmp"  , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "osvoss" : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OSVOS-S","im_url": "osvoss", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "elm"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "ELM"    ,"im_url": "elm"   , "col_R" : 0, "col_G" :   255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "premvos": {"type": "semisup"  , "sets": ['val_2016'],                            "display_name": "PReMVOS","im_url": "premvos", "col_R" : 0,"col_G" :   255, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
+                  "premvos": {"type": "semisup"  , "sets": ['val_2016'],                            "display_name": "PReMVOS","im_url": "premvos", "col_R" : 255,"col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "motadapt":{"type": "unsup"   , "sets": ['val_2016'],                            "display_name": "MotAdapt","im_url": "motadapt", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
 
 var techn_papers ={
+  "motadapt":{
+    "conference": "ICRA",
+    "authors": [
+      "M. Siam",
+      "C. Jiang",
+      "S. Lu",
+      "L. Petrich",
+      "M. Gamal",
+      "M Elhoseiny",
+      "M Jagersand"
+    ],
+    "year": 2019,
+    "url": "https://msiam.github.io/ivos/",
+    "title": "Video Object Segmentation using Teacher-Student Adaptation in a Human Robot Interaction (HRI) Setting"
+  },
   "premvos":{
     "conference": "ACCV",
     "authors": [
