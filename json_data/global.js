@@ -118,7 +118,7 @@ var techn_papers ={
     ],
     "year": 2019,
     "url": "https://github.com/griffbr/TIS",
-    "title": "TIS: Tukey-Inspired Video Object Segmentation\n"
+    "title": "Tukey-Inspired Video Object Segmentation\n"
   },
   "lucid":{
     "conference": "IJCV",
