@@ -16,12 +16,39 @@ var tech_props = {
 "favos" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "FAVOS", "im_url": "favos", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
 "osmn" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "OSMN", "im_url": "osmn", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
 "rgmp" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "RGMP", "im_url": "rgmp", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+//"voslre"   :{"type": "semisup",  "sets": ['val_2017', 'test_dev_2017'], "display_name": "VOSLRE",  "im_url": "voslre", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
+//"lucid"   :{"type": "semisup",   "sets": ['val_2017', 'test_dev_2017'],"display_name": "Lucid",  "im_url": "lucid", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
 "premvos" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "PReMVOS", "im_url": "premvos", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false}
 };
 
 var tech_types = ["semi2017"];
 
 var techn_papers ={
+  "lucid":{
+    "conference": "IJCV",
+    "authors": [
+      "A. Khoreva",
+      "R. Benenson",
+      "E. Ilg",
+      "T. Brox",
+      "B. Schiele"
+    ],
+    "year": 2019,
+    "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/weakly-supervised-learning/lucid-data-dreaming-for-object-tracking/",
+    "title": "Lucid Data Dreaming for Object Tracking\n"
+  },
+
+  "voslre":{
+    "conference": "ACCV",
+    "authors": [
+      "A. Khoreva",
+      "A. Rohrbach",
+      "B. Schiele"
+    ],
+    "year": 2018,
+    "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/video-segmentation/video-object-segmentation-with-language-referring-expressions/",
+    "title": "Video Object Segmentation with Language Referring Expressions"
+  },
   "premvos":{
     "conference": "ACCV",
     "authors": [

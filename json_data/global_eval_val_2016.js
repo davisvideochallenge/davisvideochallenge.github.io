@@ -6,6 +6,7 @@ var global_eval_val_2016 = {
 		"onavos",
         "rgmp",
 		"cinm",
+		//"voslre",
 		"favos",
 		"osvos",
 		"cut",
@@ -16,6 +17,7 @@ var global_eval_val_2016 = {
 		"osmn",
 		"sflu",
 		"elm",
+		"tis",
 		"plm",
 		"msk",
 		"vpn",
@@ -42,6 +44,24 @@ var global_eval_val_2016 = {
 		"sflab",
 		"sfmot"
 	],
+	"tis": {
+		"Jmean": "0.626",
+		"Jrecall": "0.803",
+		"Jdecay": "0.071",
+		"Fmean": "0.596",
+		"Frecall": "0.745",
+		"Fdecay": "0.064",
+		"T": "0.336"
+	},
+	"voslre":{
+		"Jmean": "0.772",
+		"Jrecall": "0.878",
+		"Jdecay": "0.050",
+		"Fmean": "0.774",
+		"Frecall": "0.844",
+		"Fdecay": "0.033",
+		"T": "0.279"
+	},
 	"motadapt":{
 		"Jmean": "0.772",
 		"Jrecall": "0.878",

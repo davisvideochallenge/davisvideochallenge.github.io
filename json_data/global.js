@@ -59,10 +59,10 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['premvos', 'osvoss','onavos', 'cinm', 'rgmp', 'favos','osvos','msk','pml','sfls', 'motadapt', 'pdb','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
-                  'arp','lvo','fseg','lmp', 'sflu', 'elm','fst','cut','nlc','msg','key','cvos','trc'];
+var techniques = ['premvos', 'osvoss','onavos', 'cinm','rgmp', 'favos','osvos','msk','pml','sfls', 'motadapt', 'pdb','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
+                  'arp','lvo','fseg','lmp', 'sflu', 'tis', 'elm','fst','cut','nlc','msg','key','cvos','trc'];
 
-var shown_techniques_val = ['premvos', 'osvoss','onavos','favos', 'rgmp', 'cinm', 'osvos', 'motadapt', 'pdb'];
+var shown_techniques_val = ['premvos', 'osvoss','onavos','favos', 'rgmp', 'motadapt', 'pdb', 'arp'];
 
 var shown_techniques_train = ['msk', 'ctn', 'vpn'];
 
@@ -103,10 +103,48 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "rgmp"   : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "RGMP"  , "im_url": "rgmp"  , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "osvoss" : {"type": "semisup", "sets": ['val_2016']                             , "display_name": "OSVOS-S","im_url": "osvoss", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "elm"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "ELM"    ,"im_url": "elm"   , "col_R" : 0, "col_G" :   255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "premvos": {"type": "semisup"  , "sets": ['val_2016'],                            "display_name": "PReMVOS","im_url": "premvos", "col_R" : 255,"col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "motadapt":{"type": "unsup"   , "sets": ['val_2016'],                            "display_name": "MotAdapt","im_url": "motadapt", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
+                  "premvos": {"type": "semisup" , "sets": ['val_2016'],                            "display_name": "PReMVOS", "im_url": "premvos", "col_R" : 255,"col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "motadapt":{"type": "unsup"   , "sets": ['val_2016'],                            "display_name": "MotAdapt","im_url": "motadapt", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  //"voslre"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "VOSLRE",  "im_url": "voslre", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  //"lucid"   :{"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "Lucid",   "im_url": "lucid", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "tis":     {"type": "unsup"   , "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "TIS",    "im_url": "tis",     "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
 
 var techn_papers ={
+  "tis":{
+    "conference": "WACV",
+    "authors": [
+      "B. Griffin",
+      "J. Corso"
+    ],
+    "year": 2019,
+    "url": "https://github.com/griffbr/TIS",
+    "title": "TIS: Tukey-Inspired Video Object Segmentation\n"
+  },
+  "lucid":{
+    "conference": "IJCV",
+    "authors": [
+      "A. Khoreva",
+      "R. Benenson",
+      "E. Ilg",
+      "T. Brox",
+      "B. Schiele"
+    ],
+    "year": 2019,
+    "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/weakly-supervised-learning/lucid-data-dreaming-for-object-tracking/",
+    "title": "Lucid Data Dreaming for Object Tracking\n"
+  },
+
+  "voslre":{
+    "conference": "ACCV",
+    "authors": [
+      "A. Khoreva",
+      "A. Rohrbach",
+      "B. Schiele"
+    ],
+    "year": 2018,
+    "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/video-segmentation/video-object-segmentation-with-language-referring-expressions/",
+    "title": "Video Object Segmentation with Language Referring Expressions"
+  },
   "motadapt":{
     "conference": "ICRA",
     "authors": [
@@ -121,6 +159,19 @@ var techn_papers ={
     "year": 2019,
     "url": "https://msiam.github.io/ivos/",
     "title": "Video Object Segmentation using Teacher-Student Adaptation in a Human Robot Interaction (HRI) Setting"
+  },
+  "lucid":{
+    "conference": "IJCV",
+    "authors": [
+      "A. Khoreva",
+      "R. Benenson",
+      "E. Ilg",
+      "T. Brox",
+      "B. Schiele"
+    ],
+    "year": 2019,
+    "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/weakly-supervised-learning/lucid-data-dreaming-for-object-tracking/",
+    "title": "Lucid Data Dreaming for Object Tracking\n"
   },
   "premvos":{
     "conference": "ACCV",
