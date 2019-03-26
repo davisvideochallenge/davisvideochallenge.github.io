@@ -1,6 +1,7 @@
 var global_eval_train_2016 = {
 	"Tgt": "0.099",
 	"techniques": [
+		"lucid",
 		"msk",
 		"vpn",
 		"ofl",
@@ -27,6 +28,15 @@ var global_eval_train_2016 = {
 		"sflab",
 		"sfmot"
 	],
+	"lucid": {
+		"Jmean": "0.885",
+		"Jrecall": "0.988",
+		"Jdecay": "0.027",
+		"Fmean": "0.867",
+		"Frecall": "0.965",
+		"Fdecay": "0.060",
+		"T": "0.155"
+	},
 	"tis": {
 		"Jmean": "0.710",
 		"Jrecall": "0.876",

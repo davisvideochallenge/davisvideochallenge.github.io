@@ -59,12 +59,12 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['premvos', 'osvoss','onavos', 'cinm','rgmp', 'favos','osvos','msk','pml','sfls', 'motadapt', 'pdb','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
+var techniques = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid','rgmp', 'favos','osvos','msk','pml','sfls', 'motadapt', 'pdb','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
                   'arp','lvo','fseg','lmp', 'sflu', 'tis', 'elm','fst','cut','nlc','msg','key','cvos','trc'];
 
-var shown_techniques_val = ['premvos', 'osvoss','onavos','favos', 'rgmp', 'motadapt', 'pdb', 'arp'];
+var shown_techniques_val = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid', 'motadapt', 'pdb', 'arp'];
 
-var shown_techniques_train = ['msk', 'ctn', 'vpn'];
+var shown_techniques_train = ['lucid', 'msk', 'ctn'];
 
 var tech_types = ["unsup", "semisup"];
 
@@ -105,8 +105,8 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "elm"    : {"type": "unsup"  , "sets": ['train_2016','val_2016','trainval_2016'], "display_name": "ELM"    ,"im_url": "elm"   , "col_R" : 0, "col_G" :   255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "premvos": {"type": "semisup" , "sets": ['val_2016'],                            "display_name": "PReMVOS", "im_url": "premvos", "col_R" : 255,"col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "motadapt":{"type": "unsup"   , "sets": ['val_2016'],                            "display_name": "MotAdapt","im_url": "motadapt", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  //"voslre"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "VOSLRE",  "im_url": "voslre", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  //"lucid"   :{"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "Lucid",   "im_url": "lucid", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "voswl"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "VOSwL",  "im_url": "voswl", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "lucid"   :{"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "Lucid",   "im_url": "lucid", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "tis":     {"type": "unsup"   , "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "TIS",    "im_url": "tis",     "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
 
 var techn_papers ={
@@ -134,7 +134,7 @@ var techn_papers ={
     "title": "Lucid Data Dreaming for Object Tracking\n"
   },
 
-  "voslre":{
+  "voswl":{
     "conference": "ACCV",
     "authors": [
       "A. Khoreva",

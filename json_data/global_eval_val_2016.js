@@ -3,10 +3,11 @@ var global_eval_val_2016 = {
 	"techniques": [
 		"premvos",
 		"osvoss",
+		"lucid",
 		"onavos",
         "rgmp",
 		"cinm",
-		//"voslre",
+		"voswl",
 		"favos",
 		"osvos",
 		"cut",
@@ -53,14 +54,23 @@ var global_eval_val_2016 = {
 		"Fdecay": "0.064",
 		"T": "0.336"
 	},
-	"voslre":{
-		"Jmean": "0.772",
-		"Jrecall": "0.878",
-		"Jdecay": "0.050",
-		"Fmean": "0.774",
-		"Frecall": "0.844",
-		"Fdecay": "0.033",
-		"T": "0.279"
+	"lucid": {
+		"Jmean": "0.839",
+		"Jrecall": "0.950",
+		"Jdecay": "0.091",
+		"Fmean": "0.820",
+		"Frecall": "0.881",
+		"Fdecay": "0.097",
+		"T": "0.180"
+	},
+	"voswl": {
+		"Jmean": "0.831",
+		"Jrecall": "0.957",
+		"Jdecay": "0.069",
+		"Fmean": "0.842",
+		"Frecall": "0.939",
+		"Fdecay": "0.086",
+		"T": "0.283"
 	},
 	"motadapt":{
 		"Jmean": "0.772",
