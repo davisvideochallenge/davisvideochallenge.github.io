@@ -131,7 +131,7 @@ var techn_papers ={
     ],
     "year": 2019,
     "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/weakly-supervised-learning/lucid-data-dreaming-for-object-tracking/",
-    "title": "Lucid Data Dreaming for Object Tracking\n"
+    "title": "Lucid Data Dreaming for Video Object Segmentation\n"
   },
 
   "voswl":{
@@ -159,19 +159,6 @@ var techn_papers ={
     "year": 2019,
     "url": "https://msiam.github.io/ivos/",
     "title": "Video Object Segmentation using Teacher-Student Adaptation in a Human Robot Interaction (HRI) Setting"
-  },
-  "lucid":{
-    "conference": "IJCV",
-    "authors": [
-      "A. Khoreva",
-      "R. Benenson",
-      "E. Ilg",
-      "T. Brox",
-      "B. Schiele"
-    ],
-    "year": 2019,
-    "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/weakly-supervised-learning/lucid-data-dreaming-for-object-tracking/",
-    "title": "Lucid Data Dreaming for Object Tracking\n"
   },
   "premvos":{
     "conference": "ACCV",
