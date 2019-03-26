@@ -3,6 +3,7 @@ var global_eval_val_2017 = {
 	"techniques": [
 		"premvos",
 		"cinm",
+		"voswl",
 		"rgmp",
 		"osvoss",
 		"favos",
@@ -10,6 +11,15 @@ var global_eval_val_2017 = {
 		"onavos",
 		"osmn"
 	],
+	"voswl": {
+ 		"J_F": "0.6072",
+ 		"Jmean": "0.5799",
+ 		"Jrecall": "0.6609",
+ 		"Jdecay": "0.2244",
+ 		"Fmean": "0.6346",
+ 		"Frecall": "0.7036",
+ 		"Fdecay": "0.2453"
+ 	},
 	"rgmp": {
  		"J_F": "0.6672",
  		"Jmean": "0.6480",

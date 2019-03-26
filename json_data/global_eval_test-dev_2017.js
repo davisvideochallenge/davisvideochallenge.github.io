@@ -3,6 +3,7 @@ var global_eval_test_dev_2017 = {
 	"techniques": [
 		"premvos",
 		"cinm",
+		"lucid",
 		"rgmp",
 		"osvoss",
 		"favos",
@@ -10,6 +11,15 @@ var global_eval_test_dev_2017 = {
 		"onavos",
 		"osmn"
 	],
+	"lucid": {
+ 		"J_F": "0.6665",
+ 		"Jmean": "0.6344",
+ 		"Jrecall": "0.7396",
+ 		"Jdecay": "0.1954",
+ 		"Fmean": "0.6987",
+ 		"Frecall": "0.8007",
+ 		"Fdecay": "0.1951"
+ 	},
 	"rgmp": {
  		"J_F": "0.5282",
  		"Jmean": "0.5126",

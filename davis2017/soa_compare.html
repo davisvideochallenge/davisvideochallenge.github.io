@@ -329,15 +329,14 @@
                 var max_ids = {};
                 for(var j = 0; j < tech_types.length; j++)
                     max_ids[tech_types[j]] = {max_val: 1-meas_up[i], max_id: 0};
-                for(var j = 0; j < techniques.length; j++)
-                    if (tech_props[techniques[j]].sets.indexOf(subset)>=0)
-                        if (    ((meas_up[i]===1) && (curr_eval[techniques[j]][meas[i]]>max_ids[tech_props[techniques[j]].type].max_val))
-                             || ((meas_up[i]===0) && (curr_eval[techniques[j]][meas[i]]<max_ids[tech_props[techniques[j]].type].max_val)) )
-                        {
+                for(var j = 0; j < techniques.length; j++) {
+                    if (tech_props[techniques[j]].sets.indexOf(subset) >= 0)
+                        if (((meas_up[i] === 1) && (curr_eval[techniques[j]][meas[i]] > max_ids[tech_props[techniques[j]].type].max_val))
+                            || ((meas_up[i] === 0) && (curr_eval[techniques[j]][meas[i]] < max_ids[tech_props[techniques[j]].type].max_val))) {
                             max_ids[tech_props[techniques[j]].type].max_val = curr_eval[techniques[j]][meas[i]];
-                            max_ids[tech_props[techniques[j]].type].max_id  = j;
+                            max_ids[tech_props[techniques[j]].type].max_id = j;
                         }
-
+                }
                 // Add horizontal lines in the different type of measures
                 var st1 = '';
                 if (i===0 || i===3 || i===6 || i===7)
@@ -364,6 +363,7 @@
                         tab_html = tab_html + "<td class='"+cl+"' style='"+ st1 + st2 +"'>" + (100*curr_eval[techniques[j]][meas[i]]).toFixed(1) + "</td>";
                     else
                         tab_html = tab_html + "<td class='"+cl+"' style='"+ st1 + st2 +"'>" + "-&nbsp" + "</td>";
+
 
                 }
                 tab_html = tab_html + "</tr>";
