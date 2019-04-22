@@ -166,7 +166,7 @@
                 <a href="interactive.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Interactive<br>Challenge<br></button></a>
             </div>
             <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
-                <a href="unsupervised.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Unsupervised<br>Teaser Challenge</button></a>
+                <a href="unsupervised.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Unsupervised<br>Challenge</button></a>
             </div>
             </div>
 
@@ -175,40 +175,43 @@
 
         <h3 style="margin-top: 0px;margin-bottom: 5px">Definition</h3>
         The semi-supervised scenario assumes the user inputs a full mask of the object of interest in the first frame of a video sequence.
-        Methods have to produce the segmentation mask for that object in the subsequent frames.
+        Methods have to produce the segmentation mask for that object in the subsequent frames.<br>
+        More information in the <a href='https://arxiv.org/abs/1704.00675' target="_blank">DAVIS 2017 publication</a> and the <a href='https://competitions.codalab.org/competitions/21650' target="_blank">Codalab submission site</a>.
 
         <h3 style="margin-top: 30px;margin-bottom: 5px">Dates and Phases</h3>
         - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Dev 2019</span>: Open end.<br>
         - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Challenge 2019</span>: 12th May 2019 23:59 UTC - 24th May 2019 23:59 UTC.<br>
 
-        <h3 style="margin-top: 30px;margin-bottom: 5px">Papers <span style="color: red; margin-bottom: 50px"></span></h3>
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Prizes </h3>
+        The <b>winner</b> of the competition will get a <b>NVidia GEFORCE RTX 2080Ti</b>.<br>
+        All the other participants invited to the workshop will get a subscription to Adobe CC for 1 year.
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Submission</h3>
+        <a style="color: red">New submission site!</a>
+            <br>Submissions to all phases are done through the new <a href="https://competitions.codalab.org/competitions/21650" target="_blank">Codalab site of the challenge</a> (different from previous editions). We have speeded up the evaluation time by a factor of 5!
+            <br>Please register to the site and read carefully the instructions in the Learn the Details -> Overview and Evaluation sections.
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Datasets (Download <a href='../davis2017/code.html#semisupervised'>here</a>, 480p resolution)</h3>
+        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Train + Val</span>:  90 sequences from DAVIS 2017.<br>
+        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Dev 2017</span>: 30 sequences from DAVIS 2017. Ground truth not publicly available, unlimited number of submissions.<br>
+        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Challenge 2017</span>: 30 sequences from DAVIS 2017. Ground truth not publicly available, limited to 5 submissions in total.<br>
+        Feel free to train or pre-train your algorithms on any other dataset apart from DAVIS (Youtube-VOS, MS COCO, Pascal, etc.) or use the full resolution DAVIS annotations and images.<br>
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Evaluation</h3>
+        - The per-object measures are those described in the original DAVIS CVPR 2016 paper: Region Jaccard (J) and Boundary F measure (F).<br>
+        - The overall ranking measures are computed as the mean between J and F, both averaged over all objects. Precise definitions available in the papers <a href='http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Perazzi_A_Benchmark_Dataset_CVPR_2016_paper.pdf' target="_blank">DAVIS 2016</a> and <a href='https://arxiv.org/abs/1704.00675' target="_blank">DAVIS 2017</a> publications.
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Papers<span style="color: red; margin-bottom: 50px"></span></h3>
         - Right after the Challenge closes (24th May) we will invite all participants to submit a <b>short abstract</b> (400 words maximum) of their method (Deadline 29th of May, 23:59 UTC).<br>
         - Together with the results obtained, we will decide which teams are accepted at the workshop. Date of notification June 3rd.<br>
         - Accepted teams will be able to submit a paper describing their approach (Deadline 12th June, 23:59 UTC). The template of the paper is the same as CVPR, but length will be limited to <b>4 pages including references</b>.<br>
         - Papers will also be invited to the workshop in form of <b>oral presentation or poster</b>.<br>
       	- Accepted papers will be self-published in the web of the challenge (not in the official proceedings, although they have the same <i>value</i>).
 
-
-        <h3 style="margin-top: 30px;margin-bottom: 5px">Datasets (Download <a href='../davis2017/code.html'>here</a>, 480p resolution)</h3>
-        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Train 2017 + Val 2017</span>: 90 sequences, the 50 original DAVIS 2016 sequences (reannotated with multiple objects) plus 40 new sequences.<br>
-        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Dev 2017</span>: 30 new sequences. Ground truth not publicly available, unlimited number of submissions.<br>
-        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Challenge 2017</span>: 30 new sequences. Ground truth not publicly available, limited to 5 submissions in total.<br>
-        Feel free to train or pre-train your algorithms on any other dataset apart from DAVIS (Youtube-VOS, MS COCO, Pascal, etc.) or use the full resolution DAVIS annotations and images.<br>
-
-        <h3 style="margin-top: 30px;margin-bottom: 5px">Submission</h3>
-        Submissions to all phases will be done through the <a href="https://competitions.codalab.org/competitions/16526">Codalab site of the challenge</a>.<br>Please register to the site and refer to the instructions on how to submit your results.
-
-        <h3 style="margin-top: 30px;margin-bottom: 5px">Prizes </h3>
-        This year we are trying to increase the prize pool, so stay tuned!
-
-        <h3 style="margin-top: 30px;margin-bottom: 5px">Evaluation</h3>
-        - The per-object measures are those described in the original DAVIS CVPR 2016 paper: Region Jaccard (J) and Boundary F measure (F).<br>
-        - The overall ranking measures will be computed as the mean between J and F, both averaged over all objects. Precise definitions available in the papers below.
-
         <h3 style="margin-top: 30px;margin-bottom: 5px">Other considerations</h3>
         - Each entry must be associated to a team and provide its affiliation.<br>
         - The best entry of each team will be public in the leaderboard at all times.<br>
-        - We will only consider the "semi-supervised" scenario: the mask of the first frame is given, no human interaction/refinement allowed. Although we have no way to check the latter at the challenge stage, we will make our best to detect it a posteriori before the workshop.<br>
+        - We will only consider the "semi-supervised" scenario: the mask of the first frame is given, no human interaction/refinement allowed. Even though the class of each object was recently released, it should not be used as additional information in the methods. Although we have no way to check the latter at the challenge stage, we will make our best to detect it a posteriori before the workshop.<br>
         - We reserve the right to remove one of the entry methods to the competition when there is a high technical similarity to methods published in previous conferences or workshops. We do so in order to keep the workshop interesting and to push state of the art to move forward.<br>
         - The new annotations in this dataset belong to the organizers of the challenge and are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 License</a>.<br>
 
@@ -222,34 +225,33 @@
         <!--</div>-->
         <div class="content" style="text-align: left; padding-top: 40px;font-size:95%">
         <h3 style="margin-top: 30px;margin-bottom: 5px">Citation</h3>
-            <div class="pure-g">
+           <div class="pure-g">
 
                 <div class="pure-u-1-6">
-                    <img class="pure-img-responsive" style="margin-top:5px; width:100%;" src="../images/teaser/montage-2018.jpg" alt="arXiv">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:100%;" src="../images/teaser/montage-2019.jpg" alt="arXiv">
                 </div>
                 <div class="pure-u-5-6">
                 <p style="margin-left:0.6cm;line-height: 1.4em;margin-top:0em;">
-                    The 2018 DAVIS Challenge on Video Object Segmentation<br>
+                    The 2019 DAVIS Challenge on VOS: Unsupervised Multi-Object Segmentation<br>
                     <a href="https://sergicaelles.com/" target="_blank"/>S. Caelles</a>,
+                    <a href="http://jponttuset.github.io" target="_blank">J. Pont-Tuset</a>,
+                    <a href="http://graphics.ethz.ch/~perazzif" target="_blank"/>F. Perazzi</a>,
                     <a href="http://montesg.xyz/" target="_blank"/>A. Montes</a>,
-                    <a href="http://www.vision.ee.ethz.ch/~kmaninis/" target="_blank"/>K.-K. Maninis</a>,
-                    <a href="http://www.vision.ee.ethz.ch/~yuhchen/" target="_blank"/>Y. Chen</a>,
-                    <a href="https://www.vision.ee.ethz.ch/en/members/get_member.cgi?id=1" target="_blank">L. Van Gool</a>,
-                    <a href="http://graphics.ethz.ch/~perazzif" target="_blank"/>F. Perazzi</a>, and
-                    <a href="http://jponttuset.github.io" target="_blank">J. Pont-Tuset</a>
+                    <a href="http://www.vision.ee.ethz.ch/~kmaninis/" target="_blank"/>K.-K. Maninis</a>, and
+                    <a href="https://www.vision.ee.ethz.ch/en/members/get_member.cgi?id=1" target="_blank">L. Van Gool</a>
                     <br>
-                                       <i>arXiv:1803.00557, 2018</i><br>
-                    [<a href="https://arxiv.org/abs/1803.00557" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('Caelles_arXiv_2018')">BibTex</a>]
+                    <i>arXiv, 2019</i><br>
+                    [<a href="" target="_blank">PDF (Coming soon)</a>] [<a href="javascript:toggleBibtex('Caelles_arXiv_2019')">BibTex</a>]
                 </p>
                 </div>
             </div>
 
-            <div id="bib_Caelles_arXiv_2018" class="bibtex noshow"><pre>@article{Caelles_arXiv_2018,
-  author = {Sergi Caelles and Alberto Montes and Kevis-Kokitsi Maninis and Yuhua Chen and Luc {Van Gool} and Federico Perazzi and Jordi Pont-Tuset},
-  title = {The 2018 DAVIS Challenge on Video Object Segmentation},
-  journal = {arXiv:1803.00557},
-  year = {2018}
-}</pre></div>
+            <div id="bib_Caelles_arXiv_2019" class="bibtex noshow"><pre>@article{Caelles_arXiv_2019,
+              author = {Sergi Caelles and Jordi Pont-Tuset and Federico Perazzi and Alberto Montes and Kevis-Kokitsi Maninis and Luc {Van Gool}},
+              title = {The 2019 DAVIS Challenge on VOS: Unsupervised Multi-Object Segmentation},
+              journal = {arXiv},
+              year = {2019}
+            }</pre></div>
 
 
 
