@@ -43,8 +43,28 @@ var global_eval_val_2016 = {
 		"fst",
 		"mcg",
 		"sflab",
-		"sfmot"
+		"sfmot",
+		"ags",
+		"feelvos"
 	],
+	"ags": {
+		"Jmean": "0.797",
+		"Jrecall": "0.911",
+		"Jdecay": "0.019",
+		"Fmean": "0.774",
+		"Frecall": "0.858",
+		"Fdecay": "0.016",
+		"T": "0.267"
+	},
+	"feelvos": {
+		"Jmean": "0.811",
+		"Jrecall": "0.905",
+		"Jdecay": "0.137",
+		"Fmean": "0.822",
+		"Frecall": "0.866",
+		"Fdecay": "0.141",
+		"T": "0.124"
+	},
 	"tis": {
 		"Jmean": "0.626",
 		"Jrecall": "0.803",

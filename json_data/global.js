@@ -59,10 +59,10 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid','rgmp', 'favos','osvos','msk','pml','sfls', 'motadapt', 'pdb','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
+var techniques = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid','rgmp', 'feelvos', 'favos','osvos','msk','pml','sfls', 'ags', 'motadapt', 'pdb','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
                   'arp','lvo','fseg','lmp', 'sflu', 'tis', 'elm','fst','cut','nlc','msg','key','cvos','trc'];
 
-var shown_techniques_val = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid', 'motadapt', 'pdb', 'arp'];
+var shown_techniques_val = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid', 'ags', 'motadapt', 'pdb'];
 
 var shown_techniques_train = ['lucid', 'msk', 'ctn'];
 
@@ -107,9 +107,40 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "motadapt":{"type": "unsup"   , "sets": ['val_2016'],                            "display_name": "MotAdapt","im_url": "motadapt", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "voswl"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "VOSwL",  "im_url": "voswl", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "lucid"   :{"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "Lucid",   "im_url": "lucid", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "tis":     {"type": "unsup"   , "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "TIS",    "im_url": "tis",     "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
+                  "tis":     {"type": "unsup"   , "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "TIS",    "im_url": "tis",     "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "feelvos"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "FEELVOS",  "im_url": "feelvos", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "ags":     {"type": "unsup"   , "sets": ['val_2016'],                            "display_name": "AGS","im_url": "ags", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
 
 var techn_papers ={
+  "feelvos":{
+    "conference": "CVPR",
+    "authors": [
+      "Paul Voigtlaender",
+      "Yuning Chai",
+      "Florian Schroff",
+      "Hartwig Adam",
+      "Bastian Leibe",
+      "Liang-Chieh Chen",
+    ],
+    "year": 2019,
+    "url": "https://github.com/tensorflow/models/tree/master/research/feelvos",
+    "title": "FEELVOS: Fast End-to-End Embedding Learning for Video Object Segmentation\n"
+  },
+  "ags":{
+    "conference": "CVPR",
+    "authors": [
+      "Wenguan Wang",
+      "Hongmei Song",
+      "Shuyang Zhao",
+      "Jianbing Shen",
+      "Sanyuan Zhao",
+      "Steven Chu Hong Hoi",
+      "Haibin Ling"
+    ],
+    "year": 2019,
+    "url": "https://github.com/wenguanwang/AGS",
+    "title": "Learning Unsupervised Video Object Segmentation through Visual Attention\n"
+  },
   "tis":{
     "conference": "WACV",
     "authors": [
