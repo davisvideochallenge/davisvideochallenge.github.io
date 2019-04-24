@@ -59,10 +59,10 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid','rgmp', 'feelvos', 'favos','osvos','msk','pml','sfls', 'ags', 'motadapt', 'pdb','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
+var techniques = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid','rgmp', 'feelvos', 'favos','osvos','msk','pml','sfls', 'ags', 'motadapt', 'lsmo', 'pdb','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
                   'arp','lvo','fseg','lmp', 'sflu', 'tis', 'elm','fst','cut','nlc','msg','key','cvos','trc'];
 
-var shown_techniques_val = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid', 'ags', 'motadapt', 'pdb'];
+var shown_techniques_val = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid', 'ags', 'motadapt', 'lsmo'];
 
 var shown_techniques_train = ['lucid', 'msk', 'ctn'];
 
@@ -109,9 +109,21 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "lucid"   :{"type": "semisup", "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "Lucid",   "im_url": "lucid", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "tis":     {"type": "unsup"   , "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "TIS",    "im_url": "tis",     "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "feelvos"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "FEELVOS",  "im_url": "feelvos", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "ags":     {"type": "unsup"   , "sets": ['val_2016'],                            "display_name": "AGS","im_url": "ags", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
+                  "ags":     {"type": "unsup"   , "sets": ['val_2016'],                            "display_name": "AGS","im_url": "ags", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "lsmo":   {"type": "unsup" ,    "sets": ['val_2016'],                            "display_name": "LSMO","im_url": "lsmo", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
 
 var techn_papers ={
+  "lsmo":{
+    "conference": "IJCV",
+    "authors": [
+      "Pavel Tokmakov",
+      "Cordelia Schmid",
+      "Karteek Alahari"
+    ],
+    "year": 2019,
+    "url": "https://link.springer.com/content/pdf/10.1007%2Fs11263-018-1122-2.pdf",
+    "title": "Learning to Segment Moving Objects\n"
+  },
   "feelvos":{
     "conference": "CVPR",
     "authors": [
