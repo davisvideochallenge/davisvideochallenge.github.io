@@ -59,7 +59,7 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid','rgmp', 'feelvos', 'favos','osvos','msk','pml','sfls', 'ags', 'motadapt', 'lsmo', 'pdb','osmn','ctn','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
+var techniques = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid','rgmp', 'feelvos', 'favos','osvos','msk','pml','sfls', 'ags', 'motadapt', 'lsmo', 'pdb','osmn','ctn','siammask','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
                   'arp','lvo','fseg','lmp', 'sflu', 'tis', 'elm','fst','cut','nlc','msg','key','cvos','trc'];
 
 var shown_techniques_val = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid', 'ags', 'motadapt', 'lsmo'];
@@ -110,9 +110,23 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "tis":     {"type": "unsup"   , "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "TIS",    "im_url": "tis",     "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "feelvos"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "FEELVOS",  "im_url": "feelvos", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "ags":     {"type": "unsup"   , "sets": ['val_2016'],                            "display_name": "AGS","im_url": "ags", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "lsmo":   {"type": "unsup" ,    "sets": ['val_2016'],                            "display_name": "LSMO","im_url": "lsmo", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}};
+                  "lsmo":   {"type": "unsup" ,    "sets": ['val_2016'],                            "display_name": "LSMO","im_url": "lsmo", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "siammask"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "SIAMMASK",  "im_url": "siammask", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false}};
 
 var techn_papers ={
+  "siammask":{
+    "conference": "CVPR",
+    "authors": [
+      "Qiang Wang",
+      "Li Zhang",
+      "Luca Bertinetto",
+      "Weiming Hu",
+      "Philip H.S. Torr"
+    ],
+    "year": 2019,
+    "url": "http://www.robots.ox.ac.uk/~qwang/SiamMask/",
+    "title": "Fast Online Object Tracking and Segmentation: A Unifying Approach\n"
+  },
   "lsmo":{
     "conference": "IJCV",
     "authors": [

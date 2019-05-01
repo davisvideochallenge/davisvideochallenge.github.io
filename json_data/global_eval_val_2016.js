@@ -46,8 +46,18 @@ var global_eval_val_2016 = {
 		"sfmot",
 		"ags",
 		"feelvos",
-		"lsmo"
+		"lsmo",
+		"siammask"
 	],
+	"siammask": {
+		"Jmean": "0.717",
+		"Jrecall": "0.868",
+		"Jdecay": "0.030",
+		"Fmean": "0.678",
+		"Frecall": "0.798",
+		"Fdecay": "0.021",
+		"T": "0.407"
+	},
 	"lsmo": {
 		"Jmean": "0.782",
 		"Jrecall": "0.891",
