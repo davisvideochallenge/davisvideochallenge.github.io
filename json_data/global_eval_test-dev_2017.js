@@ -11,8 +11,18 @@ var global_eval_test_dev_2017 = {
 		"onavos",
 		"osmn",
 		"feelvos",
-		"siammask"
+		"siammask",
+		"rvos"
 	],
+	"rvos": {
+ 		"J_F": "0.5026",
+ 		"Jmean": "0.4794",
+ 		"Jrecall": "0.5440",
+ 		"Jdecay": "0.3572",
+ 		"Fmean": "0.5258",
+ 		"Frecall": "0.6167",
+ 		"Fdecay": "0.3670"
+ 	},
 	"siammask": {
  		"J_F": "0.4317",
  		"Jmean": "0.4055",
