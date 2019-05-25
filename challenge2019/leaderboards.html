@@ -180,11 +180,149 @@
         You can find the latest results in the <a href="https://competitions.codalab.org/competitions/21650#results" target="_blank">Codalab leaderboard</a>!
 
         <h3 style="margin-top: 30px;margin-bottom: 5px">Interactive</h3>
-        <div>
-          <iframe id="leaderboardFrame" src="https://server.davischallenge.org/leaderboard" width="100%" scrolling="no" frameborder="0"></iframe>
-        </div>
-        <script type="text/javascript" src="/js/iframeResizer.js"></script>
-        <script>iFrameResize({log:false, checkOrigin:false}, '#leaderboardFrame')</script>
+<!--        <div>-->
+<!--          <iframe id="leaderboardFrame" src="https://server.davischallenge.org/leaderboard" width="100%" scrolling="no" frameborder="0"></iframe>-->
+<!--        </div>-->
+<!--        <script type="text/javascript" src="/js/iframeResizer.js"></script>-->
+<!--        <script>iFrameResize({log:false, checkOrigin:false}, '#leaderboardFrame')</script>-->
+
+			<div class="header">
+				<h1>Leaderboard By AUC</h1>
+			</div>
+			<div class="pure-g">
+			<div class="pure-u-1-1">
+
+<table id="tab_auc" width="100%" style="margin: auto; border-spacing: 40px 10px; font-family: 'Raleway', sans-serif; margin-left: 0%;margin-right:0%;margin-bottom:40px;">
+  <tbody>
+    <tr>
+      <td class="seq_header" style="width: 40px; border-bottom: 1px solid gray; border-top: 1px solid gray; color:#efefef; background: #a1a1a1; text-align: center;">Position</td>
+      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">Participant</td>
+      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">Session ID</td>
+      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">AUC</td>
+      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">J&amp;F@60s</td>
+    </tr>
+
+    <tr>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">1</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Seoung Wug Oh (Yonsei University)</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">069a9f2c</td>
+      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.783</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.791</td>
+    </tr>
+
+    <tr>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">2</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Yuk Heo (Korea University)</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">19b36910</td>
+      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.647</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.609</td>
+    </tr>
+
+    <tr>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">3</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Zihang Lin (Sun Yat-sen University)</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">07af0840</td>
+      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.621</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.601</td>
+    </tr>
+
+    <tr>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">4</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">YK_CL (Youku Company)</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">98d2b5a5</td>
+      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.589</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.491</td>
+    </tr>
+
+    <tr>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">5</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Yang Yu (student)</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">5e3d2ee5</td>
+      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.524</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.532</td>
+    </tr>
+
+    <tr>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">6</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Sergi Caelles (ETH Zurich)</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">64dcd941</td>
+      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.224</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.161</td>
+    </tr>
+
+  </tbody>
+</table>
+
+</div></div>
+
+<div class="header">
+    <h1>Leaderboard By J&F@60s</h1>
+</div>
+<div class="pure-g">
+<div class="pure-u-1-1">
+
+<table id="tab_jf" width="100%" style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif; margin-left: 0%;margin-right:0%;margin-bottom:40px;">
+  <tbody>
+    <tr>
+      <td class="seq_header" style="width: 40px; border-bottom: 1px solid gray; border-top: 1px solid gray; color:#efefef; background: #a1a1a1; text-align: center;">Position</td>
+      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">Participant</td>
+      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">Session ID</td>
+      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">AUC</td>
+      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">J&amp;F@60s</td>
+    </tr>
+
+    <tr>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">1</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Seoung Wug Oh (Yonsei University)</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">069a9f2c</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.783</td>
+      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.791</td>
+    </tr>
+
+    <tr>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">2</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Yuk Heo (Korea University)</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">19b36910</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.647</td>
+      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.609</td>
+    </tr>
+
+    <tr>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">3</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Zihang Lin (Sun Yat-sen University)</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">07af0840</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.621</td>
+      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.601</td>
+    </tr>
+
+    <tr>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">4</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">YK_CL (Youku Company)</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">8af54f5e</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.588</td>
+      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.555</td>
+    </tr>
+
+    <tr>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">5</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Yang Yu (student)</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">5e3d2ee5</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.524</td>
+      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.532</td>
+    </tr>
+
+    <tr>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">6</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Sergi Caelles (ETH Zurich)</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">c113efed</td>
+      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.222</td>
+      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.163</td>
+    </tr>
+
+  </tbody>
+</table>
+
+</div></div>
 
         <h3 style="margin-top: 30px;margin-bottom: 5px">Unsupervised</h3>
         You can find the latest results in the <a href="https://competitions.codalab.org/competitions/21739#results" target="_blank">Codalab leaderboard</a>!
