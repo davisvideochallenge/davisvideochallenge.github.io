@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!--<script src="https://storage.googleapis.com/davis-interactive-static/leaderboard/global_eval_test-challenge_2018.js?test=1" type="text/javascript"></script>-->
-    <script src="../json_data/global_eval_test-challenge_2018.js?test=1" type="text/javascript"></script>
-
     <meta charset="utf-8">
+
+    <script src="../json_data/global_eval_test-challenge_2019.js" type="text/javascript"></script>
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'> -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:100,300' rel='stylesheet' type='text/css'>
@@ -19,11 +20,11 @@
         <link rel="stylesheet" href="../css/layouts/side-menu.css">
     <!--<![endif]-->
 
-    <!-- Table -->
-    <link rel="stylesheet" href="../css/style_tab.css">
-
     <!--Includes-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Table -->
+    <link rel="stylesheet" href="../css/style_tab.css">
 
     <!-- Buttons -->
     <link rel="stylesheet" type="text/css" href="../css/buttons/component.css" />
@@ -61,54 +62,11 @@
         line-height: 130%;
     }
 
-    </style>
-
-    <style type="text/css">
-    /*********************************
-    The list of publication items
-    *********************************/
-    /* The list of items */
-    .biblist { }
-
-    /* The item */
-    .biblist li { }
-
-    /* You can define custom styles for plstyle field here. */
-
-
-    /*************************************
-     The box that contain BibTeX code
-     *************************************/
-    div.noshow { display: none; }
-    div.bibtex {
-        margin-right: 0%;
-        margin-top: 1.2em;
-        margin-bottom: 1.3em;
-        border: 1px solid silver;
-        padding: 0.3em 0.5em;
-        background: #ffffee;
+    .semisup{
+        color:#FFFFFF;
     }
-    div.bibtex pre { font-size: 75%; overflow: auto;  width: 100%; }
 
-
-    .content-subhead{color: black}
-</style>
-
-<script type="text/javascript">
- <!--
- // Toggle Display of BibTeX
- function toggleBibtex(articleid) {
-     var bib = document.getElementById('bib_'+articleid);
-     if (bib) {
-         if(bib.className.indexOf('bibtex') != -1) {
-             bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
-         }
-     } else {
-         return;
-     }
- }
--->
-</script>
+    </style>
 </head>
 
 
@@ -174,165 +132,79 @@
             </div>
 
 
-        <div class="content" style="text-align: left; padding-top: 40px;font-size:95%">
-
-        <h3 style="margin-top: 0px;margin-bottom: 5px">Semi-supervised</h3>
-        You can find the latest results in the <a href="https://competitions.codalab.org/competitions/21650#results" target="_blank">Codalab leaderboard</a>!
-
-        <h3 style="margin-top: 30px;margin-bottom: 5px">Interactive</h3>
-<!--        <div>-->
-<!--          <iframe id="leaderboardFrame" src="https://server.davischallenge.org/leaderboard" width="100%" scrolling="no" frameborder="0"></iframe>-->
-<!--        </div>-->
-<!--        <script type="text/javascript" src="/js/iframeResizer.js"></script>-->
-<!--        <script>iFrameResize({log:false, checkOrigin:false}, '#leaderboardFrame')</script>-->
-
-			<div class="header">
-				<h1>Leaderboard By AUC</h1>
-			</div>
-			<div class="pure-g">
-			<div class="pure-u-1-1">
-
-<table id="tab_auc" width="100%" style="margin: auto; border-spacing: 40px 10px; font-family: 'Raleway', sans-serif; margin-left: 0%;margin-right:0%;margin-bottom:40px;">
-  <tbody>
-    <tr>
-      <td class="seq_header" style="width: 40px; border-bottom: 1px solid gray; border-top: 1px solid gray; color:#efefef; background: #a1a1a1; text-align: center;">Position</td>
-      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">Participant</td>
-      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">Session ID</td>
-      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">AUC</td>
-      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">J&amp;F@60s</td>
-    </tr>
-
-    <tr>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">1</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Seoung Wug Oh (Yonsei University)</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">069a9f2c</td>
-      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.783</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.791</td>
-    </tr>
-
-    <tr>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">2</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Yuk Heo (Korea University)</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">19b36910</td>
-      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.647</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.609</td>
-    </tr>
-
-    <tr>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">3</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Zihang Lin (Sun Yat-sen University)</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">07af0840</td>
-      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.621</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.601</td>
-    </tr>
-
-    <tr>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">4</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">YK_CL (Youku Company)</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">98d2b5a5</td>
-      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.589</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.491</td>
-    </tr>
-
-    <tr>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">5</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Yang Yu (student)</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">5e3d2ee5</td>
-      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.524</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.532</td>
-    </tr>
-
-    <tr>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">6</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Sergi Caelles (ETH Zurich)</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">64dcd941</td>
-      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.224</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.161</td>
-    </tr>
-
-  </tbody>
-</table>
-
-</div></div>
-
-<div class="header">
-    <h1>Leaderboard By J&F@60s</h1>
-</div>
-<div class="pure-g">
-<div class="pure-u-1-1">
-
-<table id="tab_jf" width="100%" style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif; margin-left: 0%;margin-right:0%;margin-bottom:40px;">
-  <tbody>
-    <tr>
-      <td class="seq_header" style="width: 40px; border-bottom: 1px solid gray; border-top: 1px solid gray; color:#efefef; background: #a1a1a1; text-align: center;">Position</td>
-      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">Participant</td>
-      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">Session ID</td>
-      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">AUC</td>
-      <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">J&amp;F@60s</td>
-    </tr>
-
-    <tr>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">1</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Seoung Wug Oh (Yonsei University)</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">069a9f2c</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.783</td>
-      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.791</td>
-    </tr>
-
-    <tr>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">2</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Yuk Heo (Korea University)</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">19b36910</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.647</td>
-      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.609</td>
-    </tr>
-
-    <tr>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">3</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Zihang Lin (Sun Yat-sen University)</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">07af0840</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.621</td>
-      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.601</td>
-    </tr>
-
-    <tr>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">4</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">YK_CL (Youku Company)</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">8af54f5e</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.588</td>
-      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.555</td>
-    </tr>
-
-    <tr>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">5</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Yang Yu (student)</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">5e3d2ee5</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.524</td>
-      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.532</td>
-    </tr>
-
-    <tr>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">6</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Sergi Caelles (ETH Zurich)</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">c113efed</td>
-      <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.222</td>
-      <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">0.163</td>
-    </tr>
-
-  </tbody>
-</table>
-
-</div></div>
-
-        <h3 style="margin-top: 30px;margin-bottom: 5px">Unsupervised</h3>
-        You can find the latest results in the <a href="https://competitions.codalab.org/competitions/21739#results" target="_blank">Codalab leaderboard</a>!
-
-        <div class="content" style="text-align: left; padding-top: 40px;font-size:95%">
-
-
-        <h3 style="margin-top: 30px;margin-bottom: 5px">Contact </h3>
-        If you have any further questions, <a href='mailto:davisvideochallenge@gmail.com'>contact us!</a>.
+        <div style="margin: auto;max-width: 1200px;">
+            <div  style="font-family: 'Raleway', sans-serif;font-weight: 300;text-align:center;margin-left: 10%;margin-right: 10%;margin-top:50px;margin-bottom:10px;">
+                <i>The following tables contains the final accepted entries to the 2019 challenges.</i>
+<!--                    <br>Check the authors and papers in the <a href="publications.html">publications section</a>.</i>-->
+             </div>
         </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-1" style="text-align: center;font-size:95%">
+            <div class="content">
+                <h2 class="content-subhead" style="margin-top:33px;margin-bottom:20px">Leaderboard Semi-Supervised track</h2>
+            </div>
+        </div>
+        <div class="pure-u-1-1">
+          <table id='tab_semisupervised' width='70%' style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif;margin-left: 15%;margin-right: 15%;margin-bottom:40px;">
+          </table>
+        </div>
+
+        <div class="pure-u-1-1" style="text-align: center;font-size:95%">
+            <div class="content">
+                <h2 class="content-subhead" style="margin-top:33px;margin-bottom:5px">Leaderboard Interactive track</h2>
+            </div>
+        </div>
+        <div class="pure-u-1-1">
+            <table id="tab1" width="70%"style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif;margin-left: 15%;margin-right: 15%;margin-bottom:20px;">
+                <tbody>
+                    <tr>
+                        <td class="seq_header" style="width: 40px; border-bottom: 1px solid gray; border-top: 1px solid gray; color:#efefef; background: #a1a1a1; text-align: center;">Position</td>
+                        <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">Participant</td>
+                        <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">Session ID</td>
+                        <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">AUC</td>
+                        <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">J&amp;F@60s</td>
+                    </tr>
+                    <tr>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">1</td>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Seoung Wug Oh (Yonsei University)</td>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">069a9f2c</td>
+                        <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">78.3</td>
+                        <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">79.1</td>
+                    </tr>
+                    <tr>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">2</td>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Yuk Heo (Korea University)</td>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">19b36910</td>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">64.7</td>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">60.9</td>
+                    </tr>
+                    <tr>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">3</td>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Zihang Lin (Sun Yat-sen University)</td>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">07af0840</td>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">62.1</td>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">60.1</td>
+                    </tr>
+                    <tr>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">4</td>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">YK_CL (Youku Company)</td>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">98d2b5a5</td>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">58.9</td>
+                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">49.1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pure-u-1-1" style="text-align: center;font-size:95%">
+            <div class="content">
+                <h2 class="content-subhead" style="margin-top:33px;margin-bottom:20px">Leaderboard Unsupervised track</h2>
+            </div>
+        </div>
+        <div class="pure-u-1-1">
+          <table id='tab_unsupervised' width='50%' style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif;margin-left: 25%;margin-right: 25%;margin-bottom:40px;">
+          </table>
         </div>
     </div>
 </div>
@@ -340,112 +212,115 @@
 
 
 
+
 <script type="text/javascript">
-    // Set values different to the ones by default, to 'force' the change
-    var curr_table  = "J";
-    var curr_subset = "val_2017";
-    var curr_eval;
-    var techniques = global_eval_test_challenge_2018['techniques'];
 
-    function switch_to_table(new_table,new_subset)
-    {
-        curr_table = new_table;
-        curr_subset = new_subset;
+    techniques = global_eval_test_challenge_2019_semisupervised.techniques;
+    curr_eval = global_eval_test_challenge_2019_semisupervised;
+    tech_props = tech_props_semisup;
+    tech_types = ['over'];
+    subset = 'test-challenge-2019';
+    html_id = 'tab_semisupervised';
+    generate_table(tech_props, techniques, curr_eval, tech_types, subset, html_id);
 
-        // Change to current subset
-        curr_eval   = window["global_eval_" + curr_subset];
+    techniques = global_eval_test_challenge_2019_unsupervised.techniques;
+    curr_eval = global_eval_test_challenge_2019_unsupervised;
+    tech_props = tech_props_unsup;
+    tech_types = ['over'];
+    subset = 'test-challenge-2019';
+    html_id = 'tab_unsupervised';
+    generate_table(tech_props, techniques, curr_eval, tech_types, subset, html_id);
 
-        // Apply the changes
-        show_table(curr_table,curr_subset,"tab","None");
-
-    }
-
-    function switch_to_subset(id)
-    {
-        curr_subset = id;
-    }
-
-    function mean(values)
-    {
-        var sum = 0;
-        for( var i = 0; i < values.length; i++ ){
-            sum += parseFloat( values[i]);
-        }
-
-        var avg = 100*(sum/values.length);
-        return avg.toFixed(1);
-    }
-
-    function show_table(meas, subset, html_id)
-    {
-        var tab_html = '';
-
-        // Header
-        tab_html = "<tr><th class='seq_header' style='width: 170px;border-bottom: 1px solid gray;border-top: 1px solid gray;'>Measure</th>";
-        var st = '';
-        for(var i = 0; i < techniques.length; i++)
-        {
-            // Add vertical lines in the transition betyween types of techniques
-            st = '';
-            tab_html = tab_html + "<th class='semi2017' style='border-bottom: 1px solid gray;border-top: 1px solid gray; text-align:right;"+st+"'>" + techniques[i] + "</th>";
-        }
-        tab_html = tab_html + "</tr>";
-
-        // Show one line per measure
-        var meas = ["J_F","Jmean", "Jrecall", "Jdecay", "Fmean", "Frecall", "Fdecay"];
-        var meas_up = [1, 1, 1, 0, 1, 1, 0, 0];
-        var meas_show = ["J&F Mean &uarr;", "J Mean &uarr;", "J Recall &uarr;", "J Decay &darr;", "F Mean &uarr;", "F Recall &uarr;", "F Decay &darr;", "T (GT "+(100*curr_eval.Tgt).toFixed(1)+") &darr;"];
-        for(var i = 0; i < meas.length; i++)
-        {
-            // Get the maximum at each row
-            var max_ids = {};
-            max_ids['semi2017'] = {max_val: 1-meas_up[i], max_id: 0};
-            for(var j = 0; j < techniques.length; j++)
-                if (    ((meas_up[i]===1) && (curr_eval[techniques[j]][meas[i]]>max_ids['semi2017'].max_val))
-                     || ((meas_up[i]===0) && (curr_eval[techniques[j]][meas[i]]<max_ids['semi2017'].max_val)) )
-                {
-                    max_ids['semi2017'].max_val = curr_eval[techniques[j]][meas[i]];
-                    max_ids['semi2017'].max_id  = j;
-                }
-
-            // Add horizontal lines in the different type of measures
-            var st1 = '';
-            if (i===0 || i===3 || i===6 || i===7)
-                st1 = "border-bottom: 1px solid gray;";
-
-            // Display it
-            tab_html = tab_html + "<tr><td class='measures' style='width: 170px;"+st1+"'>"+meas_show[i]+"</td>";
-            for(var j = 0; j < techniques.length; j++)
+    function generate_table(tech_props, techniques, curr_eval, tech_types, subset, html_id) {
+            ordinals = ['st','nd','rd','th','th','th','th','th','th','th'];
+            // Header
+            var tab_html = "<tr><th class='seq_header' style='width: 170px;border-bottom: 1px solid gray;border-top: 1px solid gray;'>Participant</th>"
+            for(var i = 0; i < techniques.length; i++)
             {
-                // Highlight the maximum
-
-                if (max_ids['semi2017'].max_id===j)
-                    cl = 'highlight';
-                else
-                    cl = 'elements';
                 // Add vertical lines in the transition between types of techniques
-                var st2 = '';
-
-                // Actually add the row
-                tab_html = tab_html + "<td class='"+cl+"' style='"+ st1 + st2 +"'>" + (100*curr_eval[techniques[j]][meas[i]]).toFixed(1) + "</td>";
-
+                var st = '';
+                if (i>0)
+                    if (tech_props[techniques[i]].type!=tech_props[techniques[i-1]].type)
+                        st = "border-left: 3px solid white;";
+                tab_html = tab_html + "<th class='"+tech_props[techniques[i]].type+"' style='border-bottom: 1px solid gray;border-top: 1px solid gray; text-align:right;"+st+"'>" + tech_props[techniques[i]].display_name + "</th>";
             }
             tab_html = tab_html + "</tr>";
+
+
+            // Ranking
+            tab_html = tab_html + "<tr><td class='measures' style='width: 170px;border-bottom: 1px solid gray;'>Rank</td>"
+            for(var i = 0; i < techniques.length; i++)
+            {
+                // Add vertical lines in the transition betyween types of techniques
+                var st = '';
+                if (i>0)
+                    if (tech_props[techniques[i]].type!=tech_props[techniques[i-1]].type)
+                        st = "border-left: 3px solid white;";
+                tab_html = tab_html + "<td class='elements' style='"+st+"text-align: right; color:#0000FF; border-bottom: 1px solid gray;'>" + (i+1).toString() + ordinals[i]+ "</th>";
+            }
+            tab_html = tab_html + "</tr>";
+
+
+            // Show one line per measure
+            var meas = ["J_F","Jmean", "Jrecall", "Jdecay", "Fmean", "Frecall", "Fdecay"];
+            var meas_up = [1, 1, 1, 0, 1, 1, 0];
+            var meas_show = ["Mean J and F &uarr;", "J Mean &uarr;", "J Recall &uarr;", "J Decay &darr;", "F Mean &uarr;", "F Recall &uarr;", "F Decay &darr;", "T (GT "+(100*curr_eval.Tgt).toFixed(1)+") &darr;"];
+            for(var i = 0; i < meas.length; i++)
+            {
+                // Get the maximum at each row
+                var max_ids = {};
+                for(var j = 0; j < tech_types.length; j++)
+                    max_ids[tech_types[j]] = {max_val: 1-meas_up[i], max_id: 0};
+                for(var j = 0; j < techniques.length; j++)
+                    if (tech_props[techniques[j]].sets.indexOf(subset)>=0)
+                        if (    ((meas_up[i]==1) && (curr_eval[techniques[j]][meas[i]]>max_ids[tech_props[techniques[j]].type].max_val))
+                             || ((meas_up[i]==0) && (curr_eval[techniques[j]][meas[i]]<max_ids[tech_props[techniques[j]].type].max_val)) )
+                        {
+                            max_ids[tech_props[techniques[j]].type].max_val = curr_eval[techniques[j]][meas[i]];
+                            max_ids[tech_props[techniques[j]].type].max_id  = j;
+                        }
+
+                // Add horizontal lines in the different type of measures
+                var st1 = ''
+                if (i==0 || i==3 || i==6 || i==7)
+                    st1 = "border-bottom: 1px solid gray;";
+
+                // Display it
+                tab_html = tab_html + "<tr><td class='measures' style='width: 170px;"+st1+"'>"+meas_show[i]+"</td>"
+                for(var j = 0; j < techniques.length; j++)
+                {
+                    // Highlight the maximum
+                    if (max_ids[tech_props[techniques[j]].type].max_id==j)
+                        cl = 'highlight';
+                    else
+                        cl = 'elements';
+
+                    // Add vertical lines in the transition between types of techniques
+                    var st2 = '';
+                    if (j>0)
+                        if (tech_props[techniques[j]].type!=tech_props[techniques[j-1]].type)
+                            st2 = "border-left: 3px solid white;";
+
+                    // Actually add the row
+                    if (tech_props[techniques[j]].sets.indexOf(subset)>=0)
+                        tab_html = tab_html + "<td class='"+cl+"' style='"+ st1 + st2 +"'>" + (100*curr_eval[techniques[j]][meas[i]]).toFixed(1) + "</td>";
+                    else
+                        tab_html = tab_html + "<td class='"+cl+"' style='"+ st1 + st2 +"'>" + "-&nbsp" + "</td>";
+
+                }
+                tab_html = tab_html + "</tr>";
+            }
+
+            // Fill in the table
+            document.getElementById(html_id).innerHTML = tab_html;
         }
-
-        // Fill in the table
-        document.getElementById(html_id).innerHTML = tab_html;
-    }
-
-    switch_to_table('global','test_challenge_2018')
-
-
-</script>
+    </script>
 
 <script src="../js/ui.js"></script>
-
 
 
 </body>
 
 </html>
+
+
