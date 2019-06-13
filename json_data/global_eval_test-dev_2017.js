@@ -12,8 +12,18 @@ var global_eval_test_dev_2017 = {
 		"osmn",
 		"feelvos",
 		"siammask",
-		"rvos"
+		"rvos",
+		"agame"
 	],
+	"agame": {
+ 		"J_F": "0.5226",
+ 		"Jmean": "0.4922",
+ 		"Jrecall": "0.5318",
+ 		"Jdecay": "0.2889",
+ 		"Fmean": "0.5531",
+ 		"Frecall": "0.6111",
+ 		"Fdecay": "0.2756"
+ 	},
 	"rvos": {
  		"J_F": "0.5026",
  		"Jmean": "0.4794",

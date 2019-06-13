@@ -12,8 +12,18 @@ var global_eval_val_2017 = {
 		"onavos",
 		"osmn",
 		"siammask",
-		"rvos"
+		"rvos",
+		"agame"
 	],
+	"agame": {
+ 		"J_F": "0.7105",
+ 		"Jmean": "0.6849",
+ 		"Jrecall": "0.7839",
+ 		"Jdecay": "0.1399",
+ 		"Fmean": "0.7361",
+ 		"Frecall": "0.8339",
+ 		"Fdecay": "0.1576"
+ 	},
 	"rvos": {
  		"J_F": "0.6055",
  		"Jmean": "0.5754",
