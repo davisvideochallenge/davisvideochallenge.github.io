@@ -47,8 +47,18 @@ var global_eval_val_2016 = {
 		"ags",
 		"feelvos",
 		"lsmo",
-		"siammask"
+		"siammask",
+		"agame"
 	],
+	"agame": {
+		"Jmean": "0.815",
+		"Jrecall": "0.936",
+		"Jdecay": "0.094",
+		"Fmean": "0.822",
+		"Frecall": "0.903",
+		"Fdecay": "0.098",
+		"T": "0.218"
+	},
 	"siammask": {
 		"Jmean": "0.717",
 		"Jrecall": "0.868",
