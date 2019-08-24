@@ -13,8 +13,18 @@ var global_eval_test_dev_2017 = {
 		"feelvos",
 		"siammask",
 		"rvos",
-		"agame"
+		"agame",
+		"ranet"
 	],
+	"ranet": {
+ 		"J_F": "0.5537",
+ 		"Jmean": "0.5344",
+ 		"Jrecall": "0.6189",
+ 		"Jdecay": "0.2193",
+ 		"Fmean": "0.5730",
+ 		"Frecall": "0.6768",
+ 		"Fdecay": "0.2209"
+ 	},
 	"agame": {
  		"J_F": "0.5226",
  		"Jmean": "0.4922",
