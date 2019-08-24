@@ -26,8 +26,18 @@ var global_eval_trainval_2016 = {
 		"fst",
 		"mcg",
 		"sflab",
-		"sfmot"
+		"sfmot",
+		"uovos"
 	],
+	"uovos": {
+		"Jmean": "0.778",
+		"Jrecall": "0.936",
+		"Jdecay": "0.021",
+		"Fmean": "0.720",
+		"Frecall": "0.877",
+		"Fdecay": "0.038",
+		"T": "0.330"
+	},
 	"lucid": {
 		"Jmean": "0.866",
 		"Jrecall": "0.973",

@@ -59,8 +59,10 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid','agame','rgmp', 'feelvos', 'favos','osvos','msk','pml','sfls', 'ags', 'motadapt', 'lsmo', 'pdb','osmn','ctn','siammask','vpn', 'plm','ofl','bvs','fcp','jmp','hvs','sea',
-                  'arp','lvo','fseg','lmp', 'sflu', 'tis', 'elm','fst','cut','nlc','msg','key','cvos','trc'];
+var techniques = ['premvos', 'osvoss', 'onavos', 'cinm', 'voswl', 'lucid', 'agame', 'rgmp', 'feelvos', 'favos', 'osvos',
+  'msk', 'pml', 'sfls', 'ags', 'motadapt', 'lsmo', 'pdb','osmn','ctn','siammask', 'vpn', 'plm', 'ofl', 'bvs',
+  'fcp', 'jmp', 'hvs', 'sea', 'arp', 'lvo', 'uovos', 'fseg','lmp', 'sflu', 'tis', 'elm', 'fst', 'cut', 'nlc', 'msg', 'key',
+  'cvos', 'trc'];
 
 var shown_techniques_val = ['premvos', 'osvoss','onavos', 'cinm','voswl','lucid', 'ags', 'motadapt', 'lsmo'];
 
@@ -112,9 +114,24 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "ags":     {"type": "unsup"   , "sets": ['val_2016'],                            "display_name": "AGS","im_url": "ags", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "lsmo":   {"type": "unsup" ,    "sets": ['val_2016'],                            "display_name": "LSMO","im_url": "lsmo", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "siammask"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "SIAMMASK",  "im_url": "siammask", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "agame"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "AGAME",  "im_url": "agame", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false}};
+                  "agame"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "AGAME",  "im_url": "agame", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "uovos":     {"type": "unsup"   , "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "UOVOS","im_url": "uovos", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}
+};
 
 var techn_papers ={
+  "uovos":{
+    "conference": "TIP",
+    "authors": [
+      "Tao Zhuo",
+      "Zhiyong Cheng",
+      "Peng Zhang",
+      "Yongkang Wong",
+      "Mohan Kankanhalli"
+    ],
+    "year": 2019,
+    "url": "https://github.com/visiontao/uovos",
+    "title": "Unsupervised Online Video Object Segmentation with Motion Property Understanding\n"
+  },
   "agame":{
     "conference": "CVPR",
     "authors": [
