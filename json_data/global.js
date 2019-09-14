@@ -60,11 +60,11 @@ var seq_nframes = {"bear"                 : 82,
                    "train"                : 80};
 
 var techniques = ['ranet', 'premvos', 'osvoss', 'onavos', 'cinm', 'voswl', 'lucid', 'agame', 'rgmp', 'feelvos', 'favos', 'osvos',
-  'msk', 'pml', 'sfls', 'ags', 'motadapt', 'lsmo', 'pdb','osmn','ctn','siammask', 'vpn', 'plm', 'ofl', 'bvs',
+  'msk', 'pml', 'sfls', 'cosnet', 'ags', 'motadapt', 'lsmo', 'pdb','osmn','ctn','siammask', 'vpn', 'plm', 'ofl', 'bvs',
   'fcp', 'jmp', 'hvs', 'sea', 'arp', 'lvo', 'uovos', 'fseg','lmp', 'sflu', 'tis', 'elm', 'fst', 'cut', 'nlc', 'msg', 'key',
   'cvos', 'trc'];
 
-var shown_techniques_val = ['ranet', 'premvos', 'osvoss','onavos', 'cinm','voswl', 'ags', 'motadapt', 'lsmo'];
+var shown_techniques_val = ['ranet', 'premvos', 'osvoss','onavos', 'cinm','voswl', 'cosnet', 'ags', 'motadapt'];
 
 var shown_techniques_train = ['lucid', 'msk', 'ctn'];
 
@@ -116,10 +116,25 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "siammask"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "SIAMMASK",  "im_url": "siammask", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "agame"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "AGAME",  "im_url": "agame", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "uovos":     {"type": "unsup"   , "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "UOVOS","im_url": "uovos", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "ranet"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "RANet",  "im_url": "ranet", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false}
+                  "ranet"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "RANet",  "im_url": "ranet", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "cosnet":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "COSNet","im_url": "cosnet", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}
 };
 
 var techn_papers ={
+  "cosnet":{
+    "conference": "CVPR",
+    "authors": [
+      "Xiankai Lu",
+      "Wenguan Wang",
+      "Chao Ma",
+      "Jianbing Shen",
+      "Ling Shao",
+      "Fatih Porikli"
+    ],
+    "year": 2019,
+    "url": "https://github.com/carrierlxk/COSNet",
+    "title": "See More, Know More: Unsupervised Video Object Segmentation with Co-Attention Siamese Networks\n"
+  },
   "ranet":{
     "conference": "ICCV",
     "authors": [

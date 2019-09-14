@@ -50,8 +50,18 @@ var global_eval_val_2016 = {
 		"siammask",
 		"agame",
 		"uovos",
-		"ranet"
+		"ranet",
+		"cosnet"
 	],
+	"cosnet": {
+		"Jmean": "0.805",
+		"Jrecall": "0.931",
+		"Jdecay": "0.044",
+		"Fmean": "0.795",
+		"Frecall": "0.895",
+		"Fdecay": "0.050",
+		"T": "0.184"
+	},
 	"ranet": {
 		"Jmean": "0.866",
 		"Jrecall": "0.970",
