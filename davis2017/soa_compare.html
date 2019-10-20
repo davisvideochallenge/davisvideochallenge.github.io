@@ -106,7 +106,8 @@
         <div class="header">
             <h1>Benchmark Video Object Segmentation on DAVIS 2017</h1>
             <h2>Quantitative state-of-the-art comparison</h2>
-            <h4>In order to evaluate on Test-dev, use the <a href="https://competitions.codalab.org/competitions/20516" target="_blank">Codalab</a> site.</h4>
+            <h4>In order to evaluate on Semi-Supervised Test-dev, use the <a href="https://competitions.codalab.org/competitions/20516" target="_blank">Codalab</a> site.</h4>
+            <h4>In order to evaluate on Unsupervised Test-dev, use the <a href="https://competitions.codalab.org/competitions/20515" target="_blank">Codalab</a> site.</h4>
         </div>
 
         <!-- Buttons  -->
@@ -143,19 +144,26 @@
 
         <div style="margin: auto;max-width: 1200px;">
         <div  style="font-family: 'Raleway', sans-serif;font-weight: 300;text-align:center;margin-left: 10%;margin-right: 10%;margin-top:20px;margin-bottom:0px;">
-            <!--<i>*Note about the subsets: A dash "-" means that the authors did not publish their results on this set. If you would like to have your results in the table <a href='mailto:davischallenge17@gmail.com'>contact us!</a></i>-->
-            <i >All techniques are semi-supervised.</i>
-        </div>
-             <div id="text_top" style="font-family: 'Raleway', sans-serif;font-weight: 300;text-align:center;margin-left: 10%;margin-right: 10%;margin-top:20px;margin-bottom:10px;">
+            <i>*Note about the subsets: A dash "-" means that the authors did not publish their results on this set. If you would like to have your results in the table <a href='mailto:davischallenge17@gmail.com'>contact us!</a></i>
+<!--            <i >All techniques are semi-supervised.</i>-->
              </div>
-             <!--<div style="font-family: 'Raleway', sans-serif;text-align:center;font-weight: 300;margin-left: 10%;margin-right: 10%;margin-top:3px;margin-bottom:15px;">-->
-             <!--<i>Semi-supervised techniques are depicted in <span style="color:red">red</span> and unsupervised in <span style="color:green;">green</span>.</i>-->
-             <!--</div>-->
+             <div id="text_top" style="font-family: 'Raleway', sans-serif;font-weight: 300;text-align:center;margin-left: 10%;margin-right: 10%;margin-top:20px;margin-bottom:0px;">
+             </div>
+             <div style="font-family: 'Raleway', sans-serif;text-align:center;font-weight: 300;margin-left: 10%;margin-right: 10%;margin-top:3px;margin-bottom:15px;">
+             <i>Semi-Supervised techniques are depicted in <span style="color:red">red</span> and Unsupervised in <span style="color:green;">green</span>.</i>
+             </div>
         </div> 
 
         <div class="pure-g">
             <div class="pure-u-1-1">
-              <table id='tab' width='50%' class="center" style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif;margin-bottom:40px;">
+              <table id='tab_semi' width='80%' class="center" style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif;margin-bottom:40px;">
+              </table>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+              <table id='tab_unsup' width='30%' class="center" style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif;margin-bottom:40px;">
               </table>
             </div>
         </div>
@@ -178,6 +186,17 @@
     var curr_table  = "J";
     var curr_subset = "val_2017";
     var curr_eval;
+
+    var unsup_tech = [];
+    var semi_tech = [];
+    for (var i = 0; i < techniques.length; i++){
+        if (tech_props[techniques[i]].type === 'unsup2017'){
+            unsup_tech.push(techniques[i])
+        }
+        else {
+            semi_tech.push(techniques[i])
+        }
+    }
 
     function switch_to_table(new_table,new_subset)
     {
@@ -205,7 +224,8 @@
         }
 
         // Apply the changes
-        show_table(curr_table,curr_subset,"tab","None");
+        show_table(curr_table,curr_subset, semi_tech,"tab_semi","None");
+        show_table(curr_table,curr_subset, unsup_tech,"tab_unsup","None");
 
     }
 
@@ -214,27 +234,29 @@
         curr_subset = id;
     }
 
-    function show_table(meas, subset, html_id, sort_by)
+    function show_table(meas, subset, techns_show, html_id, sort_by)
     {
-        var tab_html = '';
+
         if (meas==="J" || meas==="F")
         {
             // Header
-            tab_html = "<tr><th onclick=\"click_method('None')\" class='seq_header' style='width: 170px;'><span style='cursor:n-resize;'>Sequence</span></th>";
-            var st = '';
-            for(var i = 0; i < techniques.length; i++)
+            var tab_html = "<tr><th onclick=\"click_method('None')\" class='seq_header' style='width: 170px;'><span style='cursor:n-resize;'>Sequence</span></th>"
+            for(var i = 0; i < techns_show.length; i++)
             {
                 // Add vertical lines in the transition between types of techniques
-                st = "style='text-align:right;'";
+                var st = "style='text-align:right;'";
                 if (i>0)
-                    if (tech_props[techniques[i]].type!=tech_props[techniques[i-1]].type)
+                    if (tech_props[techns_show[i]].type!=tech_props[techns_show[i-1]].type)
                         st = "style='border-left: 3px solid white;'";
-                tab_html = tab_html + "<th onclick=\"click_method('"+techniques[i]+"')\" class='"+tech_props[techniques[i]].type+"' "+st+"><span style='cursor:n-resize;'>" + tech_props[techniques[i]].display_name + "</span></th>";
+                tab_html = tab_html + "<th onclick=\"click_method('"+techns_show[i]+"')\" class='"+tech_props[techns_show[i]].type+"' "+st+"><span style='cursor:n-resize;'>" + tech_props[techns_show[i]].display_name + "</span></th>";
             }            
             tab_html = tab_html + "</tr>";
 
             // Which sequences to show
-            curr_seqs = seq_lists[subset];
+            if (html_id === 'tab_unsup')
+                curr_seqs = seq_lists['unsup_2017'];
+            else
+                curr_seqs = seq_lists[subset];
 
             // Get the maximum at each row
             var max_ids = {};
@@ -244,15 +266,15 @@
                 for(var k = 0; k < tech_types.length; k++)
                     max_ids[curr_seqs[j]][tech_types[k]] = {max_val: 0, max_id: 0};
             }
-
-            for(var i = 0; i < curr_seqs.length; i++)
-                for(var j = 0; j < techniques.length; j++)
-                    if (tech_props[techniques[j]].sets.indexOf(subset)>=0)
-                        if (all_eval[techniques[j]][curr_seqs[i]][meas]>max_ids[curr_seqs[i]][tech_props[techniques[j]].type].max_val)
-                        {
-                            max_ids[curr_seqs[i]][tech_props[techniques[j]].type].max_val = all_eval[techniques[j]][curr_seqs[i]][meas];
-                            max_ids[curr_seqs[i]][tech_props[techniques[j]].type].max_id  = j;
-                        }
+            if (html_id !== 'tab_unsup') {
+                for (var i = 0; i < curr_seqs.length; i++)
+                    for (var j = 0; j < techns_show.length; j++)
+                        if (tech_props[techns_show[j]].sets.indexOf(subset) >= 0)
+                            if (all_eval[techns_show[j]][curr_seqs[i]][meas] > max_ids[curr_seqs[i]][tech_props[techns_show[j]].type].max_val) {
+                                max_ids[curr_seqs[i]][tech_props[techns_show[j]].type].max_val = all_eval[techns_show[j]][curr_seqs[i]][meas];
+                                max_ids[curr_seqs[i]][tech_props[techns_show[j]].type].max_id = j;
+                            }
+            }
 
             // Define the order by default            
             var seq_order = [];
@@ -277,23 +299,23 @@
             for(var i = 0; i < curr_seqs.length; i++)
             {
                 tab_html = tab_html + "<tr><td class='sequences' style='width: 170px;'>"+curr_seqs[seq_order[i]]+"</td>"
-                for(var j = 0; j < techniques.length; j++)
+                for(var j = 0; j < techns_show.length; j++)
                 {
                     // Highlight the maximum
-                    if (max_ids[curr_seqs[seq_order[i]]][tech_props[techniques[j]].type].max_id===j)
+                    if (max_ids[curr_seqs[seq_order[i]]][tech_props[techns_show[j]].type].max_id===j)
                         cl = 'highlight';
                     else
                         cl = 'elements';
 
                     // Add vertical lines in the transition between types of techniques
-                    st = '';
+                    var st = '';
                     if (j>0)
-                        if (tech_props[techniques[j]].type!==tech_props[techniques[j-1]].type)
+                        if (tech_props[techns_show[j]].type!==tech_props[techns_show[j-1]].type)
                             st = "style='border-left: 3px solid white;'";
 
                     // Actually add the row
-                    if (tech_props[techniques[j]].sets.indexOf(subset)>=0)
-                        tab_html = tab_html + "<td class='"+cl+"' "+st+">" + all_eval[techniques[j]][curr_seqs[seq_order[i]]][meas] + "</td>";
+                    if (tech_props[techns_show[j]].sets.indexOf(subset)>=0 && html_id !== 'tab_unsup')
+                        tab_html = tab_html + "<td class='"+cl+"' "+st+">" + all_eval[techns_show[j]][curr_seqs[seq_order[i]]][meas] + "</td>";
                     else
                         tab_html = tab_html + "<td class='"+cl+"' "+st+">" + "-&nbsp" + "</td>";
                 }
@@ -306,16 +328,15 @@
         else
         {
             // Header
-            tab_html = "<tr><th class='seq_header' style='width: 170px;border-bottom: 1px solid gray;border-top: 1px solid gray;'>Measure</th>";
-            var st = '';
-            for(var i = 0; i < techniques.length; i++)
+            var tab_html = "<tr><th class='seq_header' style='width: 170px;border-bottom: 1px solid gray;border-top: 1px solid gray;'>Measure</th>"
+            for(var i = 0; i < techns_show.length; i++)
             {
                 // Add vertical lines in the transition betyween types of techniques
-                st = '';
+                var st = '';
                 if (i>0)
-                    if (tech_props[techniques[i]].type!==tech_props[techniques[i-1]].type)
+                    if (tech_props[techns_show[i]].type!==tech_props[techns_show[i-1]].type)
                         st = "border-left: 3px solid white;";
-                tab_html = tab_html + "<th class='"+tech_props[techniques[i]].type+"' style='border-bottom: 1px solid gray;border-top: 1px solid gray; text-align:right;"+st+"'>" + tech_props[techniques[i]].display_name + "</th>";
+                tab_html = tab_html + "<th class='"+tech_props[techns_show[i]].type+"' style='border-bottom: 1px solid gray;border-top: 1px solid gray; text-align:right;"+st+"'>" + tech_props[techns_show[i]].display_name + "</th>";
             }
             tab_html = tab_html + "</tr>";
 
@@ -329,38 +350,37 @@
                 var max_ids = {};
                 for(var j = 0; j < tech_types.length; j++)
                     max_ids[tech_types[j]] = {max_val: 1-meas_up[i], max_id: 0};
-                for(var j = 0; j < techniques.length; j++) {
-                    if (tech_props[techniques[j]].sets.indexOf(subset) >= 0)
-                        if (((meas_up[i] === 1) && (curr_eval[techniques[j]][meas[i]] > max_ids[tech_props[techniques[j]].type].max_val))
-                            || ((meas_up[i] === 0) && (curr_eval[techniques[j]][meas[i]] < max_ids[tech_props[techniques[j]].type].max_val))) {
-                            max_ids[tech_props[techniques[j]].type].max_val = curr_eval[techniques[j]][meas[i]];
-                            max_ids[tech_props[techniques[j]].type].max_id = j;
+                for(var j = 0; j < techns_show.length; j++) {
+                    if (tech_props[techns_show[j]].sets.indexOf(subset) >= 0)
+                        if (((meas_up[i] === 1) && (curr_eval[techns_show[j]][meas[i]] > max_ids[tech_props[techns_show[j]].type].max_val))
+                            || ((meas_up[i] === 0) && (curr_eval[techns_show[j]][meas[i]] < max_ids[tech_props[techns_show[j]].type].max_val))) {
+                            max_ids[tech_props[techns_show[j]].type].max_val = curr_eval[techns_show[j]][meas[i]];
+                            max_ids[tech_props[techns_show[j]].type].max_id = j;
                         }
                 }
                 // Add horizontal lines in the different type of measures
-                var st1 = '';
+                var st1 = ''
                 if (i===0 || i===3 || i===6 || i===7)
                     st1 = "border-bottom: 1px solid gray;";
 
                 // Display it
-                tab_html = tab_html + "<tr><td class='measures' style='width: 170px;"+st1+"'>"+meas_show[i]+"</td>";
-                for(var j = 0; j < techniques.length; j++)
+                tab_html = tab_html + "<tr><td class='measures' style='width: 170px;"+st1+"'>"+meas_show[i]+"</td>"
+                for(var j = 0; j < techns_show.length; j++)
                 {
                     // Highlight the maximum
-
-                    if (max_ids[tech_props[techniques[j]].type].max_id===j)
+                    if (max_ids[tech_props[techns_show[j]].type].max_id===j)
                         cl = 'highlight';
                     else
                         cl = 'elements';
                     // Add vertical lines in the transition between types of techniques
                     var st2 = '';
                     if (j>0)
-                        if (tech_props[techniques[j]].type!==tech_props[techniques[j-1]].type)
+                        if (tech_props[techns_show[j]].type!==tech_props[techns_show[j-1]].type)
                             st2 = "border-left: 3px solid white;";
 
                     // Actually add the row
-                    if (tech_props[techniques[j]].sets.indexOf(subset)>=0)
-                        tab_html = tab_html + "<td class='"+cl+"' style='"+ st1 + st2 +"'>" + (100*curr_eval[techniques[j]][meas[i]]).toFixed(1) + "</td>";
+                    if (tech_props[techns_show[j]].sets.indexOf(subset)>=0)
+                        tab_html = tab_html + "<td class='"+cl+"' style='"+ st1 + st2 +"'>" + (100*curr_eval[techns_show[j]][meas[i]]).toFixed(1) + "</td>";
                     else
                         tab_html = tab_html + "<td class='"+cl+"' style='"+ st1 + st2 +"'>" + "-&nbsp" + "</td>";
 
@@ -424,15 +444,17 @@
     for(var i = 0; i < techniques.length; i++)
     {
         tc = techniques[i];
-        leg_text = leg_text + "<li><b>" + tech_props[techniques[i]].display_name + "</b>: " + techn_papers[tc].title
-        leg_text = leg_text + ". <i>" + techn_papers[tc].authors[0] + "</i>"
-        for(var j = 1; j < techn_papers[tc].authors.length; j++)
-            leg_text = leg_text + ", <i>" + techn_papers[tc].authors[j] + "</i>"
-        if ('conference' in techn_papers[tc])
-            leg_text = leg_text + ", " + techn_papers[tc].conference + " " + techn_papers[tc].year.toString()
-        leg_text = leg_text + ". <a href='" + techn_papers[tc].url + "' class='lk' target='_blank'>[Project Page]</a>"
-        leg_text = leg_text + " <a href='../results/2017/" + tech_props[tc].im_url + ".zip' class='lk' target='_blank'>[Precomputed results]</a>"
-        leg_text = leg_text + "</li>"
+        if (techn_papers[tc]["title"] !== undefined) {
+            leg_text = leg_text + "<li><b>" + tech_props[techniques[i]].display_name + "</b>: " + techn_papers[tc].title
+            leg_text = leg_text + ". <i>" + techn_papers[tc].authors[0] + "</i>"
+            for (var j = 1; j < techn_papers[tc].authors.length; j++)
+                leg_text = leg_text + ", <i>" + techn_papers[tc].authors[j] + "</i>"
+            if ('conference' in techn_papers[tc])
+                leg_text = leg_text + ", " + techn_papers[tc].conference + " " + techn_papers[tc].year.toString()
+            leg_text = leg_text + ". <a href='" + techn_papers[tc].url + "' class='lk' target='_blank'>[Project Page]</a>"
+            leg_text = leg_text + " <a href='../results/2017/" + tech_props[tc].im_url + ".zip' class='lk' target='_blank'>[Precomputed results]</a>"
+            leg_text = leg_text + "</li>"
+        }
     }
     
 

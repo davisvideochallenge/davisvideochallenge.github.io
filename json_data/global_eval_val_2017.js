@@ -14,8 +14,38 @@ var global_eval_val_2017 = {
 		"siammask",
 		"rvos",
 		"agame",
-		"ranet"
+		"ranet",
+		"ags",
+		"pdb",
+		"rvos_unsup"
 	],
+	"rvos_unsup": {
+		"J_F": "0.412",
+ 		"Jmean": "0.368",
+ 		"Jrecall": "0.402",
+ 		"Jdecay": "0.005",
+ 		"Fmean": "0.457",
+ 		"Frecall": "0.464",
+ 		"Fdecay": "0.017"
+ 	},
+	"ags": {
+		"J_F": "0.575",
+ 		"Jmean": "0.555",
+ 		"Jrecall": "0.616",
+ 		"Jdecay": "0.07",
+ 		"Fmean": "0.595",
+ 		"Frecall": "0.628",
+ 		"Fdecay": "0.09"
+ 	},
+	"pdb": {
+		"J_F": "0.551",
+ 		"Jmean": "0.532",
+ 		"Jrecall": "0.589",
+ 		"Jdecay": "0.049",
+ 		"Fmean": "0.570",
+ 		"Frecall": "0.602",
+ 		"Fdecay": "0.068"
+ 	},
 	"ranet": {
  		"J_F": "0.6572",
  		"Jmean": "0.6325",

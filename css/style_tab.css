@@ -42,7 +42,7 @@ table th, table td {
 }
 
 
-.seq_header, .sequences, .semisup, .unsup, .preprop, .semi2017, .measures, .over, .under{
+.seq_header, .sequences, .semisup, .unsup, .preprop, .semi2017, .unsup2017, .measures, .over, .under{
   text-transform: capitalize;
   font-size: 0.8em;
   font-weight: 300;
@@ -85,6 +85,12 @@ table th, table td {
   background: #a1a1a1;
 }
 
+
+.unsup2017 {
+  color: #11ef11;
+  background: #a1a1a1;
+}
+
 .unsup {
   color: #11ef11;
   background: #a1a1a1;
@@ -96,7 +102,7 @@ table th, table td {
 }
 
 .semi2017 {
-  color: #efefef;
+  color: #ef1111;
   background: #a1a1a1;
 }
 
