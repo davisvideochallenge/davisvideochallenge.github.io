@@ -60,7 +60,7 @@ var seq_nframes = {"bear"                 : 82,
                    "train"                : 80};
 
 var techniques = ['ranet', 'premvos', 'osvoss', 'onavos', 'cinm', 'voswl', 'lucid', 'agame', 'rgmp', 'feelvos', 'favos', 'osvos',
-  'msk', 'pml', 'sfls', 'cosnet', 'ags', 'motadapt', 'lsmo', 'pdb','osmn','ctn','siammask', 'vpn', 'plm', 'ofl', 'bvs',
+  'msk', 'pml', 'sfls', 'cosnet', 'ags', 'epo+', 'motadapt', 'lsmo', 'pdb','osmn','ctn','siammask', 'vpn', 'plm', 'ofl', 'bvs',
   'fcp', 'jmp', 'hvs', 'sea', 'arp', 'lvo', 'uovos', 'fseg','lmp', 'sflu', 'tis', 'elm', 'fst', 'cut', 'nlc', 'msg', 'key',
   'cvos', 'trc'];
 
@@ -117,10 +117,23 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "agame"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "AGAME",  "im_url": "agame", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "uovos":     {"type": "unsup"   , "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "UOVOS","im_url": "uovos", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "ranet"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "RANet",  "im_url": "ranet", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "cosnet":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "COSNet","im_url": "cosnet", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}
+                  "cosnet":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "COSNet","im_url": "cosnet", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "epo+":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "EpO+","im_url": "epo+", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}
 };
 
 var techn_papers ={
+    "epo+":{
+    "conference": "WACV",
+    "authors": [
+      "Muhammad Faisal",
+      "Ijaz Akhter",
+      "Mohsen Ali",
+      "Richard I. Hartley"
+    ],
+    "year": 2020,
+    "url": "http://im.itu.edu.pk/video-object-segmentation/",
+    "title": "Exploiting Geometric Constraints on Dense Trajectories for Motion Saliency\n"
+  },
   "cosnet":{
     "conference": "CVPR",
     "authors": [
