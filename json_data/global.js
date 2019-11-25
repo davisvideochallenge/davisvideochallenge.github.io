@@ -119,7 +119,7 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "ranet"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "RANet",  "im_url": "ranet", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "cosnet":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "COSNet","im_url": "cosnet", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "epo+":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "EpO+","im_url": "epo+", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "andiff":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "AndDiff","im_url": "andiff", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}
+                  "andiff":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "AnDiff","im_url": "andiff", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}
 };
 
 var techn_papers ={
