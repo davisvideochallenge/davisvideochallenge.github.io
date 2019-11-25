@@ -52,8 +52,18 @@ var global_eval_val_2016 = {
 		"uovos",
 		"ranet",
 		"cosnet",
-		"epo+"
+		"epo+",
+		"andiff"
 	],
+	"andiff": {
+		"Jmean": "0.817",
+		"Jrecall": "0.909",
+		"Jdecay": "0.022",
+		"Fmean": "0.805",
+		"Frecall": "0.851",
+		"Fdecay": "0.006",
+		"T": "0.214"
+	},
 	"epo+": {
 		"Jmean": "0.806",
 		"Jrecall": "0.952",

@@ -60,7 +60,7 @@ var seq_nframes = {"bear"                 : 82,
                    "train"                : 80};
 
 var techniques = ['ranet', 'premvos', 'osvoss', 'onavos', 'cinm', 'voswl', 'lucid', 'agame', 'rgmp', 'feelvos', 'favos', 'osvos',
-  'msk', 'pml', 'sfls', 'cosnet', 'ags', 'epo+', 'motadapt', 'lsmo', 'pdb','osmn','ctn','siammask', 'vpn', 'plm', 'ofl', 'bvs',
+  'msk', 'pml', 'sfls', 'andiff', 'cosnet', 'ags', 'epo+', 'motadapt', 'lsmo', 'pdb','osmn','ctn','siammask', 'vpn', 'plm', 'ofl', 'bvs',
   'fcp', 'jmp', 'hvs', 'sea', 'arp', 'lvo', 'uovos', 'fseg','lmp', 'sflu', 'tis', 'elm', 'fst', 'cut', 'nlc', 'msg', 'key',
   'cvos', 'trc'];
 
@@ -118,11 +118,26 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "uovos":     {"type": "unsup"   , "sets": ['train_2016','val_2016','trainval_2016'],"display_name": "UOVOS","im_url": "uovos", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "ranet"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "RANet",  "im_url": "ranet", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "cosnet":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "COSNet","im_url": "cosnet", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "epo+":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "EpO+","im_url": "epo+", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}
+                  "epo+":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "EpO+","im_url": "epo+", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "andiff":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "AndDiff","im_url": "andiff", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}
 };
 
 var techn_papers ={
-    "epo+":{
+  "andiff":{
+    "conference": "ICCV",
+    "authors": [
+      "Zhao Yang",
+      "Qiang Wang",
+      "Luca Bertinetto",
+      "Weiming Hu",
+      "Song Bai",
+      "Philip H.S. Torr"
+    ],
+    "year": 2019,
+    "url": "https://github.com/yz93/anchor-diff-VOS",
+    "title": "Anchor Diffusion for Unsupervised Video Object Segmentation\n"
+  },
+  "epo+":{
     "conference": "WACV",
     "authors": [
       "Muhammad Faisal",
