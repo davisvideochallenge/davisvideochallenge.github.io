@@ -64,7 +64,7 @@ var techniques = ['ranet', 'premvos', 'osvoss', 'onavos', 'cinm', 'voswl', 'luci
   'fcp', 'jmp', 'hvs', 'sea', 'arp', 'lvo', 'uovos', 'fseg','lmp', 'sflu', 'tis', 'elm', 'fst', 'cut', 'nlc', 'msg', 'key',
   'cvos', 'trc'];
 
-var shown_techniques_val = ['ranet', 'premvos', 'osvoss','onavos', 'cinm','voswl', 'cosnet', 'ags', 'motadapt'];
+var shown_techniques_val = ['ranet', 'premvos', 'osvoss','onavos', 'cinm','voswl', 'andiff', 'cosnet', 'ags'];
 
 var shown_techniques_train = ['lucid', 'msk', 'ctn'];
 
