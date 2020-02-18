@@ -127,12 +127,12 @@ var techn_papers ={
   "matnet":{
     "conference": "AAAI",
     "authors": [
-      "Tianfei Zhou1",
+      "Tianfei Zhou",
       "Shunzhou Wang",
       "Yi Zhou",
       "Yazhou Yao",
       "Jianwu Li",
-      "Ling Shao1"
+      "Ling Shao"
     ],
     "year": 2020,
     "url": "https://github.com/tfzhou/MATNet",
