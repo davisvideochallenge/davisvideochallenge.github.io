@@ -60,11 +60,11 @@ var seq_nframes = {"bear"                 : 82,
                    "train"                : 80};
 
 var techniques = ['ranet', 'premvos', 'osvoss', 'onavos', 'cinm', 'voswl', 'lucid', 'agame', 'rgmp', 'feelvos', 'favos', 'osvos',
-  'msk', 'pml', 'sfls', 'andiff', 'cosnet', 'ags', 'epo+', 'motadapt', 'lsmo', 'pdb','osmn','ctn','siammask', 'vpn', 'plm', 'ofl', 'bvs',
+  'msk', 'pml', 'sfls', 'matnet', 'andiff', 'cosnet', 'ags', 'epo+', 'motadapt', 'lsmo', 'pdb','osmn','ctn','siammask', 'vpn', 'plm', 'ofl', 'bvs',
   'fcp', 'jmp', 'hvs', 'sea', 'arp', 'lvo', 'uovos', 'fseg','lmp', 'sflu', 'tis', 'elm', 'fst', 'cut', 'nlc', 'msg', 'key',
   'cvos', 'trc'];
 
-var shown_techniques_val = ['ranet', 'premvos', 'osvoss','onavos', 'cinm','voswl', 'andiff', 'cosnet', 'ags'];
+var shown_techniques_val = ['ranet', 'premvos', 'osvoss','onavos', 'cinm','voswl', 'matnet', 'andiff', 'cosnet'];
 
 var shown_techniques_train = ['lucid', 'msk', 'ctn'];
 
@@ -119,10 +119,25 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "ranet"   :{"type": "semisup", "sets": ['val_2016'],                            "display_name": "RANet",  "im_url": "ranet", "col_R" : 255,"col_G" :  0,   "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "cosnet":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "COSNet","im_url": "cosnet", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "epo+":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "EpO+","im_url": "epo+", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "andiff":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "AnDiff","im_url": "andiff", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}
+                  "andiff":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "AnDiff","im_url": "andiff", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "matnet":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "MATNet","im_url": "matnet", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false}
 };
 
 var techn_papers ={
+  "matnet":{
+    "conference": "AAAI",
+    "authors": [
+      "Tianfei Zhou1",
+      "Shunzhou Wang",
+      "Yi Zhou",
+      "Yazhou Yao",
+      "Jianwu Li",
+      "Ling Shao1"
+    ],
+    "year": 2020,
+    "url": "https://github.com/tfzhou/MATNet",
+    "title": "Motion-Attentive Transition for Zero-Shot Video Object Segmentation\n"
+  },
   "andiff":{
     "conference": "ICCV",
     "authors": [

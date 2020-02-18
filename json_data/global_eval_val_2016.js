@@ -53,8 +53,18 @@ var global_eval_val_2016 = {
 		"ranet",
 		"cosnet",
 		"epo+",
-		"andiff"
+		"andiff",
+		"matnet"
 	],
+	"matnet": {
+		"Jmean": "0.824",
+		"Jrecall": "0.945",
+		"Jdecay": "0.055",
+		"Fmean": "0.807",
+		"Frecall": "0.902",
+		"Fdecay": "0.045",
+		"T": "0.216"
+	},
 	"andiff": {
 		"Jmean": "0.817",
 		"Jrecall": "0.909",
