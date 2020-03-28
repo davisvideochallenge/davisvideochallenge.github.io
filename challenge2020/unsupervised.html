@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--<script src="https://storage.googleapis.com/davis-interactive-static/leaderboard/global_eval_test-challenge_2018.js?test=1" type="text/javascript"></script>-->
+    <script src="../json_data/global_eval_test-challenge_2018.js?test=1" type="text/javascript"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,300' rel='stylesheet' type='text/css'>
+    <meta name="description" content="DAVIS, Densely Annotated VIdeo Segmentation">
+
+    <title>DAVIS: Densely Annotated VIdeo Segmentation</title>
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="../css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="../css/layouts/side-menu.css">
+    <!--<![endif]-->
+
+    <!-- Table -->
+    <link rel="stylesheet" href="../css/style_tab.css">
+
+    <!--Includes-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Buttons -->
+    <link rel="stylesheet" type="text/css" href="../css/buttons/component.css" />
+
+    <style type="text/css">
+    .round{
+      width:100%;
+      padding-top:100%;
+      overflow:hidden;
+      position:relative;
+      border-radius:50%;
+    }
+
+    img.roundimg{
+      position:absolute;
+      top:51%;
+      left:51%;
+      min-width:102%;
+      height:102%;
+      transform:translate(-51%,-51%);
+      transition: all 0.5s ease;
+    }
+
+    img.roundimg:hover{
+      min-width:105%;
+      height:105%;
+    }
+
+    h3{
+        font-weight: 300;
+    }
+
+    .footnote{
+        font-size: 70%;
+        line-height: 130%;
+    }
+
+    </style>
+
+    <style type="text/css">
+    /*********************************
+    The list of publication items
+    *********************************/
+    /* The list of items */
+    .biblist { }
+
+    /* The item */
+    .biblist li { }
+
+    /* You can define custom styles for plstyle field here. */
+
+
+    /*************************************
+     The box that contain BibTeX code
+     *************************************/
+    div.noshow { display: none; }
+    div.bibtex {
+        margin-right: 0%;
+        margin-top: 1.2em;
+        margin-bottom: 1.3em;
+        border: 1px solid silver;
+        padding: 0.3em 0.5em;
+        background: #ffffee;
+    }
+    div.bibtex pre { font-size: 75%; overflow: auto;  width: 100%; }
+
+
+    .content-subhead{color: black}
+</style>
+
+<script type="text/javascript">
+ <!--
+ // Toggle Display of BibTeX
+ function toggleBibtex(articleid) {
+     var bib = document.getElementById('bib_'+articleid);
+     if (bib) {
+         if(bib.className.indexOf('bibtex') != -1) {
+             bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+         }
+     } else {
+         return;
+     }
+ }
+-->
+</script>
+</head>
+
+
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <ul class="pure-menu-list">
+                <li style="border-bottom: 1px solid;"><a href="../index.html" class="pure-menu-link">Home</a></li>
+            </ul>
+
+            <span class="pure-menu-heading" style="border-bottom: 1px solid;">DAVIS 2016</span>
+            <ul class="pure-menu-list">
+                <li><a href="../davis2016/soa_compare.html" class="pure-menu-link">Benchmark</a></li>
+                <li><a href="../davis2016/browse.html" class="pure-menu-link">Explore</a></li>
+                <li style="border-bottom: 1px solid;"><a href="../davis2016/code.html" class="pure-menu-link">Download</a></li>
+            </ul>
+
+            <span class="pure-menu-heading" style="border-bottom: 1px solid;">DAVIS 2017</span>
+            <ul class="pure-menu-list">
+                <li><a href="../davis2017/soa_compare.html" class="pure-menu-link">Benchmark</a></li>
+                <li style="border-bottom: 1px solid;"><a href="../davis2017/code.html" class="pure-menu-link">Download</a></li>
+            </ul>
+
+            <span class="pure-menu-heading" style="border-bottom: 1px solid;">Challenges</span>
+            <ul class="pure-menu-list">
+                <li><a href="../challenge2017/index.html" class="pure-menu-link">Challenge 2017</a></li>
+                <li><a href="../challenge2018/index.html" class="pure-menu-link">Challenge 2018</a></li>
+                <li><a href="../challenge2019/index.html" class="pure-menu-link">Challenge 2019</a></li>
+                <li><a href="index.html" class="pure-menu-link pure-menu-selected" style="color: red">Challenge 2020</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>DAVIS Challenge on Video Object Segmentation 2020</h1>
+            <h2>Workshop in conjunction with CVPR 2020, Seattle, Washington</h2>
+        </div>
+
+                           <!-- Buttons  -->
+            <div class="pure-g" style="margin-left: 5%;margin-right: 5%;">
+            <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <a href="index.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Workshop</button></a>
+            </div>
+            <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <a href="semisupervised.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Semi-Supervised<br>Challenge</button></a>
+            </div>
+            <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <a href="interactive.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Interactive<br>Challenge<br></button></a>
+            </div>
+            <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <button class="btn btn-6 btn-6a" style="width: 95%;background:#e7eae8;margin-top:30px;min-height: 65px;">Unsupervised<br>Challenge</button>
+            </div>
+<!--            <div class="pure-u-1-6" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">-->
+<!--                <a href="leaderboards.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Leaderboards</button></a>-->
+<!--            </div>-->
+<!--            <div class="pure-u-1-6" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">-->
+<!--                <a href="publications.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Publications</button></a>-->
+<!--            </div>-->
+            </div>
+
+
+        <div class="content" style="text-align: left; padding-top: 40px;font-size:95%">
+
+        <h3 style="margin-top: 0px;margin-bottom: 5px">Definition</h3>
+        The unsupervised scenario assumes that the user does not interact with the algorithm to obtain the segmentation masks.
+        Methods should provide a set of object candidates with no overlapping pixels that span through the whole video sequence.
+        This set of objects should contain at least the objects that capture human attention when watching the whole video sequence i.e objects
+        that are more likely to be followed by human gaze. <br>
+        More information in the <a href='https://arxiv.org/abs/1905.00737' target="_blank">DAVIS 2019 publication</a> and the <a href='https://competitions.codalab.org/competitions/20515' target="_blank">Codalab submission site.</a>.
+
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Dates and Phases</h3>
+        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Dev</span>: Unlimited number of submissions, open end.<br>
+        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Challenge</span>: Limited to 5 submissions in total from 3rd May 2020 23:59 UTC to 15th May 2020 23:59 UTC.<br>
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Prizes</h3>
+        TBA
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Datasets (Download <a href='../davis2017/code.html#unsupervised'>here</a>, 480p resolution)</h3>
+        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Train + Val Unsupervised</span>: the 60 Train and 30 Val sequences from DAVIS 2017, but reannotated taking into account the unsupervised definition.<br>
+        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Dev 2019</span>: 30 new sequences. Ground truth not publicly available.<br>
+        - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Challenge 2019</span>: 30 new sequences. Ground truth not publicly available.<br>
+        Feel free to train or pre-train your algorithms on any other dataset apart from DAVIS (Youtube-VOS, MS COCO, Pascal, etc.) or use the full resolution DAVIS annotations and images.<br>
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Submission</h3>
+            Submissions to all phases are done through the <a href="https://competitions.codalab.org/competitions/20515" target="_blank">Codalab site of the challenge</a>.
+            Please register to the site and read carefully the instructions in the Learn the Details -> Overview and Evaluation sections.<br>
+            The submitted masks should use the Indexed PNG format. Each pixel in a frame should be equal to the id of the object that it belongs to. For a certain object, its id should be the same for the whole video sequence.
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Evaluation</h3>
+        Methods have to provide a pool of N non-overlapping video object proposals for every video sequence i.e. a segmentation mask for each frame
+        in the video sequence where the mask id for a certain object has to be consistent through the whole sequence. During evaluation, each of the
+        annotated objects in the ground truth is matched with one of the N video object proposals predicted by the methods that maximize J&F using a bipartite graph matching.
+        Note that we do not penalize if methods detect more objects than the ones annotated in the ground truth. The final J&F result is the mean of all the matched objects in all the video sequences.
+        <br> More details of can be found in the <a href='https://arxiv.org/abs/1905.00737' target="_blank">DAVIS 2019</a> publication and the <a href='https://github.com/davisvideochallenge/davis2017-evaluation' target="_blank">evaluation code</a>.
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Papers <span style="color: red; margin-bottom: 50px"></span></h3>
+        - Right after the Challenge closes (15th May) we will invite participants to submit a <b>short abstract</b> (400 words maximum) of their method (Deadline 20th May 23:59 UTC).<br>
+        - Together with the results obtained, we will decide which teams are accepted at the workshop. Date of notification 25th May.<br>
+        - Accepted teams will be able to submit a paper describing their approach (Deadline 5th June 23:59 UTC). The template of the paper is the same as CVPR, but length will be limited to <b>4 pages including references</b>.<br>
+        - Papers will also be invited to the workshop in form of <b>oral presentation or poster</b>.<br>
+      	- Accepted papers will be self-published in the web of the challenge (not in the official proceedings, although they have the same <i>value</i>).
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Other considerations</h3>
+        - Each entry must be associated to a team and provide its affiliation.<br>
+        - The best entry of each team will be public in the leaderboard at all times.<br>
+        - We will only consider the "unsupervised" scenario: no human input of any kind allowed when testing a sequence. Although we have no way to check at the challenge stage, we will make our best to detect it a posteriori before the workshop.<br>
+        - We reserve the right to remove one of the entry methods to the competition when there is a high technical similarity to methods published in previous conferences or workshops. We do so in order to keep the workshop interesting and to push state of the art to move forward.<br>
+        - The new annotations in this dataset belong to the organizers of the challenge and are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 License</a>.<br>
+
+        <div class="content" style="text-align: left; padding-top: 40px;font-size:95%">
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Citation</h3>
+            <div class="pure-g">
+
+                <div class="pure-u-1-6">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:100%;" src="../images/teaser/montage-2019.jpg" alt="arXiv">
+                </div>
+                <div class="pure-u-5-6">
+                <p style="margin-left:0.6cm;line-height: 1.4em;margin-top:0em;">
+                    The 2019 DAVIS Challenge on VOS: Unsupervised Multi-Object Segmentation<br>
+                    <a href="https://sergicaelles.com/" target="_blank"/>S. Caelles</a>,
+                    <a href="http://jponttuset.github.io" target="_blank">J. Pont-Tuset</a>,
+                    <a href="https://fperazzi.github.io/" target="_blank"/>F. Perazzi</a>,
+                    <a href="http://montesg.xyz/" target="_blank"/>A. Montes</a>,
+                    <a href="http://www.vision.ee.ethz.ch/~kmaninis/" target="_blank"/>K.-K. Maninis</a>, and
+                    <a href="https://www.vision.ee.ethz.ch/en/members/get_member.cgi?id=1" target="_blank">L. Van Gool</a>
+                    <br>
+                    <i>arXiv:1905.00737, 2019</i><br>
+                    [<a href="https://arxiv.org/pdf/1905.00737" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('Caelles_arXiv_2019')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+
+            <div id="bib_Caelles_arXiv_2019" class="bibtex noshow"><pre>@article{Caelles_arXiv_2019,
+              author = {Sergi Caelles and Jordi Pont-Tuset and Federico Perazzi and Alberto Montes and Kevis-Kokitsi Maninis and Luc {Van Gool}},
+              title = {The 2019 DAVIS Challenge on VOS: Unsupervised Multi-Object Segmentation},
+              journal = {arXiv:1905.00737},
+              year = {2019}
+            }</pre></div>
+
+                <div class="pure-g">
+
+                <div class="pure-u-1-6">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:100%;" src="../images/teaser/montage-2017.jpg" alt="arXiv">
+                </div>
+                <div class="pure-u-5-6">
+                <p style="margin-left:0.6cm;line-height: 1.4em;margin-top:0em;">
+                    The 2017 DAVIS Challenge on Video Object Segmentation<br>
+                    <a href="http://jponttuset.github.io" target="_blank">J. Pont-Tuset</a>,
+                    <a href="https://fperazzi.github.io/" target="_blank"/>F. Perazzi</a>,
+                    <a href="https://sergicaelles.com/" target="_blank"/>S. Caelles</a>,
+                    <a href="https://biomedicalcomputervision.uniandes.edu.co/" target="_blank"/>P. Arbeláez</a>,
+                    <a href="http://www.ahornung.net" target="_blank">A. Sorkine-Hornung</a>, and
+                    <a href="https://www.vision.ee.ethz.ch/en/members/get_member.cgi?id=1" target="_blank">L. Van Gool</a>
+                    <br>
+                                       <i>arXiv:1704.00675, 2017</i><br>
+                    [<a href="https://arxiv.org/abs/1704.00675" target="_blank">PDF</a>] [<a href="javascript:toggleBibtex('Pont-Tuset_arXiv_2017')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+
+            <div id="bib_Pont-Tuset_arXiv_2017" class="bibtex noshow"><pre>@article{Pont-Tuset_arXiv_2017,
+              author = {Jordi Pont-Tuset and Federico Perazzi and Sergi Caelles and Pablo Arbel\'aez and Alexander Sorkine-Hornung and Luc {Van Gool}},
+              title = {The 2017 DAVIS Challenge on Video Object Segmentation},
+              journal = {arXiv:1704.00675},
+              year = {2017}
+            }</pre></div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-6">
+                    <img class="pure-img-responsive" style="margin-top:5px; width:100%;" src="../images/teaser/montage.jpg" alt="CVPR">
+                </div>
+                <div class="pure-u-5-6">
+                <p style="margin-left:0.6cm;line-height: 1.4em;margin-top:0em;">
+                    A Benchmark Dataset and Evaluation Methodology for Video Object Segmentation<br>
+                    <a href="https://fperazzi.github.io/" target="_blank"/>F. Perazzi</a>,
+                    <a href="http://jponttuset.github.io" target="_blank">J. Pont-Tuset</a>,
+                    <a href="https://www.inf.ethz.ch/personal/mcbrian/" target="_blank">B. McWilliams</a>,
+                    <a href="https://www.vision.ee.ethz.ch/en/members/get_member.cgi?id=1" target="_blank">L. Van Gool</a>,
+                    <a href="http://www.disneyresearch.com/people/markus-gross" target="_blank">M. Gross</a>, and
+                    <a href="http://www.ahornung.net" target="_blank">A. Sorkine-Hornung</a>
+                    <br>
+                    <i>Computer Vision and Pattern Recognition (CVPR) 2016</i><br>
+                    [<a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Perazzi_A_Benchmark_Dataset_CVPR_2016_paper.pdf" target="_blank">PDF</a>] [<a href="files/davis_supplementary.pdf" target="_blank">Supplemental</a>] [<a href="javascript:toggleBibtex('Perazzi2016')">BibTex</a>]
+                </p>
+                </div>
+            </div>
+            <div id="bib_Perazzi2016" class="bibtex noshow"><pre>@inproceedings{Perazzi2016,<br/>  author = {F. Perazzi and J. Pont-Tuset and B. McWilliams and L. {Van Gool} and M. Gross and A. Sorkine-Hornung},<br/>  title = {A Benchmark Dataset and Evaluation Methodology for Video Object Segmentation},<br/>  booktitle = {Computer Vision and Pattern Recognition},<br/>  year = {2016}<br/>}</pre></div>
+
+            <i>Please cite these papers in your publications if DAVIS helps your research.</i>
+
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Contact </h3>
+        If you have any further questions, <a href='mailto:davisvideochallenge@gmail.com'>contact us!</a>.
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+<script type="text/javascript">
+    // Set values different to the ones by default, to 'force' the change
+    var curr_table  = "J";
+    var curr_subset = "val_2017";
+    var curr_eval;
+    var techniques = global_eval_test_challenge_2018['techniques'];
+
+    function switch_to_table(new_table,new_subset)
+    {
+        curr_table = new_table;
+        curr_subset = new_subset;
+
+        // Change to current subset
+        curr_eval   = window["global_eval_" + curr_subset];
+
+        // Apply the changes
+        show_table(curr_table,curr_subset,"tab","None");
+
+    }
+
+    function switch_to_subset(id)
+    {
+        curr_subset = id;
+    }
+
+    function mean(values)
+    {
+        var sum = 0;
+        for( var i = 0; i < values.length; i++ ){
+            sum += parseFloat( values[i]);
+        }
+
+        var avg = 100*(sum/values.length);
+        return avg.toFixed(1);
+    }
+
+    function show_table(meas, subset, html_id)
+    {
+        var tab_html = '';
+
+        // Header
+        tab_html = "<tr><th class='seq_header' style='width: 170px;border-bottom: 1px solid gray;border-top: 1px solid gray;'>Measure</th>";
+        var st = '';
+        for(var i = 0; i < techniques.length; i++)
+        {
+            // Add vertical lines in the transition betyween types of techniques
+            st = '';
+            tab_html = tab_html + "<th class='semi2017' style='border-bottom: 1px solid gray;border-top: 1px solid gray; text-align:right;"+st+"'>" + techniques[i] + "</th>";
+        }
+        tab_html = tab_html + "</tr>";
+
+        // Show one line per measure
+        var meas = ["J_F","Jmean", "Jrecall", "Jdecay", "Fmean", "Frecall", "Fdecay"];
+        var meas_up = [1, 1, 1, 0, 1, 1, 0, 0];
+        var meas_show = ["J&F Mean &uarr;", "J Mean &uarr;", "J Recall &uarr;", "J Decay &darr;", "F Mean &uarr;", "F Recall &uarr;", "F Decay &darr;", "T (GT "+(100*curr_eval.Tgt).toFixed(1)+") &darr;"];
+        for(var i = 0; i < meas.length; i++)
+        {
+            // Get the maximum at each row
+            var max_ids = {};
+            max_ids['semi2017'] = {max_val: 1-meas_up[i], max_id: 0};
+            for(var j = 0; j < techniques.length; j++)
+                if (    ((meas_up[i]===1) && (curr_eval[techniques[j]][meas[i]]>max_ids['semi2017'].max_val))
+                     || ((meas_up[i]===0) && (curr_eval[techniques[j]][meas[i]]<max_ids['semi2017'].max_val)) )
+                {
+                    max_ids['semi2017'].max_val = curr_eval[techniques[j]][meas[i]];
+                    max_ids['semi2017'].max_id  = j;
+                }
+
+            // Add horizontal lines in the different type of measures
+            var st1 = '';
+            if (i===0 || i===3 || i===6 || i===7)
+                st1 = "border-bottom: 1px solid gray;";
+
+            // Display it
+            tab_html = tab_html + "<tr><td class='measures' style='width: 170px;"+st1+"'>"+meas_show[i]+"</td>";
+            for(var j = 0; j < techniques.length; j++)
+            {
+                // Highlight the maximum
+
+                if (max_ids['semi2017'].max_id===j)
+                    cl = 'highlight';
+                else
+                    cl = 'elements';
+                // Add vertical lines in the transition between types of techniques
+                var st2 = '';
+
+                // Actually add the row
+                tab_html = tab_html + "<td class='"+cl+"' style='"+ st1 + st2 +"'>" + (100*curr_eval[techniques[j]][meas[i]]).toFixed(1) + "</td>";
+
+            }
+            tab_html = tab_html + "</tr>";
+        }
+
+        // Fill in the table
+        document.getElementById(html_id).innerHTML = tab_html;
+    }
+
+    switch_to_table('global','test_challenge_2018')
+
+
+</script>
+
+<script src="../js/ui.js"></script>
+
+
+
+</body>
+
+</html>
