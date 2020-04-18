@@ -455,6 +455,9 @@
                 leg_text = leg_text + ", " + techn_papers[tc].conference + " " + techn_papers[tc].year.toString()
             leg_text = leg_text + ". <a href='" + techn_papers[tc].url + "' class='lk' target='_blank'>[Project Page]</a>"
             leg_text = leg_text + " <a href='../results/2017/" + tech_props[tc].im_url + ".zip' class='lk' target='_blank'>[Precomputed results]</a>"
+            if ('extra_result' in techn_papers[tc]){
+                leg_text = leg_text + " <a href='../results/2017/" + techn_papers[tc].extra_result + ".zip' class='lk' target='_blank'>[Precomputed results 2]</a>"
+            }
             leg_text = leg_text + "</li>"
         }
     }
