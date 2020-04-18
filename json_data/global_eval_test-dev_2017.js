@@ -18,8 +18,18 @@ var global_eval_test_dev_2017 = {
 		"pdb",
 		"ags",
 		"rvos_unsup",
-		"mugu"
+		"mugu",
+		"mhpvos"
 	],
+	"mhpvos": {
+ 		"J_F": "0.6955",
+ 		"Jmean": "0.6638",
+ 		"Jrecall": "0.7601",
+ 		"Jdecay": "0.1803",
+ 		"Fmean": "0.7273",
+ 		"Frecall": "0.8228",
+ 		"Fdecay": "0.1905"
+ 	},
 	"mugu": {
  		"J_F": "0.417",
  		"Jmean": "0.389",

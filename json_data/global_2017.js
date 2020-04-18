@@ -7,7 +7,7 @@ var seq_lists = {'val_2017'       : ['bike-packing_1','bike-packing_2','blackswa
                  'test_dev_2017'  : ['aerobatics_1','aerobatics_2','aerobatics_3','car-race_1','car-race_2','car-race_3','car-race_4','carousel_1','carousel_2','carousel_3','carousel_4','cats-car_1','cats-car_2','cats-car_3','cats-car_4','chamaleon_1','deer_1','deer_2','giant-slalom_1','giant-slalom_2','giant-slalom_3','girl-dog_1','girl-dog_2','girl-dog_3','golf_1','golf_2','golf_3','guitar-violin_1','guitar-violin_2','guitar-violin_3','guitar-violin_4','gym_1','gym_2','gym_3','gym_4','helicopter_1','helicopter_2','horsejump-stick_1','horsejump-stick_2','horsejump-stick_3','hoverboard_1','hoverboard_2','lock_1','lock_2','lock_3','lock_4','man-bike_1','man-bike_2','monkeys-trees_1','monkeys-trees_2','mtb-race_1','mtb-race_2','mtb-race_3','mtb-race_4','orchid_1','orchid_2','people-sunset_1','people-sunset_2','people-sunset_3','people-sunset_4','planes-crossing_1','planes-crossing_2','rollercoaster_1','salsa_1','salsa_2','salsa_3','salsa_4','salsa_5','salsa_6','salsa_7','salsa_8','salsa_9','salsa_10','seasnake_1','skate-jump_1','skate-jump_2','slackline_1','subway_1','subway_2','subway_3','subway_4','tandem_1','tandem_2','tandem_3','tandem_4','tennis-vest_1','tennis-vest_2','tractor_1','tractor_2'],
                  'unsup_2017': ['Not available']};
 
-var techniques = ['premvos', 'cinm', 'lucid', 'feelvos', 'osvoss', 'ranet', 'voswl', 'rgmp', 'onavos', 'agame', 'osvos', 'rvos', 'favos', 'siammask', 'mugs', 'osmn', "ags", 'mugu', 'pdb', 'rvos_unsup'];
+var techniques = ['premvos', 'mhpvos', 'cinm', 'lucid', 'feelvos', 'osvoss', 'ranet', 'voswl', 'rgmp', 'onavos', 'agame', 'osvos', 'rvos', 'favos', 'siammask', 'mugs', 'osmn', "ags", 'mugu', 'pdb', 'rvos_unsup'];
 
 var tech_props = {
 "osvos"  : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "OSVOS" , "im_url": "osvos" , "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
@@ -30,11 +30,25 @@ var tech_props = {
 "rvos_unsup" : {"type": "unsup2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "RVOS", "im_url": "rvos_unsup", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
 "mugs" : {"type": "semi2017", "sets": ['val_2017'], "display_name": "MuG-W", "im_url": "mugs", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
 "mugu" : {"type": "unsup2017", "sets": ['test_dev_2017'], "display_name": "MuG-W", "im_url": "mugu", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+"mhpvos" : {"type": "semi2017", "sets": ['val_2017', 'test_dev_2017'], "display_name": "MHP-VOS", "im_url": "mhpvos", "col_R" : 255, "col_G" :   0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
 };
 
 var tech_types = ["semi2017", "unsup2017"];
 
 var techn_papers ={
+  "mhpvos":{
+    "conference": "CVPR",
+    "authors": [
+      "Shuangjie Xu",
+      "Daizong Liu",
+      "Linchao Bao",
+      "Wei Liu",
+      "Pan Zhou"
+    ],
+    "year": 2019,
+    "url": "https://github.com/shuangjiexu/MHP-VOS",
+    "title": "MHP-VOS: Multiple Hypotheses Propagation for Video Object Segmentation\n"
+  },
   "mugu":{},
    "mugs":{
     "conference": "CVPR",
