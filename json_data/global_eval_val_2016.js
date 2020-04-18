@@ -54,8 +54,28 @@ var global_eval_val_2016 = {
 		"cosnet",
 		"epo+",
 		"andiff",
-		"matnet"
+		"matnet",
+		"mugs",
+		"mugu"
 	],
+	"mugu": {
+		"Jmean": "0.620",
+		"Jrecall": "0.747",
+		"Jdecay": "-0.031",
+		"Fmean": "0.561",
+		"Frecall": "0.621",
+		"Fdecay": "-0.036",
+		"T": "0.393"
+	},
+	"mugs": {
+		"Jmean": "0.657",
+		"Jrecall": "0.777",
+		"Jdecay": "0.264",
+		"Fmean": "0.636",
+		"Frecall": "0.677",
+		"Fdecay": "0.272",
+		"T": "0.251"
+	},
 	"matnet": {
 		"Jmean": "0.824",
 		"Jrecall": "0.945",

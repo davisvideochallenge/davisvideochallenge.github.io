@@ -17,8 +17,18 @@ var global_eval_val_2017 = {
 		"ranet",
 		"ags",
 		"pdb",
-		"rvos_unsup"
+		"rvos_unsup",
+		"mugs"
 	],
+	"mugs": {
+ 		"J_F": "0.5602",
+ 		"Jmean": "0.5408",
+ 		"Jrecall": "0.6046",
+ 		"Jdecay": "0.3246",
+ 		"Fmean": "0.5796",
+ 		"Frecall": "0.6221",
+ 		"Fdecay": "0.3743"
+ 	},
 	"rvos_unsup": {
 		"J_F": "0.412",
  		"Jmean": "0.368",

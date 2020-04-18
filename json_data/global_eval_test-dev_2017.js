@@ -17,8 +17,18 @@ var global_eval_test_dev_2017 = {
 		"ranet",
 		"pdb",
 		"ags",
-		"rvos_unsup"
+		"rvos_unsup",
+		"mugu"
 	],
+	"mugu": {
+ 		"J_F": "0.417",
+ 		"Jmean": "0.389",
+ 		"Jrecall": "0.443",
+ 		"Jdecay": "-0.027",
+ 		"Fmean": "0.445",
+ 		"Frecall": "0.466",
+ 		"Fdecay": "-0.017"
+ 	},
 	"rvos_unsup": {
  		"J_F": "0.225",
  		"Jmean": "0.177",
