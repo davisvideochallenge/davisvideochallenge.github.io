@@ -59,7 +59,7 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['ranet', 'premvos', 'osvoss', 'onavos', 'mhpvos', 'cinm', 'voswl', 'lucid', 'agame', 'rgmp', 'feelvos', 'favos', 'osvos',
+var techniques = ['mhpvos', 'ranet', 'premvos', 'osvoss', 'onavos', 'cinm', 'voswl', 'lucid', 'agame', 'rgmp', 'feelvos', 'favos', 'osvos',
   'msk', 'pml', 'sfls', 'matnet', 'andiff', 'cosnet', 'ags', 'epo+', 'motadapt', 'lsmo', 'pdb','osmn','ctn','siammask', 'vpn', 'plm', 'ofl', 'mugs', 'bvs',
   'fcp', 'jmp', 'hvs', 'sea', 'arp', 'lvo', 'uovos', 'fseg','lmp', 'sflu', 'tis', 'elm', 'mugu', 'fst', 'cut', 'nlc', 'msg', 'key',
   'cvos', 'trc'];

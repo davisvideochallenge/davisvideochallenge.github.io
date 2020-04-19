@@ -60,13 +60,13 @@ var global_eval_val_2016 = {
 		"mhpvos"
 	],
 	"mhpvos": {
-		"Jmean": "0.844",
-		"Jrecall": "0.964",
-		"Jdecay": "0.070",
-		"Fmean": "0.860",
-		"Frecall": "0.947",
-		"Fdecay": "0.104",
-		"T": "0.196"
+		"Jmean": "0.876",
+		"Jrecall": "0.973",
+		"Jdecay": "0.069",
+		"Fmean": "0.895",
+		"Frecall": "0.955",
+		"Fdecay": "0.090",
+		"T": "0.195"
 	},
 	"mugu": {
 		"Jmean": "0.620",
