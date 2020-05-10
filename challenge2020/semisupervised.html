@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!--<script src="https://storage.googleapis.com/davis-interactive-static/leaderboard/global_eval_test-challenge_2018.js?test=1" type="text/javascript"></script>-->
+    <script src="https://data.vision.ee.ethz.ch/csergi/share/davis/tmp_leaderboards/semisupervised_challenge_2020.js?test=1" type="text/javascript"></script>
     <script src="../json_data/global_eval_test-challenge_2018.js?test=1" type="text/javascript"></script>
 
     <meta charset="utf-8">
@@ -185,6 +185,14 @@
         Methods have to produce the segmentation mask for that object in the subsequent frames.<br>
         More information in the <a href='https://arxiv.org/abs/1704.00675' target="_blank">DAVIS 2017 publication</a> and the <a href='https://competitions.codalab.org/competitions/20516' target="_blank">Codalab submission site</a>.
 
+        <h3 style="margin-top: 30px;margin-bottom: 5px">Test-Challenge 2020 Leaderboard</h3>
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+              <table id='tab' width='60%' style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif;margin-left: 5%;margin-right: 5%;margin-bottom:40px;">
+              </table>
+            </div>
+        </div>
+
         <h3 style="margin-top: 30px;margin-bottom: 5px">Dates and Phases</h3>
         - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Dev</span>: Unlimited number of submissions, open end.<br>
         - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Challenge</span>: Limited to 5 submissions in total from 3rd May 2020 23:59 UTC to 15th May 2020 23:59 UTC.<br>
@@ -297,7 +305,7 @@
     var curr_table  = "J";
     var curr_subset = "val_2017";
     var curr_eval;
-    var techniques = global_eval_test_challenge_2018['techniques'];
+    var techniques = semisupervised_challenge_2020['techniques'];
 
     function switch_to_table(new_table,new_subset)
     {
@@ -305,7 +313,7 @@
         curr_subset = new_subset;
 
         // Change to current subset
-        curr_eval   = window["global_eval_" + curr_subset];
+        curr_eval   = window["semisupervised_challenge_2020"];
 
         // Apply the changes
         show_table(curr_table,curr_subset,"tab","None");
