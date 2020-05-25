@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <script src="../json_data/global_eval_test-challenge_2020.js" type="text/javascript"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,300' rel='stylesheet' type='text/css'>
+    <meta name="description" content="DAVIS, Densely Annotated VIdeo Segmentation">
+
+    <title>DAVIS: Densely Annotated VIdeo Segmentation</title>
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="../css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="../css/layouts/side-menu.css">
+    <!--<![endif]-->
+
+    <!--Includes-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Table -->
+    <link rel="stylesheet" href="../css/style_tab.css">
+
+    <!-- Buttons -->
+    <link rel="stylesheet" type="text/css" href="../css/buttons/component.css" />
+
+    <style type="text/css">
+    .round{
+      width:100%;
+      padding-top:100%;
+      overflow:hidden;
+      position:relative;
+      border-radius:50%;
+    }
+
+    img.roundimg{
+      position:absolute;
+      top:51%;
+      left:51%;
+      min-width:102%;
+      height:102%;
+      transform:translate(-51%,-51%);
+      transition: all 0.5s ease;
+    }
+
+    img.roundimg:hover{
+      min-width:105%;
+      height:105%;
+    }
+
+    h3{
+        font-weight: 300;
+    }
+
+    .footnote{
+        font-size: 70%;
+        line-height: 130%;
+    }
+
+    .semisup{
+        color:#FFFFFF;
+    }
+
+    </style>
+</head>
+
+
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <ul class="pure-menu-list">
+                <li style="border-bottom: 1px solid;"><a href="../index.html" class="pure-menu-link">Home</a></li>
+            </ul>
+
+            <span class="pure-menu-heading" style="border-bottom: 1px solid;">DAVIS 2016</span>
+            <ul class="pure-menu-list">
+                <li><a href="../davis2016/soa_compare.html" class="pure-menu-link">Benchmark</a></li>
+                <li><a href="../davis2016/browse.html" class="pure-menu-link">Explore</a></li>
+                <li style="border-bottom: 1px solid;"><a href="../davis2016/code.html" class="pure-menu-link">Download</a></li>
+            </ul>
+
+            <span class="pure-menu-heading" style="border-bottom: 1px solid;">DAVIS 2017</span>
+            <ul class="pure-menu-list">
+                <li><a href="../davis2017/soa_compare.html" class="pure-menu-link">Benchmark</a></li>
+                <li style="border-bottom: 1px solid;"><a href="../davis2017/code.html" class="pure-menu-link">Download</a></li>
+            </ul>
+
+            <span class="pure-menu-heading" style="border-bottom: 1px solid;">Challenges</span>
+            <ul class="pure-menu-list">
+                <li><a href="../challenge2017/index.html" class="pure-menu-link">Challenge 2017</a></li>
+                <li><a href="../challenge2018/index.html" class="pure-menu-link">Challenge 2018</a></li>
+                <li><a href="../challenge2019/index.html" class="pure-menu-link">Challenge 2019</a></li>
+                <li><a href="index.html" class="pure-menu-link pure-menu-selected" style="color: red">Challenge 2020</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+           <h1>DAVIS Challenge on Video Object Segmentation 2020</h1>
+           <h2>Workshop in conjunction with CVPR 2020, Seattle, Washington</h2>
+        </div>
+
+                           <!-- Buttons  -->
+            <div class="pure-g" style="margin-left: 5%;margin-right: 5%;">
+            <div class="pure-u-1-5" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <a href="index.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Workshop</button></a>
+            </div>
+            <div class="pure-u-1-5" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <a href="semisupervised.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Semi-Supervised<br>Challenge</button></a>
+            </div>
+            <div class="pure-u-1-5" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <a href="interactive.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Interactive<br>Challenge<br></button></a>
+            </div>
+            <div class="pure-u-1-5" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <a href="unsupervised.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Unsupervised<br>Challenge</button></a>
+            </div>
+            <div class="pure-u-1-5" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <button class="btn btn-6 btn-6a" style="width: 95%;background:#e7eae8;margin-top:30px;min-height: 65px;">Leaderboards</button>
+            </div>
+<!--            <div class="pure-u-1-6" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">-->
+<!--                <a href="publications.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Publications</button></a>-->
+<!--            </div>-->
+            </div>
+
+
+        <div style="margin: auto;max-width: 1200px;">
+            <div  style="font-family: 'Raleway', sans-serif;font-weight: 300;text-align:center;margin-left: 10%;margin-right: 10%;margin-top:50px;margin-bottom:10px;">
+                <i>The following tables contains the final accepted entries to the 2020 challenges.</i>
+<!--                    <br>Check the authors and papers in the <a href="publications.html">publications section</a>.</i>-->
+             </div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-1" style="text-align: center;font-size:95%">
+            <div class="content">
+                <h2 class="content-subhead" style="margin-top:33px;margin-bottom:20px">Leaderboard Semi-Supervised track</h2>
+            </div>
+        </div>
+        <div class="pure-u-1-1">
+          <table id='tab_semisupervised' width='70%' style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif;margin-left: 15%;margin-right: 15%;margin-bottom:40px;">
+          </table>
+        </div>
+
+<!--        <div class="pure-u-1-1" style="text-align: center;font-size:95%">-->
+<!--            <div class="content">-->
+<!--                <h2 class="content-subhead" style="margin-top:33px;margin-bottom:5px">Leaderboard Interactive track</h2>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="pure-u-1-1">-->
+<!--            <table id="tab1" width="70%"style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif;margin-left: 15%;margin-right: 15%;margin-bottom:20px;">-->
+<!--                <tbody>-->
+<!--                    <tr>-->
+<!--                        <td class="seq_header" style="width: 40px; border-bottom: 1px solid gray; border-top: 1px solid gray; color:#efefef; background: #a1a1a1; text-align: center;">Position</td>-->
+<!--                        <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">Participant</td>-->
+<!--                        <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">Session ID</td>-->
+<!--                        <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">AUC</td>-->
+<!--                        <td class="over" style="border-bottom: 1px solid gray; border-top: 1px solid gray; text-align:right; color:#efefef; background: #a1a1a1; text-align: center;">J&amp;F@60s</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">1</td>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Seoung Wug Oh (Yonsei University)</td>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">069a9f2c</td>-->
+<!--                        <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">78.3</td>-->
+<!--                        <td class="highlight" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">79.1</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">2</td>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Yuk Heo (Korea University)</td>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">19b36910</td>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">64.7</td>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">60.9</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">3</td>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">Zihang Lin (Sun Yat-sen University)</td>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">07af0840</td>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">62.1</td>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">60.1</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">4</td>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">YK_CL (Youku Company)</td>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">98d2b5a5</td>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">58.9</td>-->
+<!--                        <td class="elements" style="border-bottom: 1px solid gray; font-family: 'Courier New', Courier, monospace; font-size: 80%; text-align: center;">49.1</td>-->
+<!--                    </tr>-->
+<!--                </tbody>-->
+<!--            </table>-->
+<!--        </div>-->
+
+        <div class="pure-u-1-1" style="text-align: center;font-size:95%">
+            <div class="content">
+                <h2 class="content-subhead" style="margin-top:33px;margin-bottom:20px">Leaderboard Unsupervised track</h2>
+            </div>
+        </div>
+        <div class="pure-u-1-1">
+          <table id='tab_unsupervised' width='50%' style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif;margin-left: 25%;margin-right: 25%;margin-bottom:40px;">
+          </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+    techniques = global_eval_test_challenge_2020_semisupervised.techniques;
+    curr_eval = global_eval_test_challenge_2020_semisupervised;
+    tech_props = tech_props_semisup;
+    tech_types = ['over'];
+    subset = 'test-challenge-2020';
+    html_id = 'tab_semisupervised';
+    generate_table(tech_props, techniques, curr_eval, tech_types, subset, html_id);
+
+    techniques = global_eval_test_challenge_2020_unsupervised.techniques;
+    curr_eval = global_eval_test_challenge_2020_unsupervised;
+    tech_props = tech_props_unsup;
+    tech_types = ['over'];
+    subset = 'test-challenge-2020';
+    html_id = 'tab_unsupervised';
+    generate_table(tech_props, techniques, curr_eval, tech_types, subset, html_id);
+
+    function generate_table(tech_props, techniques, curr_eval, tech_types, subset, html_id) {
+            ordinals = ['st','nd','rd','th','th','th','th','th','th','th'];
+            // Header
+            var tab_html = "<tr><th class='seq_header' style='width: 170px;border-bottom: 1px solid gray;border-top: 1px solid gray;'>Participant</th>"
+            for(var i = 0; i < techniques.length; i++)
+            {
+                // Add vertical lines in the transition between types of techniques
+                var st = '';
+                if (i>0)
+                    if (tech_props[techniques[i]].type!=tech_props[techniques[i-1]].type)
+                        st = "border-left: 3px solid white;";
+                tab_html = tab_html + "<th class='"+tech_props[techniques[i]].type+"' style='border-bottom: 1px solid gray;border-top: 1px solid gray; text-align:right;"+st+"'>" + tech_props[techniques[i]].display_name + "</th>";
+            }
+            tab_html = tab_html + "</tr>";
+
+
+            // Ranking
+            tab_html = tab_html + "<tr><td class='measures' style='width: 170px;border-bottom: 1px solid gray;'>Rank</td>"
+            for(var i = 0; i < techniques.length; i++)
+            {
+                // Add vertical lines in the transition betyween types of techniques
+                var st = '';
+                if (i>0)
+                    if (tech_props[techniques[i]].type!=tech_props[techniques[i-1]].type)
+                        st = "border-left: 3px solid white;";
+                tab_html = tab_html + "<td class='elements' style='"+st+"text-align: right; color:#0000FF; border-bottom: 1px solid gray;'>" + (i+1).toString() + ordinals[i]+ "</th>";
+            }
+            tab_html = tab_html + "</tr>";
+
+
+            // Show one line per measure
+            var meas = ["J_F","Jmean", "Jrecall", "Jdecay", "Fmean", "Frecall", "Fdecay"];
+            var meas_up = [1, 1, 1, 0, 1, 1, 0];
+            var meas_show = ["Mean J and F &uarr;", "J Mean &uarr;", "J Recall &uarr;", "J Decay &darr;", "F Mean &uarr;", "F Recall &uarr;", "F Decay &darr;", "T (GT "+(100*curr_eval.Tgt).toFixed(1)+") &darr;"];
+            for(var i = 0; i < meas.length; i++)
+            {
+                // Get the maximum at each row
+                var max_ids = {};
+                for(var j = 0; j < tech_types.length; j++)
+                    max_ids[tech_types[j]] = {max_val: 1-meas_up[i], max_id: 0};
+                for(var j = 0; j < techniques.length; j++)
+                    if (tech_props[techniques[j]].sets.indexOf(subset)>=0)
+                        if (    ((meas_up[i]==1) && (curr_eval[techniques[j]][meas[i]]>max_ids[tech_props[techniques[j]].type].max_val))
+                             || ((meas_up[i]==0) && (curr_eval[techniques[j]][meas[i]]<max_ids[tech_props[techniques[j]].type].max_val)) )
+                        {
+                            max_ids[tech_props[techniques[j]].type].max_val = curr_eval[techniques[j]][meas[i]];
+                            max_ids[tech_props[techniques[j]].type].max_id  = j;
+                        }
+
+                // Add horizontal lines in the different type of measures
+                var st1 = ''
+                if (i==0 || i==3 || i==6 || i==7)
+                    st1 = "border-bottom: 1px solid gray;";
+
+                // Display it
+                tab_html = tab_html + "<tr><td class='measures' style='width: 170px;"+st1+"'>"+meas_show[i]+"</td>"
+                for(var j = 0; j < techniques.length; j++)
+                {
+                    // Highlight the maximum
+                    if (max_ids[tech_props[techniques[j]].type].max_id==j)
+                        cl = 'highlight';
+                    else
+                        cl = 'elements';
+
+                    // Add vertical lines in the transition between types of techniques
+                    var st2 = '';
+                    if (j>0)
+                        if (tech_props[techniques[j]].type!=tech_props[techniques[j-1]].type)
+                            st2 = "border-left: 3px solid white;";
+
+                    // Actually add the row
+                    if (tech_props[techniques[j]].sets.indexOf(subset)>=0)
+                        tab_html = tab_html + "<td class='"+cl+"' style='"+ st1 + st2 +"'>" + (100*curr_eval[techniques[j]][meas[i]]).toFixed(1) + "</td>";
+                    else
+                        tab_html = tab_html + "<td class='"+cl+"' style='"+ st1 + st2 +"'>" + "-&nbsp" + "</td>";
+
+                }
+                tab_html = tab_html + "</tr>";
+            }
+
+            // Fill in the table
+            document.getElementById(html_id).innerHTML = tab_html;
+        }
+    </script>
+
+<script src="../js/ui.js"></script>
+
+
+</body>
+
+</html>
+
+

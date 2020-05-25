@@ -157,21 +157,21 @@
 
                            <!-- Buttons  -->
             <div class="pure-g" style="margin-left: 5%;margin-right: 5%;">
-            <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+            <div class="pure-u-1-5" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
                 <a href="index.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Workshop</button></a>
             </div>
-            <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+            <div class="pure-u-1-5" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
                 <a href="semisupervised.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Semi-Supervised<br>Challenge</button></a>
             </div>
-            <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+            <div class="pure-u-1-5" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
                 <a href="interactive.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Interactive<br>Challenge<br></button></a>
             </div>
-            <div class="pure-u-1-4" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+            <div class="pure-u-1-5" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
                 <button class="btn btn-6 btn-6a" style="width: 95%;background:#e7eae8;margin-top:30px;min-height: 65px;">Unsupervised<br>Challenge</button>
             </div>
-<!--            <div class="pure-u-1-6" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">-->
-<!--                <a href="leaderboards.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Leaderboards</button></a>-->
-<!--            </div>-->
+            <div class="pure-u-1-5" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">
+                <a href="leaderboards.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Leaderboards</button></a>
+            </div>
 <!--            <div class="pure-u-1-6" style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 300;">-->
 <!--                <a href="publications.html"><button class="btn btn-6 btn-6a" style="width: 95%;margin-top:30px;min-height: 65px;">Publications</button></a>-->
 <!--            </div>-->
@@ -187,14 +187,14 @@
         that are more likely to be followed by human gaze. <br>
         More information in the <a href='https://arxiv.org/abs/1905.00737' target="_blank">DAVIS 2019 publication</a> and the <a href='https://competitions.codalab.org/competitions/20515' target="_blank">Codalab submission site.</a>.
 
-        <h3 style="margin-top: 30px;margin-bottom: 5px">Test-Challenge 2020 Leaderboard</h3>
-        <p>Last update:  May-16-2020 01:59:00 am CET</p>
-        <div class="pure-g">
-            <div class="pure-u-1-1">
-              <table id='tab' width='60%' style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif;margin-left: 5%;margin-right: 5%;margin-bottom:40px;">
-              </table>
-            </div>
-        </div>
+<!--        <h3 style="margin-top: 30px;margin-bottom: 5px">Test-Challenge 2020 Leaderboard</h3>-->
+<!--        <p>Last update:  May-16-2020 01:59:00 am CET</p>-->
+<!--        <div class="pure-g">-->
+<!--            <div class="pure-u-1-1">-->
+<!--              <table id='tab' width='60%' style="border-spacing: 40px 10px; font-family: 'Raleway', sans-serif;margin-left: 5%;margin-right: 5%;margin-bottom:40px;">-->
+<!--              </table>-->
+<!--            </div>-->
+<!--        </div>-->
 
         <h3 style="margin-top: 30px;margin-bottom: 5px">Dates and Phases</h3>
         - <span style="text-align:center;font-family: 'Raleway', sans-serif; font-weight: 600;">Test-Dev</span>: Unlimited number of submissions, open end.<br>
@@ -321,117 +321,117 @@
         </div>
         </div>
     </div>
+</div>
+
+<!--<script>-->
+<!--window.onload = function(){-->
+<!--    document.getElementById('table_date').innerHTML = unsupervised_challenge_2020['date'];-->
+<!--};-->
+<!--</script>-->
 
 
-<script>
-window.onload = function(){
-    document.getElementById('table_date').innerHTML = unsupervised_challenge_2020['date'];
-};
-</script>
+
+<!--<script type="text/javascript">-->
+<!--    // Set values different to the ones by default, to 'force' the change-->
+<!--    var curr_table  = "J";-->
+<!--    var curr_subset = "val_2017";-->
+<!--    var curr_eval;-->
+<!--    var techniques = unsupervised_challenge_2020['techniques'];-->
+
+<!--    function switch_to_table(new_table,new_subset)-->
+<!--    {-->
+<!--        curr_table = new_table;-->
+<!--        curr_subset = new_subset;-->
+
+<!--        // Change to current subset-->
+<!--        curr_eval   = window["unsupervised_challenge_2020"];-->
+
+<!--        // Apply the changes-->
+<!--        show_table(curr_table,curr_subset,"tab","None");-->
+
+<!--    }-->
+
+<!--    function switch_to_subset(id)-->
+<!--    {-->
+<!--        curr_subset = id;-->
+<!--    }-->
+
+<!--    function mean(values)-->
+<!--    {-->
+<!--        var sum = 0;-->
+<!--        for( var i = 0; i < values.length; i++ ){-->
+<!--            sum += parseFloat( values[i]);-->
+<!--        }-->
+
+<!--        var avg = 100*(sum/values.length);-->
+<!--        return avg.toFixed(1);-->
+<!--    }-->
+
+<!--    function show_table(meas, subset, html_id)-->
+<!--    {-->
+<!--        var tab_html = '';-->
+
+<!--        // Header-->
+<!--        tab_html = "<tr><th class='seq_header' style='width: 170px;border-bottom: 1px solid gray;border-top: 1px solid gray;'>Measure</th>";-->
+<!--        var st = '';-->
+<!--        for(var i = 0; i < techniques.length; i++)-->
+<!--        {-->
+<!--            // Add vertical lines in the transition betyween types of techniques-->
+<!--            st = '';-->
+<!--            tab_html = tab_html + "<th class='semi2017' style='border-bottom: 1px solid gray;border-top: 1px solid gray; text-align:right;"+st+"'>" + techniques[i] + "</th>";-->
+<!--        }-->
+<!--        tab_html = tab_html + "</tr>";-->
+
+<!--        // Show one line per measure-->
+<!--        var meas = ["J_F","Jmean", "Jrecall", "Jdecay", "Fmean", "Frecall", "Fdecay"];-->
+<!--        var meas_up = [1, 1, 1, 0, 1, 1, 0, 0];-->
+<!--        var meas_show = ["J&F Mean &uarr;", "J Mean &uarr;", "J Recall &uarr;", "J Decay &darr;", "F Mean &uarr;", "F Recall &uarr;", "F Decay &darr;", "T (GT "+(100*curr_eval.Tgt).toFixed(1)+") &darr;"];-->
+<!--        for(var i = 0; i < meas.length; i++)-->
+<!--        {-->
+<!--            // Get the maximum at each row-->
+<!--            var max_ids = {};-->
+<!--            max_ids['semi2017'] = {max_val: 1-meas_up[i], max_id: 0};-->
+<!--            for(var j = 0; j < techniques.length; j++)-->
+<!--                if (    ((meas_up[i]===1) && (curr_eval[techniques[j]][meas[i]]>max_ids['semi2017'].max_val))-->
+<!--                     || ((meas_up[i]===0) && (curr_eval[techniques[j]][meas[i]]<max_ids['semi2017'].max_val)) )-->
+<!--                {-->
+<!--                    max_ids['semi2017'].max_val = curr_eval[techniques[j]][meas[i]];-->
+<!--                    max_ids['semi2017'].max_id  = j;-->
+<!--                }-->
+
+<!--            // Add horizontal lines in the different type of measures-->
+<!--            var st1 = '';-->
+<!--            if (i===0 || i===3 || i===6 || i===7)-->
+<!--                st1 = "border-bottom: 1px solid gray;";-->
+
+<!--            // Display it-->
+<!--            tab_html = tab_html + "<tr><td class='measures' style='width: 170px;"+st1+"'>"+meas_show[i]+"</td>";-->
+<!--            for(var j = 0; j < techniques.length; j++)-->
+<!--            {-->
+<!--                // Highlight the maximum-->
+
+<!--                if (max_ids['semi2017'].max_id===j)-->
+<!--                    cl = 'highlight';-->
+<!--                else-->
+<!--                    cl = 'elements';-->
+<!--                // Add vertical lines in the transition between types of techniques-->
+<!--                var st2 = '';-->
+
+<!--                // Actually add the row-->
+<!--                tab_html = tab_html + "<td class='"+cl+"' style='"+ st1 + st2 +"'>" + (100*curr_eval[techniques[j]][meas[i]]).toFixed(1) + "</td>";-->
+
+<!--            }-->
+<!--            tab_html = tab_html + "</tr>";-->
+<!--        }-->
+
+<!--        // Fill in the table-->
+<!--        document.getElementById(html_id).innerHTML = tab_html;-->
+<!--    }-->
+
+<!--    switch_to_table('global','test_challenge_2018')-->
 
 
-
-<script type="text/javascript">
-    // Set values different to the ones by default, to 'force' the change
-    var curr_table  = "J";
-    var curr_subset = "val_2017";
-    var curr_eval;
-    var techniques = unsupervised_challenge_2020['techniques'];
-
-    function switch_to_table(new_table,new_subset)
-    {
-        curr_table = new_table;
-        curr_subset = new_subset;
-
-        // Change to current subset
-        curr_eval   = window["unsupervised_challenge_2020"];
-
-        // Apply the changes
-        show_table(curr_table,curr_subset,"tab","None");
-
-    }
-
-    function switch_to_subset(id)
-    {
-        curr_subset = id;
-    }
-
-    function mean(values)
-    {
-        var sum = 0;
-        for( var i = 0; i < values.length; i++ ){
-            sum += parseFloat( values[i]);
-        }
-
-        var avg = 100*(sum/values.length);
-        return avg.toFixed(1);
-    }
-
-    function show_table(meas, subset, html_id)
-    {
-        var tab_html = '';
-
-        // Header
-        tab_html = "<tr><th class='seq_header' style='width: 170px;border-bottom: 1px solid gray;border-top: 1px solid gray;'>Measure</th>";
-        var st = '';
-        for(var i = 0; i < techniques.length; i++)
-        {
-            // Add vertical lines in the transition betyween types of techniques
-            st = '';
-            tab_html = tab_html + "<th class='semi2017' style='border-bottom: 1px solid gray;border-top: 1px solid gray; text-align:right;"+st+"'>" + techniques[i] + "</th>";
-        }
-        tab_html = tab_html + "</tr>";
-
-        // Show one line per measure
-        var meas = ["J_F","Jmean", "Jrecall", "Jdecay", "Fmean", "Frecall", "Fdecay"];
-        var meas_up = [1, 1, 1, 0, 1, 1, 0, 0];
-        var meas_show = ["J&F Mean &uarr;", "J Mean &uarr;", "J Recall &uarr;", "J Decay &darr;", "F Mean &uarr;", "F Recall &uarr;", "F Decay &darr;", "T (GT "+(100*curr_eval.Tgt).toFixed(1)+") &darr;"];
-        for(var i = 0; i < meas.length; i++)
-        {
-            // Get the maximum at each row
-            var max_ids = {};
-            max_ids['semi2017'] = {max_val: 1-meas_up[i], max_id: 0};
-            for(var j = 0; j < techniques.length; j++)
-                if (    ((meas_up[i]===1) && (curr_eval[techniques[j]][meas[i]]>max_ids['semi2017'].max_val))
-                     || ((meas_up[i]===0) && (curr_eval[techniques[j]][meas[i]]<max_ids['semi2017'].max_val)) )
-                {
-                    max_ids['semi2017'].max_val = curr_eval[techniques[j]][meas[i]];
-                    max_ids['semi2017'].max_id  = j;
-                }
-
-            // Add horizontal lines in the different type of measures
-            var st1 = '';
-            if (i===0 || i===3 || i===6 || i===7)
-                st1 = "border-bottom: 1px solid gray;";
-
-            // Display it
-            tab_html = tab_html + "<tr><td class='measures' style='width: 170px;"+st1+"'>"+meas_show[i]+"</td>";
-            for(var j = 0; j < techniques.length; j++)
-            {
-                // Highlight the maximum
-
-                if (max_ids['semi2017'].max_id===j)
-                    cl = 'highlight';
-                else
-                    cl = 'elements';
-                // Add vertical lines in the transition between types of techniques
-                var st2 = '';
-
-                // Actually add the row
-                tab_html = tab_html + "<td class='"+cl+"' style='"+ st1 + st2 +"'>" + (100*curr_eval[techniques[j]][meas[i]]).toFixed(1) + "</td>";
-
-            }
-            tab_html = tab_html + "</tr>";
-        }
-
-        // Fill in the table
-        document.getElementById(html_id).innerHTML = tab_html;
-    }
-
-    switch_to_table('global','test_challenge_2018')
-
-
-</script>
+<!--</script>-->
 
 <script src="../js/ui.js"></script>
 
