@@ -59,12 +59,12 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['mhpvos', 'ranet', 'premvos', 'osvoss', 'onavos', 'cinm', 'voswl', 'lucid', 'agame', 'rgmp', 'feelvos', 'favos', 'osvos',
+var techniques = ['mhpvos', 'ranet', 'premvos', 'osvoss', 'onavos', 'cinm', 'voswl', 'lucid', 'agame', 'rgmp', 'feelvos', 'favos', 'stm', 'osvos',
   'msk', 'pml', 'sfls', 'matnet', 'andiff', 'cosnet', 'ags', 'epo+', 'motadapt', 'lsmo', 'pdb','osmn','ctn','siammask', 'vpn', 'plm', 'ofl', 'mugs', 'bvs',
   'fcp', 'jmp', 'hvs', 'sea', 'arp', 'lvo', 'uovos', 'fseg','lmp', 'sflu', 'tis', 'elm', 'mugu', 'fst', 'cut', 'nlc', 'msg', 'key',
   'cvos', 'trc'];
 
-var shown_techniques_val = ['ranet', 'premvos', 'osvoss','onavos', 'mhpvos','voswl', 'matnet', 'andiff', 'cosnet'];
+var shown_techniques_val = ['stm', 'mhpvos', 'ranet', 'premvos', 'osvoss','onavos', 'matnet', 'andiff', 'cosnet'];
 
 var shown_techniques_train = ['lucid', 'msk', 'ctn'];
 
@@ -123,10 +123,23 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "matnet":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "MATNet","im_url": "matnet", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "mugu":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "MuG-W","im_url": "mugu", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "mugs":  {"type": "semisup"   , "sets": ['val_2016'],"display_name": "MuG-W","im_url": "mugs", "col_R" : 255,"col_G" :  0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "mhpvos":  {"type": "semisup"   , "sets": ['val_2016'],"display_name": "MHP-VOS","im_url": "mhpvos", "col_R" : 255,"col_G" :  0, "col_B" :   0, "currmask": undefined, "canv_resized": false}
+                  "mhpvos":  {"type": "semisup"   , "sets": ['val_2016'],"display_name": "MHP-VOS","im_url": "mhpvos", "col_R" : 255,"col_G" :  0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "stm":  {"type": "semisup"   , "sets": ['val_2016'],"display_name": "STM","im_url": "stm", "col_R" : 255,"col_G" :  0, "col_B" :   0, "currmask": undefined, "canv_resized": false}
                 };
 
 var techn_papers ={
+  "stm":{
+    "conference": "ICCV",
+    "authors": [
+      "Seoung Wug Oh",
+      "Joon-Young Lee",
+      "Ning Xu",
+      "Seon Joo Kim"
+    ],
+    "year": 2019,
+    "url": "https://github.com/seoungwugoh/STM",
+    "title": "Video Object Segmentation using Space-Time Memory Networks\n"
+  },
   "mugu":{},
   "mugs":{
     "conference": "CVPR",

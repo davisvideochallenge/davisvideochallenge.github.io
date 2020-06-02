@@ -57,8 +57,18 @@ var global_eval_val_2016 = {
 		"matnet",
 		"mugs",
 		"mugu",
-		"mhpvos"
+		"mhpvos",
+		"stm"
 	],
+	"stm": {
+		"Jmean": "0.799",
+		"Jrecall": "0.880",
+		"Jdecay": "0.130",
+		"Fmean": "0.796",
+		"Frecall": "0.857",
+		"Fdecay": "0.127",
+		"T": "0.261"
+	},
 	"mhpvos": {
 		"Jmean": "0.876",
 		"Jrecall": "0.973",

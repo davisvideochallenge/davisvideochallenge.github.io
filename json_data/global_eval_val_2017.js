@@ -19,8 +19,18 @@ var global_eval_val_2017 = {
 		"pdb",
 		"rvos_unsup",
 		"mugs",
-		"mhpvos"
+		"mhpvos",
+		"stm"
 	],
+	"stm": {
+ 		"J_F": "0.8171",
+ 		"Jmean": "0.7917",
+ 		"Jrecall": "0.8870",
+ 		"Jdecay": "0.0801",
+ 		"Fmean": "0.8425",
+ 		"Frecall": "0.9180",
+ 		"Fdecay": "0.1046"
+ 	},
 	"mhpvos": {
  		"J_F": "0.7615",
  		"Jmean": "0.7340",
