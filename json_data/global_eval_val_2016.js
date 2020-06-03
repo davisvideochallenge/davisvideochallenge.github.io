@@ -61,13 +61,13 @@ var global_eval_val_2016 = {
 		"stm"
 	],
 	"stm": {
-		"Jmean": "0.799",
-		"Jrecall": "0.880",
-		"Jdecay": "0.130",
-		"Fmean": "0.796",
-		"Frecall": "0.857",
-		"Fdecay": "0.127",
-		"T": "0.261"
+		"Jmean": "0.887",
+		"Jrecall": "0.974",
+		"Jdecay": "0.050",
+		"Fmean": "0.901",
+		"Frecall": "0.952",
+		"Fdecay": "0.042",
+		"T": "0.150"
 	},
 	"mhpvos": {
 		"Jmean": "0.876",
