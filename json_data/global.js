@@ -59,7 +59,7 @@ var seq_nframes = {"bear"                 : 82,
                    "tennis"               : 70,
                    "train"                : 80};
 
-var techniques = ['stm', 'mhpvos', 'ranet', 'premvos', 'osvoss', 'onavos', 'cinm', 'voswl', 'lucid', 'agame', 'rgmp', 'feelvos', 'favos', 'osvos',
+var techniques = ['stm', 'mhpvos', 'ranet', 'premvos', 'osvoss', 'onavos', 'cinm', 'voswl', 'lucid', 'agame', 'rgmp', 'feelvos', 'favos', 'osvos', 'siamrcnn',
   'msk', 'pml', 'sfls', 'matnet', 'andiff', 'cosnet', 'ags', 'epo+', 'motadapt', 'lsmo', 'pdb','osmn','ctn','siammask', 'vpn', 'plm', 'ofl', 'mugs', 'bvs',
   'fcp', 'jmp', 'hvs', 'sea', 'arp', 'lvo', 'uovos', 'fseg','lmp', 'sflu', 'tis', 'elm', 'mugu', 'fst', 'cut', 'nlc', 'msg', 'key',
   'cvos', 'trc'];
@@ -124,10 +124,23 @@ var tech_props = {"nlc"    : {"type": "unsup"  , "sets": ['train_2016','val_2016
                   "mugu":  {"type": "unsup"   , "sets": ['val_2016'],"display_name": "MuG-W","im_url": "mugu", "col_R" : 0,"col_G" :  255, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "mugs":  {"type": "semisup"   , "sets": ['val_2016'],"display_name": "MuG-W","im_url": "mugs", "col_R" : 255,"col_G" :  0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
                   "mhpvos":  {"type": "semisup"   , "sets": ['val_2016'],"display_name": "MHP-VOS","im_url": "mhpvos", "col_R" : 255,"col_G" :  0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
-                  "stm":  {"type": "semisup"   , "sets": ['val_2016'],"display_name": "STM","im_url": "stm", "col_R" : 255,"col_G" :  0, "col_B" :   0, "currmask": undefined, "canv_resized": false}
+                  "stm":  {"type": "semisup"   , "sets": ['val_2016'],"display_name": "STM","im_url": "stm", "col_R" : 255,"col_G" :  0, "col_B" :   0, "currmask": undefined, "canv_resized": false},
+                  "siamrcnn":  {"type": "semisup"   , "sets": ['val_2016'],"display_name": "Siam R-CNN","im_url": "siamrcnn", "col_R" : 255,"col_G" :  0, "col_B" :   0, "currmask": undefined, "canv_resized": false}
                 };
 
 var techn_papers ={
+  "siamrcnn":{
+    "conference": "CVPR",
+    "authors": [
+      "Paul Voigtlaender",
+      "Jonathon Luiten",
+      "Philip H.S. Torr",
+      "Bastian Leibe"
+    ],
+    "year": 2020,
+    "url": "https://www.vision.rwth-aachen.de/page/siamrcnn",
+    "title": "Siam R-CNN: Visual Tracking by Re-Detection\n\n"
+  },
   "stm":{
     "conference": "ICCV",
     "authors": [

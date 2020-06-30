@@ -58,8 +58,18 @@ var global_eval_val_2016 = {
 		"mugs",
 		"mugu",
 		"mhpvos",
-		"stm"
+		"stm",
+		"siamrcnn"
 	],
+	"siamrcnn": {
+		"Jmean": "0.768",
+		"Jrecall": "0.864",
+		"Jdecay": "0.022",
+		"Fmean": "0.804",
+		"Frecall": "0.876",
+		"Fdecay": "0.040",
+		"T": "0.347"
+	},
 	"stm": {
 		"Jmean": "0.887",
 		"Jrecall": "0.974",
