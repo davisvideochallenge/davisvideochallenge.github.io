@@ -20,8 +20,18 @@ var global_eval_test_dev_2017 = {
 		"rvos_unsup",
 		"mugu",
 		"mhpvos",
-		"stm"
+		"stm",
+		"siamrcnn"
 	],
+	"siamrcnn": {
+ 		"J_F": "0.5330",
+ 		"Jmean": "0.4805",
+ 		"Jrecall": "0.5387",
+ 		"Jdecay": "0.2184",
+ 		"Fmean": "0.5855",
+ 		"Frecall": "0.6228",
+ 		"Fdecay": "0.2020"
+ 	},
 	"stm": {
  		"J_F": "0.7223",
  		"Jmean": "0.6930",
